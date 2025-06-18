@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "Build, Deploy and Scale Power Apps",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/microsoft/MPPC23-Power-Apps/main/lab1/README.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/microsoft/MPPC23-Power-Apps/main/lab2/README.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/microsoft/MPPC23-Power-Apps/main/lab3/README.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/microsoft/MPPC23-Power-Apps/main/lab4/README.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/microsoft/MPPC23-Power-Apps/main/lab5/README.md",
+        "Order": 5
+      }
+    ]
+  }
+]
