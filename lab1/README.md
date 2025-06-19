@@ -129,9 +129,9 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 
     ![Screenshot of no auth profiles found](../Media/CLI2.png)
 
-1. If you don't see it open already, let's open the Terminal. Click on the Burger menu icon in the top left corner and then hover over **Terminal** and then click **New Terminal**
+1. If you don't see it open already, let's open the Terminal. Click on the **Burger menu icon** **(1)** in the top left corner and then hover over **Terminal** **(2)** and then click **New Terminal** **(3)**
 
-    ![Screenshot of new terminal menu](assets/new-terminal.png)
+    ![Screenshot of new terminal menu](../Media/CLI3.png)
 
     A terminal window has now been opened for you. This is where you will write all of the following commands in this lab and in the upcoming labs as well.
 
@@ -141,38 +141,42 @@ A codespace is a cloud-hosted development environment you can access from anywhe
     pac auth create --deviceCode
     ```
 
-1. You will be prompted to use a web browser to authenticate. Copy (**ctrl + c**) the ```code``` that is provided in the terminal and then **Ctrl + click** on the link that is provided in the terminal.
+1. You will be prompted to use a web browser to authenticate. Copy (**ctrl + c**) the ```code``` **(1)** that is provided in the terminal and then **Ctrl + click** on the ```link``` **(2)** that is provided in the terminal.
+    
+    > **Note:** If you are using a Mac, you can **Command (⌘) + click** on the ```link``` that is provided in the terminal and then enter the ``code`` provided.
+    
+    ![Screenshot of the terminal with the code and link](../Media/CLI4.png)
 
-    ![Screenshot of the terminal with the code and link](assets/terminal-with-code-and-link.png)
+    - Once you click on that link, it will open a new browser tab where you will have to **Past** that code into the browser and then click **Next**
 
-    Once you click on that link, it will open a new browser tab where you will have to paste that code into the browser and then click **Next**
 
-    > **Note:** 
-    > If you are using a Mac, you can **Ctrl + click** on the ```link``` that is provided in the terminal and then enter the ``code`` provided.
 
-    ![Enter code and click next](assets/enter-code.png)
+    ![Enter code and click next](../Media/CLI5.png)
 
-1. Pick the account that was provided to you. If you can't see it on screen then log in.
+1. Choose the lab user **Email/Username:** <inject key="AzureAdUserEmail"></inject>.
+    
+    > Note: If you can't see it on screen then log in.
 
-    ![Screenshot of the account selection page](assets/account-selection.png)
+    ![Screenshot of the account selection page](../Media/CLI6.png)
 
 1. Then type in your password and click **Sign in**
 
-    You will then see a page asking if you're trying to sign in to Power Platform CLI - pac.
+1. You will see a Pop-up **Are you trying to sign in to Power Platform CLI - pac**. Click **Continue**
 
-    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](assets/sign-into-pac-cli.png)
+    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/CLI7.png)
 
-1. Click **Continue**
 
-    You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
+    > Note: You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
-1. Refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
+    ![Successful sign in](../Media/CLI8.png)
 
-    ![Screenshot of the Auth Profiles section with the Refresh button](assets/refresh-auth-profiles.png)
+1. If you don't see any **Auth Profiles**, refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
 
-    You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
+    ![Screenshot of the Auth Profiles section with the Refresh button](../Media/CLI9.png)
 
-    ![Select Auth Profile](assets/select-auth-profile.png)
+    > Note: You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
+
+    ![Select Auth Profile](../Media/CLI10.png)
 
 ## Task 6: Create developer environments
 
