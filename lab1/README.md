@@ -1,41 +1,44 @@
 # 🚀 Lab 1: Setup and configure
+### Estimated Duration : 60 mins
+## Overview
 
-Before we start with the lab, there are a couple of things we want you to be aware of:
 
-1. You can find the credentials you are going to use for this workshop in the **Environment Details** tab above the instructions
-1. Every time you see a link to a website, make sure to copy the link and paste it into the address bar in your browser in the lab environment. If you don't do this, the links will open in your laptop browser instead
-1. When you log into your account, you might see the following image. Make sure to always select **Ask later**
 
-![Action required screen for adding verification. Ask later must be selected at all times.](./assets/ask-later.png)
-
-## Lab 1 - Tasks
+## Lab Objectives
 
 In this lab, you will go though the following tasks:
 
-- Log on to your account
-- Create a GitHub account
-- Create a fork of the repository for this workshop
-- Creating a GitHub Codespace
-- Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
-- Create developer environments
-- Switch between environments with the Power Platform CLI
-- Enable Managed Environments on all environments
-- Deploy the pipelines solution to your Prod environment
-- Enable Dataverse settings
+- Task 1: Log on to your account
+- Task 2: Create a GitHub account
+- Task 3: Create a fork of the repository for this workshop
+- task 4: Creating a GitHub Codespace
+- Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
+- Task 6: Create developer environments
+- Task 7: Switch between environments with the Power Platform CLI
+- Task 8: Enable Managed Environments on all environments
+- Task 9: Deploy the pipelines solution to your Prod environment
+- Task 10: Enable Dataverse settings
 
 ## Task 1: Log on to your account
 
 With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
 
 1. Go to [make.powerapps.com](https://make.powerapps.com)
-1. On the sign-in screen, enter the email address that was provided to you in the **Environment Details** and then click **Next**
+1. On the sign-in screen, enter the email below and click **Next**,
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-    ![Sign in screen](assets/pa-sign-in-email.png)
 
-1. Then enter the password and click **Sign in**
-    ![Sign in screen](assets/pa-sign-in-password.png)
+    ![Sign in screen](assets/login1.png)
 
-1. If you're prompted to stay signed in, click **Yes**
+1. Next, provide your password to login:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+
+    ![Sign in screen](assets/login2.png)
+
+1. If you're prompted to stay signed in, click **No**
 
     You should now be logged in and on the Power Apps Home Page.
 
