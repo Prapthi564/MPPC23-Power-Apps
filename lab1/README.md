@@ -23,7 +23,7 @@ In this lab, you will go though the following tasks:
 
 With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
 
-1. Go to [make.powerapps.com](https://make.powerapps.com)
+1. Op**en **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
 1. On the sign-in screen, enter the email below and click **Next**,
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -48,31 +48,55 @@ With the credentials that were provided to you in the **Environment Details** ta
 
 For this workshop, we are going to be using GitHub.
 
-1. Go to the [GitHub](https://github.com) website
-1. Click on **Sign up** on the top right corner
-1. Enter your email address (use the email address for this workshop) and then click **Continue**
-1. Create a password and then click **Continue**
-1. Enter a username and then click **Continue** (this is a username you're going to use only for this workshop, so don't pick something you want to use later)
-1. Select whether you want to receive product updates or not and then click **Continue**
-1. Solve the puzzle to verify your account and then click **Create account**
-1. Go to [Outlook for the web](https://outlook.office.com) in a new tab
-1. Open the email that was sent to you from GitHub and copy the code
-1. Enter the code that was sent to your email address on the GitHub website. This should lead you to your dashboard where you can create a repository, but that's not what we're going to do now
+1. Open a new tab on **Microsoft Edge** browser and go to  [GitHub](https://github.com) website.
 
-You now have a GitHub account. Welcome to the community!
+1. Click on **Sign up** on the top right corner
+
+    ![GitHub home page](../Media/Git1.png)
+
+    - Enter your **Email:** **<inject key="AzureAdUserEmail"></inject>** **(1)**
+
+    - Create a **Password:** <inject key="AzureAdUserPassword"></inject> **(2)**
+
+    - Enter a **username:** **odl-user-<inject key="DeploymentID" enableCopy="false"/>** **(3)**
+        > **Note**: This is a username you're going to use only for this workshop.
+
+    - Uncheck **Receive occasional product updates and announcements** **(4)** and then click **Continue** **(5)**
+            ![GitHub Sign up](../Media/Git2.png)
+
+    -  Click on visual puzzle and solve the puzzle to verify your account and then click **Continue**
+            ![GitHub Sign up](../Media/Git3.png)
+            
+
+
+1. Go to [Outlook for the web](https://outlook.office.com) in a new tab and Sign-in with the below credentials,
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+    - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
+            ![GitHub Sign up](../Media/Git4.png) 
+1. Enter the code that was sent to your email address on the GitHub website and click **Continue** to confirm the email address. This should lead you to the sign in page.
+    
+    - Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and **Password:**  <inject key="AzureAdUserPassword"></inject> **(2)** and click on **Sign in** **(3)**
+
+        ![GitHub Sign up](../Media/Git5.png)
+
+You now have a GitHub account. Welcome to the GitHub community!
 
 ## Task 3: Create a fork of the repository for this workshop
 
 Now that you have a GitHub account, we are going to create a fork of the repository for this workshop. A fork is a copy of an existing repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
-1. Go to the [MPPC23-Power-Apps](https://aka.ms/MPPC23-Power-Apps) GitHub repository
+1. Open a new tab on **Microsoft Edge** browser, **Copy and Paste** the link  [MPPC23-Power-Apps](https://aka.ms/MPPC23-Power-Apps) to go to the GitHub repository.
+
 1. Click on the **Fork** button on the top right corner
 
-    ![Screenshot of fork button in GitHub Repository](assets/fork-button.png)
+    ![Fork the Repo](../Media/Repo1.png)
 
 1. Once the "Create a new fork" page opens, review the information and then click **Create Fork**
 
-    ![Screenshot of "Create fork" button in GitHub](assets/create-fork-button.png)
+    ![Fork the Repo](../Media/Repo2.png)
+
 
     Once your have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **MPPC23-Power-Apps forked from microsoft/MPPC23-Power-Apps**.
 
@@ -80,24 +104,30 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 
 A codespace is a cloud-hosted development environment you can access from anywhere. It has everything you need, including a text editor, terminal, and debugger. Codespaces are powered by Visual Studio Code and run in a containerized environment. For this workshop, we are going to use codespaces to do our development.
 
-1. Make sure that you are in your forked repository (_your-username/MPPC23-Power-Apps_) and then find and click on the **<> Code** button
+1. Make sure that you are in your forked repository odl-user-<inject key="DeploymentID" enableCopy="false"/> / MPPC23-Power-Apps and then find and click on the **<> Code** **(1)** button.
 
-    ![TODO: Add image of code button](assets/repo-code-button.png)
+1. On the **Code** pop up, select the **Codespaces** **(2)** tab.
 
-1. On the **Code** pop up, select the **Codespaces** tab
-1. Click **Create codespace on main**
+1. Click **Create codespace on main** **(3)**.
+
+    ![TODO: Add image of code button](../Media/Code1.png)
+
 
     A codespace will now be created for you in a new tab. This will take a few seconds. But once it's done, you will have a fully functional Visual Studio Code environment in your browser. You can now start developing!
 
 ## Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
 
-1. In your codespace, click on the **Power Platform** icon in the left navigation
+1. In your codespace,You will see a pop-up for **Power Platform Tools** Extension,  click on **Allow**.
 
-    ![Power Platform icon in the left navigation](assets/power-platform-icon.png)
+    ![Power Platform Pop-up](../Media/Code2.png)
+
+1. In your codespace, click on the **Power Platform** icon on the left navigation pane.
+
+    ![Power Platform Extension](../Media/CLI1.png)
 
     You'll more than likely see that there is "No auth profiles found on this computer". Let's create one.
 
-    ![Screenshot of no auth profiles found](assets/no-auth-profiles-found.png)
+    ![Screenshot of no auth profiles found](../Media/CLI2.png)
 
 1. If you don't see it open already, let's open the Terminal. Click on the Burger menu icon in the top left corner and then hover over **Terminal** and then click **New Terminal**
 
