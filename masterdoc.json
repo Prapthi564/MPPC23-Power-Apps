@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "Build, Deploy and Scale Power Apps",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://github.com/CloudLabsAI-Azure/MPPC23-Power-Apps/blob/main/lab1/README.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://github.com/CloudLabsAI-Azure/MPPC23-Power-Apps/blob/main/lab2/README.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://github.com/CloudLabsAI-Azure/MPPC23-Power-Apps/blob/main/lab3/README.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://github.com/CloudLabsAI-Azure/MPPC23-Power-Apps/blob/main/lab4/README.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://github.com/CloudLabsAI-Azure/MPPC23-Power-Apps/blob/main/lab5/README.md",
+        "Order": 5
+      }
+    ]
+  }
+]

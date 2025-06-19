@@ -1,41 +1,44 @@
 # 🚀 Lab 1: Setup and configure
+### Estimated Duration : 60 mins
+## Overview
 
-Before we start with the lab, there are a couple of things we want you to be aware of:
 
-1. You can find the credentials you are going to use for this workshop in the **Environment Details** tab above the instructions
-1. Every time you see a link to a website, make sure to copy the link and paste it into the address bar in your browser in the lab environment. If you don't do this, the links will open in your laptop browser instead
-1. When you log into your account, you might see the following image. Make sure to always select **Ask later**
 
-![Action required screen for adding verification. Ask later must be selected at all times.](./assets/ask-later.png)
-
-## Lab 1 - Tasks
+## Lab Objectives
 
 In this lab, you will go though the following tasks:
 
-- Log on to your account
-- Create a GitHub account
-- Create a fork of the repository for this workshop
-- Creating a GitHub Codespace
-- Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
-- Create developer environments
-- Switch between environments with the Power Platform CLI
-- Enable Managed Environments on all environments
-- Deploy the pipelines solution to your Prod environment
-- Enable Dataverse settings
+- Task 1: Log on to your account
+- Task 2: Create a GitHub account
+- Task 3: Create a fork of the repository for this workshop
+- task 4: Creating a GitHub Codespace
+- Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
+- Task 6: Create developer environments
+- Task 7: Switch between environments with the Power Platform CLI
+- Task 8: Enable Managed Environments on all environments
+- Task 9: Deploy the pipelines solution to your Prod environment
+- Task 10: Enable Dataverse settings
 
 ## Task 1: Log on to your account
 
 With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
 
-1. Go to [make.powerapps.com](https://make.powerapps.com)
-1. On the sign-in screen, enter the email address that was provided to you in the **Environment Details** and then click **Next**
+1. Op**en **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
+1. On the sign-in screen, enter the email below and click **Next**,
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-    ![Sign in screen](assets/pa-sign-in-email.png)
 
-1. Then enter the password and click **Sign in**
-    ![Sign in screen](assets/pa-sign-in-password.png)
+    ![Sign in screen](assets/login1.png)
 
-1. If you're prompted to stay signed in, click **Yes**
+1. Next, provide your password to login:
+ 
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+
+    ![Sign in screen](assets/login2.png)
+
+1. If you're prompted to stay signed in, click **No**
 
     You should now be logged in and on the Power Apps Home Page.
 
@@ -45,31 +48,55 @@ With the credentials that were provided to you in the **Environment Details** ta
 
 For this workshop, we are going to be using GitHub.
 
-1. Go to the [GitHub](https://github.com) website
-1. Click on **Sign up** on the top right corner
-1. Enter your email address (use the email address for this workshop) and then click **Continue**
-1. Create a password and then click **Continue**
-1. Enter a username and then click **Continue** (this is a username you're going to use only for this workshop, so don't pick something you want to use later)
-1. Select whether you want to receive product updates or not and then click **Continue**
-1. Solve the puzzle to verify your account and then click **Create account**
-1. Go to [Outlook for the web](https://outlook.office.com) in a new tab
-1. Open the email that was sent to you from GitHub and copy the code
-1. Enter the code that was sent to your email address on the GitHub website. This should lead you to your dashboard where you can create a repository, but that's not what we're going to do now
+1. Open a new tab on **Microsoft Edge** browser and go to  [GitHub](https://github.com) website.
 
-You now have a GitHub account. Welcome to the community!
+1. Click on **Sign up** on the top right corner
+
+    ![GitHub home page](../Media/Git1.png)
+
+    - Enter your **Email:** **<inject key="AzureAdUserEmail"></inject>** **(1)**
+
+    - Create a **Password:** <inject key="AzureAdUserPassword"></inject> **(2)**
+
+    - Enter a **username:** **odl-user-<inject key="DeploymentID" enableCopy="false"/>** **(3)**
+        > **Note**: This is a username you're going to use only for this workshop.
+
+    - Uncheck **Receive occasional product updates and announcements** **(4)** and then click **Continue** **(5)**
+            ![GitHub Sign up](../Media/Git2.png)
+
+    -  Click on visual puzzle and solve the puzzle to verify your account and then click **Continue**
+            ![GitHub Sign up](../Media/Git3.png)
+            
+
+
+1. Go to [Outlook for the web](https://outlook.office.com) in a new tab and Sign-in with the below credentials,
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+    - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
+            ![GitHub Sign up](../Media/Git4.png) 
+1. Enter the code that was sent to your email address on the GitHub website and click **Continue** to confirm the email address. This should lead you to the sign in page.
+    
+    - Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and **Password:**  <inject key="AzureAdUserPassword"></inject> **(2)** and click on **Sign in** **(3)**
+
+        ![GitHub Sign up](../Media/Git5.png)
+
+You now have a GitHub account. Welcome to the GitHub community!
 
 ## Task 3: Create a fork of the repository for this workshop
 
 Now that you have a GitHub account, we are going to create a fork of the repository for this workshop. A fork is a copy of an existing repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
-1. Go to the [MPPC23-Power-Apps](https://aka.ms/MPPC23-Power-Apps) GitHub repository
+1. Open a new tab on **Microsoft Edge** browser, **Copy and Paste** the link  [MPPC23-Power-Apps](https://aka.ms/MPPC23-Power-Apps) to go to the GitHub repository.
+
 1. Click on the **Fork** button on the top right corner
 
-    ![Screenshot of fork button in GitHub Repository](assets/fork-button.png)
+    ![Fork the Repo](../Media/Repo1.png)
 
 1. Once the "Create a new fork" page opens, review the information and then click **Create Fork**
 
-    ![Screenshot of "Create fork" button in GitHub](assets/create-fork-button.png)
+    ![Fork the Repo](../Media/Repo2.png)
+
 
     Once your have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **MPPC23-Power-Apps forked from microsoft/MPPC23-Power-Apps**.
 
@@ -77,28 +104,34 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 
 A codespace is a cloud-hosted development environment you can access from anywhere. It has everything you need, including a text editor, terminal, and debugger. Codespaces are powered by Visual Studio Code and run in a containerized environment. For this workshop, we are going to use codespaces to do our development.
 
-1. Make sure that you are in your forked repository (_your-username/MPPC23-Power-Apps_) and then find and click on the **<> Code** button
+1. Make sure that you are in your forked repository odl-user-<inject key="DeploymentID" enableCopy="false"/> / MPPC23-Power-Apps and then find and click on the **<> Code** **(1)** button.
 
-    ![TODO: Add image of code button](assets/repo-code-button.png)
+1. On the **Code** pop up, select the **Codespaces** **(2)** tab.
 
-1. On the **Code** pop up, select the **Codespaces** tab
-1. Click **Create codespace on main**
+1. Click **Create codespace on main** **(3)**.
+
+    ![TODO: Add image of code button](../Media/Code1.png)
+
 
     A codespace will now be created for you in a new tab. This will take a few seconds. But once it's done, you will have a fully functional Visual Studio Code environment in your browser. You can now start developing!
 
 ## Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
 
-1. In your codespace, click on the **Power Platform** icon in the left navigation
+1. In your codespace,You will see a pop-up for **Power Platform Tools** Extension,  click on **Allow**.
 
-    ![Power Platform icon in the left navigation](assets/power-platform-icon.png)
+    ![Power Platform Pop-up](../Media/Code2.png)
+
+1. In your codespace, click on the **Power Platform** icon on the left navigation pane.
+
+    ![Power Platform Extension](../Media/CLI1.png)
 
     You'll more than likely see that there is "No auth profiles found on this computer". Let's create one.
 
-    ![Screenshot of no auth profiles found](assets/no-auth-profiles-found.png)
+    ![Screenshot of no auth profiles found](../Media/CLI2.png)
 
-1. If you don't see it open already, let's open the Terminal. Click on the Burger menu icon in the top left corner and then hover over **Terminal** and then click **New Terminal**
+1. If you don't see it open already, let's open the Terminal. Click on the **Burger menu icon** **(1)** in the top left corner and then hover over **Terminal** **(2)** and then click **New Terminal** **(3)**
 
-    ![Screenshot of new terminal menu](assets/new-terminal.png)
+    ![Screenshot of new terminal menu](../Media/CLI3.png)
 
     A terminal window has now been opened for you. This is where you will write all of the following commands in this lab and in the upcoming labs as well.
 
@@ -108,38 +141,42 @@ A codespace is a cloud-hosted development environment you can access from anywhe
     pac auth create --deviceCode
     ```
 
-1. You will be prompted to use a web browser to authenticate. Copy (**ctrl + c**) the ```code``` that is provided in the terminal and then **Ctrl + click** on the link that is provided in the terminal.
+1. You will be prompted to use a web browser to authenticate. Copy (**ctrl + c**) the ```code``` **(1)** that is provided in the terminal and then **Ctrl + click** on the ```link``` **(2)** that is provided in the terminal.
+    
+    > **Note:** If you are using a Mac, you can **Command (⌘) + click** on the ```link``` that is provided in the terminal and then enter the ``code`` provided.
+    
+    ![Screenshot of the terminal with the code and link](../Media/CLI4.png)
 
-    ![Screenshot of the terminal with the code and link](assets/terminal-with-code-and-link.png)
+    - Once you click on that link, it will open a new browser tab where you will have to **Past** that code into the browser and then click **Next**
 
-    Once you click on that link, it will open a new browser tab where you will have to paste that code into the browser and then click **Next**
 
-    > **Note:** 
-    > If you are using a Mac, you can **Ctrl + click** on the ```link``` that is provided in the terminal and then enter the ``code`` provided.
 
-    ![Enter code and click next](assets/enter-code.png)
+    ![Enter code and click next](../Media/CLI5.png)
 
-1. Pick the account that was provided to you. If you can't see it on screen then log in.
+1. Choose the lab user **Email/Username:** <inject key="AzureAdUserEmail"></inject>.
+    
+    > Note: If you can't see it on screen then log in.
 
-    ![Screenshot of the account selection page](assets/account-selection.png)
+    ![Screenshot of the account selection page](../Media/CLI6.png)
 
 1. Then type in your password and click **Sign in**
 
-    You will then see a page asking if you're trying to sign in to Power Platform CLI - pac.
+1. You will see a Pop-up **Are you trying to sign in to Power Platform CLI - pac**. Click **Continue**
 
-    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](assets/sign-into-pac-cli.png)
+    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/CLI7.png)
 
-1. Click **Continue**
 
-    You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
+    > Note: You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
-1. Refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
+    ![Successful sign in](../Media/CLI8.png)
 
-    ![Screenshot of the Auth Profiles section with the Refresh button](assets/refresh-auth-profiles.png)
+1. If you don't see any **Auth Profiles**, refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
 
-    You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
+    ![Screenshot of the Auth Profiles section with the Refresh button](../Media/CLI9.png)
 
-    ![Select Auth Profile](assets/select-auth-profile.png)
+    > Note: You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
+
+    ![Select Auth Profile](../Media/CLI10.png)
 
 ## Task 6: Create developer environments
 
