@@ -23,7 +23,7 @@ In this lab, you will go though the following tasks:
 
 With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
 
-1. Op**en **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
+1. Open **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
 1. On the sign-in screen, enter the email below and click **Next**,
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -203,99 +203,105 @@ In this workshop, we will create one environment through the UI, one via PPAC, a
 
 Currently, if you want to get all that the Power Platform offers, it's required to subscribe to the Power Apps Developer Plan. In this part, we will walk you through all the steps:
 
-1. Go to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
+1. Open **Microsoft Edge** browser and navigate to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
 1. Select the **Existing user? Add a dev environment** button
 
-    ![Power Apps Developer Plan website with 'Get Started Free' and 'Existing user? Add a dev environment' buttons](./assets/dev-plan-1.png)
+    ![Power Apps Developer Plan website with 'Get Started Free' and 'Existing user? Add a dev environment' buttons](../Media/Dev1.png)
 
-1. Select the **Sign up for a Community Plan** link
+1. Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**, select the **Check box** **(2)** to agree to terms, and click on **Start Free** **(3)**.
 
-    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](./assets/dev-plan-2.png)
+    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](../Media/Dev2.png)
 
-1. Leave the country on United States and select the **Accept** button.
+1. Enter the **Password:** <inject key="AzureAdUserPassword"></inject> and click on **Sign in**.
 
-    ![Page where you can select a country and accept or cancel. There are also links to the terms of use and the Microsoft privacy statement](./assets/dev-plan-3.png)
+    ![Password](../Media/login2.png)
 
-1. After selecting **Accept**, a Power Platform developer environment will be created for you with the name `{User}'s Environment` and you will be redirected to the maker portal. In here, you will see two things:
-    1. The environment picker at the top-right with your recently created environment `{User}'s Environment` selected
+1. Click on **No** on the Stay signed in pop-up.
 
-    ![The maker portal, with at the top-center the alert that this is a developer environment and not meant for production use. At to top-right, you will see the name of your developer environment that just got created](./assets/dev-plan-4.png)
+    ![Page where you can select a country and accept or cancel. There are also links to the terms of use and the Microsoft privacy statement](../Media/img7.png)
 
-Now, let's rename the environment to something that makes sense to us.
+1. A Power Platform developer environment will be created for you with the name `{User}'s Environment` and you will be redirected to the maker portal. Here, Review the details below
+    -  The **Environment** at the top-right for your recently created environment `ODL_User <inject key="DeploymentID"></inject>'s Environment` **(1)** selected and prompt stating **This is a developer environment and not meant for production use** **(2)**
 
-1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
-1. Exit the Welcome / Tour pop up. You can do this by clicking on the **X** in the top right corner of the pop up screen
+        ![Developer environment](../Media/Dev3.png)
 
-    ![Exit the Welcome / Tour pop up](assets/exit-welcome-tour.png)
 
-1. Select **Environments** in the left navigation
-1. Select `{User}'s Environment` by clicking on the name
+1. In the new tab, go to the [Power Platform Admin Center](https://aka.ms/ppac)
+
+1. Close the Welcome pop up.
+
+1. Select **Manage** **(1)** in the left navigation, **Environments** **(2)**, and then Select the **`ODL_User <inject key="DeploymentID"></inject>'s Environment`** **(3)** 
+
+    ![Developer environment](../Media/Dev4.png)
+
 1. In the details card, select **edit**
 
-    ![](./assets/environment-edit.png)
+    ![](../Media/Dev5.png)
 
-1. In the side panel, make sure to change the **Name** to `Dev` and select the **Save** button.
+1. In the side panel, change the **Name** **(1)** to `Dev` and select the **Save** **(2)** button.
 
-    ![](./assets/environment-edit-save.png)
+    ![](../Media/Dev6.png)
 
-    This will trigger a name change, and will lead you to the following screen.
 
-    ![](./assets/environment-edit-save-operation.png)
-
-1. Select **Environments** to make get back to the overview of the environments.
-
-### Create the `QA` environment via the Power Platform Admin Center (PPAC)
+### Create a new **QA** environment via the Power Platform Admin Center (PPAC).
 
 We are going to create a QA environment through the Power Platform Admin Center.
 
-1. Select **New** in the top navigation
+1. Select **Environments** under **Manage**.
 
-    ![Environment + New for adding environments](assets/new-environment-button.png)
+1. Select **+ New** in the top navigation pane.
+
+    ![Environment + New for adding environments](../Media/Dev7.png)
 
 1. When the right-hand side dialog pops up - enter the following information:
 
     | Field | Value |
     | --- | --- |
-    | Name | QA |
-    | Region | US - Default |
-    | Type | Developer |
-    | Purpose | Developer environment for MPPC23 |
+    | Name | **QA** **(1)**| 
+    | Region | **US - Default** **(2)** |
+    | Type | **Developer** **(3)** |
+    | Purpose | **Developer environment for MPPC23** **(4)** |
 
-    ![Create new Developer Environment](assets/create-qa-env.png)
+    ![Create new Developer Environment](../Media/Dev8.png)
 
-1. Select **Next**
-1. The next section is asking you to add Dataverse. Finally select on **Save**
+1. Select **Next** **(5)**
 
-### Create the `Prod` environment via the Power Platform Command-Line Interface (CLI)
+1. Leave everything to default and click on **Save**
+
+    ![Save new Developer Environment](../Media/Dev9.png)
+
+### Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
 
 We will create the last environment we are going to create via the Power Platform CLI. Because we don't have to go through the UI, and we don't have to load anything, this will go way faster than the other options.
 
-We will create the last environment with the following values:
 
-| Field | Value |
-| --- | --- |
-| Name | Prod |
-| Region | US - Default |
-| Type | Developer |
+1. Navigate to the CodeSpace, if you see a pop up **CodeSpace is Stopped**, click on **Restart Codespace**.
 
-The command we need to use for creating an environment is `pac admin create`. The documentation of this command can be found [here](https://aka.ms/pac/admin/#pac-admin-create).
+    ![Codespace is stopped popup](../Media/Dev10.png)
 
-Run the following command in the terminal in your codespace:
+    > Note: We will create the last environment with the following values:
 
-```bash
-pac admin create --name "Prod" --type "Developer"
-```
+    | Field | Value |
+    | --- | --- |
+    | Name | Prod |
+    | Region | US - Default |
+    | Type | Developer |
 
-> **Note:**
-> We don't use `purpose` here, because the Power Platform CLI doesn't have a parameter for this. Also, we are using the defaults for `region` and `currency`, so we don't have to add those to the command.
+1. Run the following command in the terminal in your codespace:
 
-Once you have created all three environments, you should see them in the list of environments. Click the **Refresh** button on the top navigation if you don't see them yet.
+    ```bash
+    pac admin create --name "Prod" --type "Developer"
+    ```
 
-![List of developer environments](assets/list-of-environments.png)
+    > **Note:** We won't be using `purpose` here, because the Power Platform CLI doesn't have a parameter for this. Also, we are using the defaults for `region` and `currency`, so we don't have to add those to the command.
+
+1. Once you have created all three environments, you should see them in the list of environments. Click the **Refresh** button on the top navigation if you don't see them yet.
+
+    ![List of developer environments](../Media/Dev11.png)
 
 ## Task 7: Switch between environments with the Power Platform CLI
 
-1. With the correct Auth Profile, in the terminal type the following command and then press **Enter**:
+1. In the terminal type the following command and then press **Enter**:
 
     ```bash
     pac org list
@@ -303,14 +309,13 @@ Once you have created all three environments, you should see them in the list of
 
     This gets a list of all the environments that you have access to. You should see the **Dev** environment listed as one of them. This is the one we want to eventually connect to.
 
-    > **Note:** 
-    > It can take a couple of minutes before you get the full list of environments. Run the command again every minute until you see all the environments.    
+    > **Note:** It can take a couple of minutes before you get the full list of environments. Run the command again every minute until you see all the environments.    
 
-    ![Screenshot of pac org list](assets/org-list.png)
+    ![Screenshot of pac org list](../Media/T71.png)
 
-1. Take note of the Environment ID of the **Dev** Environment and copy it.
+1. Copy the Environment ID of the **Dev** Environment and paste it in Notepad.
 
-    ![Copy of Dev environment ID](assets/org-list-with-env-id.png)
+    ![Copy of Dev environment ID](../Media/T72.png)
 
 1. Then in the terminal, type the following command and then press **Enter**. Make sure to replace ```00000000-0000-0000-0000-000000000000``` with the environment id that you copied above
 
@@ -318,9 +323,9 @@ Once you have created all three environments, you should see them in the list of
     pac org select --environment 00000000-0000-0000-0000-000000000000
     ```
 
-    You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
+    - You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
 
-    ![Screenshot of pac org select confirmation](assets/org-select.png)
+        ![Screenshot of pac org select confirmation](../Media/T73.png)
 
 1. To have further confirmation that you have successfully connected to the **Dev** environment, in the terminal type the following command and then press **Enter**:
 
@@ -330,46 +335,34 @@ Once you have created all three environments, you should see them in the list of
 
     This command will return information about the environment that you are connected to. You should see the **Dev** environment listed as well as other unique information about the environment including the User email you're connected as.
 
-    ![Screenshot of pac org who confirmation information](assets/org-confirmation.png)
+    ![Screenshot of pac org who confirmation information](../Media/T74.png)
 
 ## Task 8: Enable Managed Environments on all environments
 
 In this task, you will learn how to enable Managed Environments on all environments you just created.
 
-1. Go back to the [Power Platform Admin Center](https://aka.ms/ppac)
+1. Go back to the [Power Platform Admin Center](https://aka.ms/ppac) tab.
 
-1. Select **Environments** in the left navigation
+1. Select **Environments** under **Manage** in the left navigation pane.
 
-1. Use the **search box** in the top-right corner to **search** for all environments created by your user
 
-    ![](./assets/Managed-Environments-PPAC-Search.png)
+1. Select **Dev** and click on **Enable Managed Environments** button at the top.
 
-1. Select **Dev** and select the **Enable Managed Environments** button at the top (it could be hidden under the ... overflow menu)
+    ![](../Media/T81.png)
 
-    ![](./assets/Managed-Environments-Select-Environment.png)
+1. Make sure you review the **Licensing details** **(1)**. Leave everything else as default and click on **Enable** **(2)**.
 
-    Make sure you look at the highlighted text about licensing. After enabling an environment as a Managed Environment, everyone in that environment has to have a premium license
+    ![](../Media/T82.png)
 
-    ![](./assets/Managed-Environments-Licensing.png)
+1. **Repeat steps 3-5** for both the QA and Prod environments.
 
-1. Select the purple **Enable** button
+1. Once Enabled for the other two environments, you should see **Yes** in the **Managed** column for all three environments.
 
-    ![](./assets/Managed-Environments-Enable-Environment.png)
-
-1. **Repeat steps 3-5** for both the QA and Prod environments
-
-1. If all went well, you should see **Yes** in the **Managed** column at all three environments
-
-    ![](./assets/Managed-Environments-Enabled.png)
+    ![](../Media/T83.png)
 
 ## Task 9: Deploy the pipelines solution to your Prod environment
 
-In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment. This solution is needed to configure pipelines.
-
-> **NOTE:**  
-> Normally, it's a best practice to install the pipelines solution on a separate "Pipelines Host" environment. In this lab, you will install it in the `Prod` environment because a you can have three **free** developer environments, so you don't have space for another `Pipelines Host` environment next to `Dev`, `QA`, and `Prod` environments.
->
-> This is a best practice because you will avoid people accidentally using dependencies on the pipelines tables, or having issues with sharing pipelines and giving people the right security roles. Take a look at the [FAQ on Microsoft Learn](https://learn.microsoft.com/power-platform/alm/pipelines#frequently-asked-questions) to learn more best practices.
+In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment.
 
 There are two ways to install the pipelines solution:
 
@@ -377,25 +370,25 @@ There are two ways to install the pipelines solution:
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
 
-    ![](./assets/admin-center.png)
+    ![](../Media/T90.png)
 
 1. Select the **Prod** environment you created before
 
-1. In the command bar at the top (make sure you use the button at the top and don't use the left navigation - which also has a resources button), select **Resources** and **Dynamics 365 apps**
+1. At the top , select **Resources** **(1)** and **Dynamics 365 apps** **(2)**.
 
-    ![](./assets/prod-env-dynamics-365-apps.png)
+    ![](../Media/T91.png)
 
 1. Here you can find the apps that are installed on your `Prod` environment by default. Select the **Install App** button in the command bar at the top
 
-    ![](./assets/prod-env-install-app.png)
+    ![](../Media/T92.png)
 
-1. In the sidebar that opens, scroll all the way down select the **Power Platform Pipelines** app and select the **Next** button at the bottom of the sidebar
+1. In the sidebar that opens, scroll all the way down select the **Power Platform Pipelines** **(1)** app and select the **Next** **(2)** button at the bottom of the sidebar
 
-    ![](./assets/prod-env-select-app.png)
+    ![](../Media/T93.png)
 
-1. Next, make sure to agree to the terms and select the **Install** button at the bottom of the sidebar
+1. Next,select **I agree to the termsof service** **(1)** and select the **Install** **(1)** button at the bottom of the sidebar
 
-    ![](./assets/prod-env-agree-terms.png)
+    ![](../Media/T94.png)
 
 This process will take a couple of minutes, you can refresh the page by selecting the **Refresh** button in the command bar at the top.
 
@@ -407,11 +400,11 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
 
 1. Open a new terminal by selecting the **Hamburger Menu > Terminal > New Terminal**
 
-    ![](./assets/Pipelines-Install-New-Terminal.png)
+    ![](../Media/T9CLI1.png)
 
 1. Open the Power Platform Tools VS Code Extension by selecting the Power Platform DevTools icon on the left, make sure you see the `Prod` environment in the Environments & Solutions panel and select the empty star behind it to select the right environment.
 
-    ![](./assets/Pipelines-Install-Ensure-Prod.png)
+    ![](../Media/T9CLI2.png)
 
 1. Enter the following command:
 
@@ -423,7 +416,7 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
 
     Zoomed in and highlighted is the unique name of the `Power Platform Pipelines` application: `msdyn_AppDeploymentAnchor`.
 
-    ![Screenshot of pac application list](./assets/Pipelines-Install-Application-List.png)
+    ![Screenshot of pac application list](../Media/T9CLI3.png)
 
 1. Now we can install the `Power Platform Pipelines` application by using the following command:
 
@@ -431,7 +424,6 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
     pac application install --application-name msdyn_AppDeploymentAnchor
     ```
 
-    This command will return all the applications that you can install with the `pac application install` command.
 
 ## Task 10: Enable Dataverse settings
 
@@ -447,7 +439,7 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
     pac org list-settings
     ```
 
-    This command will return all the settings in the org we are connected to now (the `Dev` environment). As you can see, this is a very large list. You can filter them though.
+    This command will return all the settings in the org we are connected to now (the `Dev` environment). This is a very large list. We can filter through the list.
 
 1. Add the `--filter` parameter and filter for all settings that contain `audit` with the following command:
 
@@ -457,13 +449,13 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
 
     This command will return all the settings that contain `audit` in the org we are connected to now (the `Dev` environment). As you can see, this is a way smaller list than what we saw before.
 
-    ![Screenshot of pac org list-settings --filter audit which shows 6 results](./assets/list-settings-filter-audit.png)
+    ![Screenshot of pac org list-settings --filter audit which shows 6 results](../Media/T101.png)
 
 ### Update Dataverse settings
 
-Let's try out how updating a setting works. In the list of audit settings we just saw, there is a `isauditenabled` setting which is set to **No**.
+Let's try out how updating a setting works. In the list of audit settings we just saw a **`isauditenabled`** setting which is set to **No**.
 
-![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to no.](./assets/list-settings-filter-audit-enabled.png)
+![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to no.](../Media/T102.png)
 
 1. Run the following command and then select **Enter**:
 
@@ -474,7 +466,7 @@ Let's try out how updating a setting works. In the list of audit settings we jus
     This command will set the `isauditenabled` setting to true.
 
     > **Note:** 
-    > Note that the list command showed `No` as the output, but for updating you need to use true or false.
+    > Note that the list command showed `No` as the output, but to udpate we need to use true or false.
 
 1. Run the following command again to verify if the setting is applied and select **Enter**:
 
@@ -484,7 +476,7 @@ Let's try out how updating a setting works. In the list of audit settings we jus
 
     This command will return all the settings that contain `audit` in the org we are connected to now (the `Dev` environment). As you can see, the `isauditenabled` setting is now set to `No`.
 
-    ![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to yes.](./assets/list-settings-filter-audit-enabled-yes.png)
+    ![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to yes.](../Media/T103.png)
 
 ## Next lab
 
