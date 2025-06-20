@@ -23,7 +23,7 @@ In this lab, you will go though the following tasks:
 
 With the credentials that were provided to you in the **Environment Details** tab, let's log into the account you are going to use during the workshop.
 
-1. Op**en **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
+1. Open **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
 1. On the sign-in screen, enter the email below and click **Next**,
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -203,54 +203,55 @@ In this workshop, we will create one environment through the UI, one via PPAC, a
 
 Currently, if you want to get all that the Power Platform offers, it's required to subscribe to the Power Apps Developer Plan. In this part, we will walk you through all the steps:
 
-1. Go to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
+1. Open **Microsoft Edge** browser and navigate to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
 1. Select the **Existing user? Add a dev environment** button
 
-    ![Power Apps Developer Plan website with 'Get Started Free' and 'Existing user? Add a dev environment' buttons](./assets/dev-plan-1.png)
+    ![Power Apps Developer Plan website with 'Get Started Free' and 'Existing user? Add a dev environment' buttons](../Media/Dev1.png)
 
-1. Select the **Sign up for a Community Plan** link
+1. Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**, select the **Check box** **(2)** to agree to terms, and click on **Start Free** **(3)**.
 
-    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](./assets/dev-plan-2.png)
+    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](../Media/Dev2.png)
 
-1. Leave the country on United States and select the **Accept** button.
+1. Enter the **Password:** <inject key="AzureAdUserPassword"></inject> and click on **Sign in**.
 
-    ![Page where you can select a country and accept or cancel. There are also links to the terms of use and the Microsoft privacy statement](./assets/dev-plan-3.png)
+    ![Password](../Media/login2.png)
 
-1. After selecting **Accept**, a Power Platform developer environment will be created for you with the name `{User}'s Environment` and you will be redirected to the maker portal. In here, you will see two things:
-    1. The environment picker at the top-right with your recently created environment `{User}'s Environment` selected
+1. Click on **No** on the Stay signed in pop-up.
 
-    ![The maker portal, with at the top-center the alert that this is a developer environment and not meant for production use. At to top-right, you will see the name of your developer environment that just got created](./assets/dev-plan-4.png)
+    ![Page where you can select a country and accept or cancel. There are also links to the terms of use and the Microsoft privacy statement](../Media/img7.png)
 
-Now, let's rename the environment to something that makes sense to us.
+1. A Power Platform developer environment will be created for you with the name `{User}'s Environment` and you will be redirected to the maker portal. Here, Review the details below
+    -  The **Environment** at the top-right for your recently created environment `ODL_User <inject key="DeploymentID"></inject>'s Environment` **(1)** selected and prompt stating **This is a developer environment and not meant for production use** **(2)**
 
-1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
-1. Exit the Welcome / Tour pop up. You can do this by clicking on the **X** in the top right corner of the pop up screen
+        ![Developer environment](../Media/Dev3.png)
 
-    ![Exit the Welcome / Tour pop up](assets/exit-welcome-tour.png)
 
-1. Select **Environments** in the left navigation
-1. Select `{User}'s Environment` by clicking on the name
+1. In the new tab, go to the [Power Platform Admin Center](https://aka.ms/ppac)
+
+1. Close the Welcome pop up.
+
+1. Select **Manage** **(1)** in the left navigation, **Environments** **(2)**, and then Select the **`ODL_User <inject key="DeploymentID"></inject>'s Environment`** **(3)** 
+
+    ![Developer environment](../Media/Dev4.png)
+
 1. In the details card, select **edit**
 
-    ![](./assets/environment-edit.png)
+    ![](../Media/Dev5.png)
 
-1. In the side panel, make sure to change the **Name** to `Dev` and select the **Save** button.
+1. In the side panel, change the **Name** **(1)** to `Dev` and select the **Save** **(2)** button.
 
-    ![](./assets/environment-edit-save.png)
+    ![](../Media/Dev6.png)
 
-    This will trigger a name change, and will lead you to the following screen.
 
-    ![](./assets/environment-edit-save-operation.png)
-
-1. Select **Environments** to make get back to the overview of the environments.
-
-### Create the `QA` environment via the Power Platform Admin Center (PPAC)
+### Create a new environment.
 
 We are going to create a QA environment through the Power Platform Admin Center.
 
-1. Select **New** in the top navigation
+1. Select **Environments** under **Manage**.
 
-    ![Environment + New for adding environments](assets/new-environment-button.png)
+1. Select **+ New** in the top navigation pane.
+
+    ![Environment + New for adding environments](../Media/Dev7.png)
 
 1. When the right-hand side dialog pops up - enter the following information:
 
