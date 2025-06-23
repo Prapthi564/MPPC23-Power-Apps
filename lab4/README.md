@@ -8,37 +8,37 @@ In this lab, you will go through only one task:
 
 ## ☑️ Task: Extend the previous pipeline with Approvals
 
-### Extending the pipeline in the Deployment Pipeline Configuration App
+### Task 1.1 : Extending the pipeline in the Deployment Pipeline Configuration App
 
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
-2. Check if you are in the `Prod` environment and if not, switch to that environment
+2. Make sure you're in the **Prod** environment; if you're not, switch to it.
 
-![](./assets/check-environment-prod.png)
+    ![](./assets/check-environment-prod.png)
 
-3. Look for the `Deployment Pipeline Configuration` app, hover on it and select the play button
+3. Hover on the **Deployment Pipeline Configuration** app, and select the **Play** button.
 
-![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
+    ![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
 
-4. This will open the `Deployment Pipeline Configuration` app and will enable you to modify your pipeline. Select the `My first pipeline` pipeline
+4. This will open the **Deployment Pipeline Configuration** app and will enable you to modify your pipeline. Select the **My first pipeline** pipeline.
 
-![](./assets/extend-pipeline-select-pipeline.png)
+    ![](./assets/extend-pipeline-select-pipeline(1).png)
 
-5. On the next screen, scroll down to the deployment stages and select the `Deploy to prod` deployment stage by selecting the name
+5. On the next screen, scroll down to the **Deployment Stages** and select the **Deploy to prod** deployment stage.
 
-![](./assets/extend-pipeline-select-deploy-to-prod-stage.png)
+    ![](./assets/extend-pipeline-select-deploy-to-prod-stage.png)
 
-6. Enable the check box in the `Pre-Deployment Step Required` field and select the `Save & Close` button in the command bar at the top
+6. Enable the check box in the **Pre-Deployment Step Required (1)** field and select the **Save & Close (2)** button in the command bar at the top.
 
-![](./assets/extend-pipeline-enable-pre-deployment-step.png)
+    ![](./assets/extend-pipeline-enable-pre-deployment-step(1).png)
 
-7. Check in the Deployment Stages subgrid if the `Pre-Deployment Step Required` field is changed to yes. If that's correct, you are done with this task, if not, go back to step 5 and try again
+7. In the Deployment Stages subgrid, verify whether the **Pre-Deployment Step Required field** is set to **Yes**. If it is, the task is complete. If not, return to step 5 and try again.
 
-![](./assets/extend-pipeline-enable-pre-deployment-step-saved.png)
+    ![](./assets/extend-pipeline-enable-pre-deployment-step-saved(1).png)
 
-### Create a cloud flow that handles the approval
+### Task 1.2 : Create a cloud flow that handles the approval
 
 In this task, you will learn how to create an approval flow that will handle the approval before deploying to production.
 
