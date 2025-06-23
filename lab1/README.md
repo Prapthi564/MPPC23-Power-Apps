@@ -28,15 +28,13 @@ With the credentials that were provided to you in the **Environment Details** ta
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-
-        ![Sign in screen](../Media/login1.png)
+     ![Sign in screen](../Media/login1.png)
 
 1. Next, provide your password to login:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-
-        ![Sign in screen](../Media/login2.png)
+     ![Sign in screen](../Media/login2.png)
 
 1. If you're prompted to stay signed in, click **No**
 
