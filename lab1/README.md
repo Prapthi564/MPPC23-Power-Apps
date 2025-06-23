@@ -57,8 +57,6 @@ For this workshop, we are going to be using GitHub.
     - Create a **Password:** <inject key="AzureAdUserPassword"></inject> **(2)**
 
     - Enter a **username:** **odl-user-<inject key="DeploymentID" enableCopy="false"/>** **(3)**
-        
-        > **Note**: This is a username you're going to use only for this workshop.
 
     - Uncheck **Receive occasional product updates and announcements** **(4)** and then click **Continue** **(5)**
         
