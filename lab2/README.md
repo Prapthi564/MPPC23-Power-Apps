@@ -171,10 +171,6 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. In the **Get started with Copilot** text field, enter the following **prompt (1)**:
 
-1. In the center of the Home page within Power Apps, there's a text field in which you can enter a prompt to search for an AI-generated table.
-
-    Within the text field, type the following prompt:
-
     `Build an app to manage real estate showings`
 
 1. Click on the **filter icon (3)**, select **one table (3)**, and then click on the **Generate (4)** button.
@@ -182,10 +178,6 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
     ![](../Media/L2TT2.png)
 
 1. Once AI Copilot generates a table based on your prompt, review the table to see the columns that have been created as a starting point.
-
-    ![The table is displayed.](./assets/copilot-table.png)
-
-    Let's explore further by modifying and adding to the already generated table.
 
 1. To view the sample data added by Copilot, click on the **three ellipses (⋯)** next to the table and select **View data**.
     
