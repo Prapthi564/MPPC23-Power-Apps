@@ -2,8 +2,6 @@
 ### Estimated Duration: 60 mins
 ## Overview
 
-
-
 ## Lab Objectives
 
 In this lab, you will go through the following tasks:
@@ -98,8 +96,7 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 
     ![Fork the Repo](../Media/L1T3S2-2406.png)
 
-
-    Once you have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **MPPC23-Power-Apps forked from microsoft/MPPC23-Power-Apps**.
+1. Once you have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **MPPC23-Power-Apps forked from microsoft/MPPC23-Power-Apps**.
 
 ## Task 4: Create a GitHub Codespace
 
@@ -112,7 +109,6 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 1. Click **Create codespace on main** **(3)**.
 
     ![TODO: Add image of code button](../Media/Code1.png)
-
 
     A codespace will now be created for you in a new tab. This will take a few seconds. But once it's done, you will have a fully functional Visual Studio Code environment in your browser. You can now start developing!
 
@@ -192,8 +188,8 @@ To create developer environments, you can create them in multiple ways:
 1. Via the Power Platform Admin Center (PPAC)
 1. Via the Power Platform CLI
 
-> **Note:**
-> When subscribing to the developer plan, you will automatically be assigned a developer license to yourself. When creating a developer environment through PPAC or the CLI, you will not do that. That's why we do this step first, so that you won't have to start a trial.
+   > **Note:**
+   > When subscribing to the developer plan, you will automatically be assigned a developer license to yourself. When creating a developer environment through PPAC or the CLI, you will not do that. That's why we do this step first, so that you won't have to start a trial.
 
 In this workshop, we will create one environment through the UI, one via PPAC, and the last one via the CLI, so that you know all about how to create developer environments.
 
@@ -223,12 +219,11 @@ Currently, if you want to get all that the Power Platform offers, you're require
 
         ![Developer environment](../Media/Dev3.png)
 
-
 1. In the new tab, go to the [Power Platform Admin Center](https://aka.ms/ppac)
 
 1. Close the Welcome pop-up.
 
-1. Select **Manage** **(1)** in the left navigation, **Environments** **(2)**, and then Select the **`ODL_User <inject key="DeploymentID"></inject>'s Environment`** **(3)** 
+1. Select **Manage** **(1)** in the left navigation, **Environments** **(2)**, and then Select the **ODL_User <inject key="DeploymentID"></inject>'s Environment** **(3)** 
 
     ![Developer environment](../Media/Dev4.png)
 
@@ -272,7 +267,6 @@ We are going to create a QA environment through the Power Platform Admin Center.
 
 We will create the last environment we are going to create via the Power Platform CLI. Because we don't have to go through the UI, and we don't have to load anything, this will go way faster than the other options.
 
-
 1. Navigate to the CodeSpace. If you see a pop-up **CodeSpace is Stopped**, click on **Restart CodeSpace**.
 
     ![Codespace is stopped popup](../Media/Dev10.png)
@@ -299,7 +293,7 @@ We will create the last environment we are going to create via the Power Platfor
 
 ## Task 7: Switch between environments with the Power Platform CLI
 
-1. In the terminal type the following command and then press **Enter**:
+1. In the terminal, type the following command and then press **Enter**:
 
     ```bash
     pac org list
@@ -369,7 +363,7 @@ There are two ways to install the Pipelines solution:
 
     ![](../Media/T90.png)
 
-1. Select the **Prod** environment you created before
+1. Go to the **Prod** environment you created before
 
 1. At the top , select **Resources** **(1)** and **Dynamics 365 apps** **(2)**.
 
@@ -450,9 +444,9 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
 
 ### Update Dataverse settings
 
-Let's try out how updating a setting works. In the list of audit settings, we just saw a **`isauditenabled`** setting which is set to **No**.
+1. Let's try out how updating a setting works. In the list of audit settings, we just saw a **`isauditenabled`** setting which is set to **No**.
 
-![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to no.](../Media/T102.png)
+   ![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to no.](../Media/T102.png)
 
 1. Run the following command and then select **Enter**:
 
