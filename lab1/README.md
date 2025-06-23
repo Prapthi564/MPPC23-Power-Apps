@@ -75,7 +75,7 @@ For this workshop, we are going to be using GitHub.
 
     - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
 
-        ![GitHub Sign up](../Media/Git4.png)
+      ![GitHub Sign up](../Media/Git4.png)
 
 1. Enter the code that was sent to your email address on the GitHub website and click **Continue** to confirm the email address. This should lead you to the sign in page.
     
