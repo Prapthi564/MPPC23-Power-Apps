@@ -29,20 +29,20 @@ With the credentials that were provided to you in the **Environment Details** ta
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
 
-    ![Sign in screen](assets/login1.png)
+        ![Sign in screen](../Media/login1.png)
 
 1. Next, provide your password to login:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 
-    ![Sign in screen](assets/login2.png)
+        ![Sign in screen](../Media/login2.png)
 
 1. If you're prompted to stay signed in, click **No**
 
     You should now be logged in and on the Power Apps Home Page.
 
-    ![Power apps home page](assets/power-apps-home-page.png)
+    ![Power apps home page](../Media/power-apps-home-page.png)
 
 ## Task 2: Create a GitHub account
 
@@ -62,10 +62,10 @@ For this workshop, we are going to be using GitHub.
         > **Note**: This is a username you're going to use only for this workshop.
 
     - Uncheck **Receive occasional product updates and announcements** **(4)** and then click **Continue** **(5)**
-            ![GitHub Sign up](../Media/Git2.png)
+        ![GitHub Sign up](../Media/Git2.png)
 
     -  Click on visual puzzle and solve the puzzle to verify your account and then click **Continue**
-            ![GitHub Sign up](../Media/Git3.png)
+        ![GitHub Sign up](../Media/Git3.png)
             
 
 
@@ -74,7 +74,7 @@ For this workshop, we are going to be using GitHub.
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
     - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
-            ![GitHub Sign up](../Media/Git4.png) 
+        ![GitHub Sign up](../Media/Git4.png) 
 1. Enter the code that was sent to your email address on the GitHub website and click **Continue** to confirm the email address. This should lead you to the sign in page.
     
     - Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and **Password:**  <inject key="AzureAdUserPassword"></inject> **(2)** and click on **Sign in** **(3)**
@@ -149,9 +149,7 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 
     - Once you click on that link, it will open a new browser tab where you will have to **Past** that code into the browser and then click **Next**
 
-
-
-    ![Enter code and click next](../Media/CLI5.png)
+        ![Enter code and click next](../Media/CLI5.png)
 
 1. Choose the lab user **Email/Username:** <inject key="AzureAdUserEmail"></inject>.
     
@@ -166,7 +164,7 @@ A codespace is a cloud-hosted development environment you can access from anywhe
     ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/CLI7.png)
 
 
-    > Note: You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
+    > **Note:** You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
     ![Successful sign in](../Media/CLI8.png)
 
@@ -174,7 +172,7 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 
     ![Screenshot of the Auth Profiles section with the Refresh button](../Media/CLI9.png)
 
-    > Note: You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
+    > **Note:** You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
 
     ![Select Auth Profile](../Media/CLI10.png)
 
@@ -204,7 +202,7 @@ In this workshop, we will create one environment through the UI, one via PPAC, a
 Currently, if you want to get all that the Power Platform offers, it's required to subscribe to the Power Apps Developer Plan. In this part, we will walk you through all the steps:
 
 1. Open **Microsoft Edge** browser and navigate to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
-1. Select the **Existing user? Add a dev environment** button
+1. Scroll down and select **Try for free** under **Developer plan**.
 
     ![Power Apps Developer Plan website with 'Get Started Free' and 'Existing user? Add a dev environment' buttons](../Media/Dev1.png)
 
@@ -212,7 +210,7 @@ Currently, if you want to get all that the Power Platform offers, it's required 
 
     ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](../Media/Dev2.png)
 
-1. Enter the **Password:** <inject key="AzureAdUserPassword"></inject> and click on **Sign in**.
+1. If required, enter the **Password:** <inject key="AzureAdUserPassword"></inject> and click on **Sign in**.
 
     ![Password](../Media/login2.png)
 
@@ -221,7 +219,7 @@ Currently, if you want to get all that the Power Platform offers, it's required 
     ![Page where you can select a country and accept or cancel. There are also links to the terms of use and the Microsoft privacy statement](../Media/img7.png)
 
 1. A Power Platform developer environment will be created for you with the name `{User}'s Environment` and you will be redirected to the maker portal. Here, Review the details below
-    -  The **Environment** at the top-right for your recently created environment `ODL_User <inject key="DeploymentID"></inject>'s Environment` **(1)** selected and prompt stating **This is a developer environment and not meant for production use** **(2)**
+    -  The **Environment** at the top-right for your recently created environment **ODL_User <inject key="DeploymentID"></inject>'s Environment** **(1)** selected and prompt stating **This is a developer environment and not meant for production use** **(2)**
 
         ![Developer environment](../Media/Dev3.png)
 
@@ -345,7 +343,6 @@ In this task, you will learn how to enable Managed Environments on all environme
 
 1. Select **Environments** under **Manage** in the left navigation pane.
 
-
 1. Select **Dev** and click on **Enable Managed Environments** button at the top.
 
     ![](../Media/T81.png)
@@ -414,7 +411,7 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
 
     This command will return all the applications that you can install with the `pac application install` command.
 
-    Zoomed in and highlighted is the unique name of the `Power Platform Pipelines` application: `msdyn_AppDeploymentAnchor`.
+    Highlighted is the unique name of the `Power Platform Pipelines` application: `msdyn_AppDeploymentAnchor`.
 
     ![Screenshot of pac application list](../Media/T9CLI3.png)
 
