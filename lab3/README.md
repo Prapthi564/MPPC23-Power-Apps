@@ -11,61 +11,67 @@ In this lab, you will go though the following tasks:
 
 In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app that you installed in lab 1 will be used for that.
 
-Go to the [maker portal](https://make.powerapps.com), and make sure you are in the **Prod** environment.
+1. Go to the [maker portal](https://make.powerapps.com), and make sure you are in the `Prod` environment.
 
-![](../Media/L3T01.png)
+    ![](./assets/prod-env-pipelines-installed(1).png)
 
-Select the **Deployment Pipeline Configuration** app and make sure to **play** it.
+2. Select the **Deployment Pipeline Configuration (1)** app and click on **Play (2)**.
 
-This will open the app in a new tab:
+    ![](./assets/prod-env-pipelines-installed(2)(1).png)
 
-![](../Media/create-pipeline-app.png)
+3. The app will open in a new tab:
 
-Make yourself familiar with the app, by looking around which menu items there are:
+    ![](./assets/create-pipeline-app(1).png)
 
-First, there is an `Overview` section, where you land when you open the app. This is the `Pipelines Dashboard`, which will show you the latest info about runs and pipelines that are active. When you open this for the first time, it's supposed to be empty, so don't worry!
+    Explore the app to get familiar with the available menu items.
 
-There is also a `Pipeline Setup` section where you can view your environments and pipelines.
+    - To begin with, you'll land on the `Overview` section when you open the app. This serves as the `Pipelines Dashboard`, displaying the latest updates on active runs and pipelines. Don’t worry if it appears empty at first — that’s expected.
 
-Last but not least, there is a `Deployments` section which enables you to view the run history and find solution artifacts.
+    - Next, the `Pipeline Setup` section allows you to view your configured environments and pipelines.
 
-### Create a new pipeline
+    - The `Deployments` section provides access to the run history and the corresponding solution artifacts.
 
-Let's create a new pipeline, click on the **Elipse** **(1)**, and then click on  **+ new button** **(2)** on the `Pipelines Dashboard`.
+    - Finally, there's a `Settings` section, where you can manage security teams, configure advanced settings, and customize various aspects of the app.
 
-![](../Media/L3T02.png)
+### Task 1.1 : Create a New Pipeline
 
-This will open a quick create form at the side.
+1. To create a new pipeline, click on **⋮ (1)** in the `Pipelines Dashboard` and select **+ New (2)**.
 
-1. Use **My first pipeline** **(1)** as the name
+    ![](./assets/create-pipeline-new-pipeline(1).png)
 
-1. Leave the rest as default and save the pipeline by selecting the **Save and Close** **(2)** button.
+2. A side panel titled **Quick Create: Deployment Pipeline** will appear.
 
-    ![](../Media/L3T03.png)
+    - Set the Name to **My first pipeline** **(1)**.
 
-You will end up on the `Pipelines Dashboard` again, but now `My first pipeline` will be visible.
+    - Keep the remaining settings as they are and click **Save and Close (2)** to save the pipeline.
 
-1. Click on the name `My first pipeline`
+        ![](./assets/create-pipeline-new-pipeline(2)(1).png)
 
-This will lead you to a form where you can enter details about your pipeline:
+3. You’ll be redirected to the `Pipelines Dashboard`, where **My first pipeline** will now be listed.
 
-![](./assets/create-pipeline-new-pipeline-details.png)
+4. Select **My first pipeline**.
 
-Scroll down and you will see the following content below the owner field:
+    ![](./assets/create-pipeline-new-pipeline(3)(1).png)
 
-![](./assets/create-pipeline-new-pipeline-saved.png)
+5. You’ll be taken to a form where, under the General tab you can enter the details for your pipeline.
 
-As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
+    ![](./assets/create-pipeline-new-pipeline-details(1).png)
 
-**Linked Development Environments**
+6. As you scroll down, you’ll notice the following content beneath:
 
-A pipeline can be available for multiple development environments. This is very convenient when you want to use multiple development environments and use shared test and shared production environments.
+    ![](./assets/create-pipeline-new-pipeline-saved(1).png)
 
-In this lab, we will only add one development environment to the Linked Development Environments, but when you use this at your company later on, remember that it can be more than one environment here.
+    As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
 
-**Deployment Stages**
+    **Linked Development Environments**
 
-The Deployment Stages section will give you the option to add stages after your development environment. So for instance, in our lab today, we are going to add a stage called `Deploy to QA` and another stage called `Deploy to Prod`. The cool thing is that we can set previous stages for these stages. This gives us the ability to make sure `Deploy to QA` goes first, and `Deploy to Prod` comes second.
+    A pipeline can be connected to multiple development environments. This is especially useful when you work with several development setups while sharing the same test and production environments.
+
+    In this lab, we’ll link only one development environment. However, keep in mind that in a real-world company setting, you can associate more than one environment here..
+
+    **Deployment Stages**
+
+    The Deployment Stages section allows you to add stages that follow your development environment. For example, in today’s lab, we’ll be adding a stage called `Deploy to QA`, followed by another called `Deploy to Prod`. What’s great is that you can define the order by setting preceding stages—this ensures that `Deploy to QA` runs before `Deploy to Prod`.
 
 ### Create a development environment
 
