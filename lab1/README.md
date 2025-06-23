@@ -70,6 +70,7 @@ For this workshop, we are going to be using GitHub.
 
 1. Go to [Outlook for the web](https://outlook.office.com) in a new tab and Sign-in with the below credentials,
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
     - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
