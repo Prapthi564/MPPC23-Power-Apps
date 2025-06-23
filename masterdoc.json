@@ -4,24 +4,28 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab1/README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/LabIntro-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab2/README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab1/README.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab3/README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab2/README.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab4/README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab3/README.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab5/README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab4/README.md",
         "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MPPC23-Power-Apps/refs/heads/main/lab5/README.md",
+        "Order": 6
       }
     ]
   }
