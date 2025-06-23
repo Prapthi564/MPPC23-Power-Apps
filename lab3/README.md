@@ -73,7 +73,7 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
     The Deployment Stages section allows you to add stages that follow your development environment. For example, in today’s lab, we’ll be adding a stage called `Deploy to QA`, followed by another called `Deploy to Prod`. What’s great is that you can define the order by setting preceding stages—this ensures that `Deploy to QA` runs before `Deploy to Prod`.
 
-### Task 1.2 : Create a development environment
+### Create a development environment
 
 1. Let’s move forward with the lab by adding a new development environment. To do this, click the **New Development Environment (1)** button located in the Linked Development Environments section.
 
