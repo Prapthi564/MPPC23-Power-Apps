@@ -226,35 +226,34 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
 In this task, you’ll deploy the solution built in Lab 2 to both the QA and Production environments. We’ll begin by deploying it to QA. So far in this lab, you’ve set up a pipeline along with its associated stages. But how exactly does a maker move a solution from the `Dev` environment to the `QA` and `Prod` environments?
 
-1. Go to the [maker portal](https://make.powerapps.com)
-
-1. Make sure to select the **Dev** environment
-
-1. Go to **Solutions** via the left menu
-
-1. Select the **MPPC 23** solution by selecting the display name
+1. Go to the [Power Apps Maker Portal](https://make.powerapps.com)
 
     ![](./assets/run-first-pipeline-dev.png)
 
-1. Select the **rocket icon** on the left
+1. Make sure to select the **Dev** environment.
+    ![](../Media/L3T04.png)
 
-    ![](./assets/run-first-pipeline-solution.png)
+1. Go to **Solutions** (1) from the left navigation menu and select the **MPPC 23** (2) solution by clicking on its display name.
 
-    This will show you a new screen where you can see an overview of all stages you just configured in the last task
+    ![](../Media/L3T05.png)
+
+1. Click on the **🚀 Rocket icon** for pipelines from the left-hand navigation panel.
+
+    ![](../Media/L3T06.png)
+
+1. This will open a new screen displaying an overview of all the stages you configured in the previous step.
 
     ![](./assets/run-first-pipeline-overview.png)
 
-1. Select the purple **Deploy here** button. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later
+1. Click on the **Deploy here** button. This will open a sidebar where you can choose to either start the deployment immediately or schedule it for later.
 
     ![](./assets/run-first-pipeline-select-target.png)
 
-1. Notice the message at below the deployment schedule. This indicates that this pipeline uses AI to generate a solution overview
+1. Click **Next**. Notice the message displayed below the deployment schedule. It indicates that this pipeline uses AI to generate a solution overview.
 
     ![](./assets/run-first-pipeline-ai-generated-description.png)
 
-1. Leave everything on default and select the purple **Next** button on the bottom of the sidebar
-
-    This will lead you to the next section called `Summary`. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview
+1. Keep all settings at their default values, then click the purple **Next** button at the bottom of the sidebar. This takes you to the `Summary` section, where you’ll find key details about the solution you're deploying to the QA environment, including an AI-generated solution overview.
 
     ![](./assets/run-first-pipeline-summary-ai.png)
 

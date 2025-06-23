@@ -77,11 +77,11 @@ In this task, you’ll create an application with data from an Excel table.
 
     ![](../Media/L2T22.png)
 
-1. Under Tree View, click on **Real Estate Properties screen** **(1)** drop down, then click on **ScreenContainer1** **(2)** drop down, then click on **BodyContainer1** **(3)** drop down, and then click on **RecordsGallary1** **(4)** drop down to expand it.
+1. Under Tree View, click on **Real Estate Properties screen** **(1)** drop down, then click on **ScreenContainer1** **(2)** drop down, then click on **BodyContainer1** **(3)** drop down, and then click on **RecordsGallary1** **(4)** inside **SidebarContainer**
 
     ![](../Media/L2T23.png)
 
-1. Right click on the the **NextArrow1** and click on **Delete**.
+1. Right click on the **NextArrow1** of RecordsGallery and click on **Delete**.
 
     ![](../Media/L2T24.png)
 
@@ -93,7 +93,7 @@ In this task, you’ll create an application with data from an Excel table.
 
     ![](../Media/L2T26.png)
 
-    The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above.
+>**Note:** The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above.
 
 1. Make sure that the gallery is still in edit mode. Select the Title.
 
@@ -163,25 +163,27 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 > **Note:** Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
 
-1. In the center of the Home page within Power Apps, there's a text field in which you can enter a prompt to search for an AI generated table.
+1. Make sure you are in the **Dev environment** in the Power Apps Maker Portal.  
+1. From the left-hand navigation, click on **Apps**, then select **Start with Copilot**.
+    
+    ![](../Media/L2TT1.png)
 
-    Within the text field type the following prompt:
+1. In the **Get started with Copilot** text field, enter the following **prompt (1)**:
 
     `build an app to manage real estate showings`
 
-    Then, select the Send button.
+1. Click on the **filter icon (3)**, select **one table (3)**, and then click on the **Generate (4)** button.
 
-    ![The text field is selected and the prompt is entered.](./assets/copilot-chat-prompt.png)
+    ![](../Media/L2TT2.png)
 
-1. After the AI Copilot generates a table based on your prompt, look through the table to see what columns have been created for the start of your table.
+1. Once AI Copilot generates a table based on your prompt, review the table to see the columns that have been created as a starting point.
 
-    ![The table is displayed.](./assets/copilot-table.png)
-
-    Let's explore further within modifying and adding to the already generated table.
+2. To view the sample data added by Copilot, click on the **three ellipses (⋯)** next to the table and select **View data**.
+    ![](../Media/L2TT3.png)
 
 1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
 
-    **`add a column for client full name in Showing table`** **(1)**
+    **`add a column for client full name in Real Estate Showing table`** **(1)**
 
     Then, select the **Send** button.
 
@@ -191,22 +193,19 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Now type the following into the chat:
 
-    **`add a column for client email to Showing table`**
+    **`add a column for client email to Real Estate Showing table`**
 
     Then, select the **Send** button.
 
-    Notice how a new column has been added to the table displaying the client’s email:
-
     ![](../Media/L2T36.png)
 
-    > **Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
+>**Note:** New column has been added to the table displaying the client’s email:
 
+> **Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
 
+1. Now, let’s add a **Status** column within the  Real Estate Showing table. In the text box within the **Copilot** pane, type and send:
 
-
-1. Now, let’s add a **Status** column within the  Showing table. In the text box within the **Copilot** pane, type and send:
-
-    `add a column for Status to the Showing table`
+    `add a column for Status to the Real Estate Showing table`
 
     It may take a minute to load. Once it does, you'll see that the **Status** column has been updated to include the option for **Completed**.
 
