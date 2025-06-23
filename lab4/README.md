@@ -130,9 +130,9 @@ In this task, you will learn how to create an approval flow that will handle the
 
 17. In the first input field of the condition:
 
-    - Click inside it. In the dynamic content panel, select ***Outcome** under Start and wait for an approval.
+    - Click inside it. In the dynamic content panel, select **Outcome** under Start and wait for an approval.
 
-18. Add the text **Approve** to the other input field of the condition.
+18. Add **Approve** to the other input field of the condition.
 
     ![](./assets/extend-pipeline-cloud-flow-add-condition-details(2)(1).png)
 
