@@ -157,14 +157,11 @@ In this task, you’ll create an application with data from an Excel table.
 
 In this task, you’ll create an application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
-> **Note:**
-> Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-apps/administrator/pricing-billing-skus/).
+> **Note:** Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-apps/administrator/pricing-billing-skus/).
 
 ### Explore AI Copilot within Power Apps
 
-> **Note:**
->
-> Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
+> **Note:** Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
 
 1. In the center of the Home page within Power Apps, there's a text field in which you can enter a prompt to search for an AI generated table.
 
@@ -184,51 +181,44 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
 
-    `add a column to track client full name`
+    **`add a column to track client full name in Agent table`** **(1)**
 
     Then, select the **Send** button.
 
-    You'll see that Copilot has provided feedback that the table has been updated and you should also see the new column added to the table:
+    You'll see that Copilot has provided feedback that the table has been updated and you should also see the new column **Client Full Name** **(2)** added to the table:
 
-    ![The table is displayed with the new column.](./assets/copilot-table-new-column.png)
+    ![](../Media/L2T35.png)
 
 1. Now type the following into the chat:
 
-    `add a column to track client email`
+    **`add a column to track client email to Agent table`**
 
     Then, select the **Send** button.
 
     Notice how a new column has been added to the table displaying the client’s email:
 
-    ![The table is displayed with the new column.](./assets/copilot-table-new-column-email.png)
+    ![](../Media/L2T36.png)
 
-    > **Note**
-    >
-    > Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
+    > **Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
 
-    > **Note**
-    >
-    > In the bottom left corner of the screen, notice that there is a section titled Suggestions. This section provides you with different suggestions on how you can add to and modify your table.
 
-    ![The suggestions section is displayed.](./assets/copilot-suggestions.png)
 
-    Notice that to the right of the screen, it appears to look as if you're having a conversation with a Copilot AI bot while adding to and modifying your table. Here's where you can scroll through and view the changes or additions you have made to your table.
 
-    ![The chat is displayed.](./assets/copilot-chat.png)
+1. Now, let’s add a **Status** column within the  Showing table. In the text box within the **Copilot** pane, type and send:
 
-1. Now, let’s edit the **Status** column within the table. In the text box within the **Copilot** pane, type and send:
-
-    `add an option for “Completed” to the Status column`
+    `add a status column to the showing table`
 
     It may take a minute to load. Once it does, you'll see that the **Status** column has been updated to include the option for **Completed**.
 
-1. Select the **Status** column name **drop down**, and select **View column**. Here, you can view the columns’ properties and the current status details and data.
+    ![](../Media/L2T37.png)
 
-    ![The status column is displayed.](./assets/copilot-status-column.png)
+1. Select the **Status** column name **drop down**, and select **Edit column**. Here, you can add the drop down options such as **Pending** and **Confirmed** if not already present, and then click on **Update**.
+
+    ![](../Media/L2T38.png)
 
     > **Note**
     >
-    > If your column choices are not the same as the ones shown in the screenshot - you can type the following command into the **Copilot** pane text box and send:
+    > If your column choices are not the same as the ones shown in the screenshot - you can also use Copilot to add these choices:
     >
     > `the status choices should be Pending, Confirmed, Cancelled, and Completed`
 
