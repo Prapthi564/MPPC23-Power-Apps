@@ -63,12 +63,6 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
     As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
 
-6. As you scroll down, you’ll notice the following content beneath:
-
-    ![](./assets/create-pipeline-new-pipeline-saved(1).png)
-
-    As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
-
     **Linked Development Environments**
 
     A pipeline can be connected to multiple development environments. This is especially useful when you work with several development setups while sharing the same test and production environments.
@@ -81,120 +75,156 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
 ### Create a development environment
 
-Let's continue our lab and start by adding a new development environment by selecting the New Development Environment button in the Linked Development Environments section.
+1. Let’s move forward with the lab by adding a new development environment. To do this, click the **New Development Environment (1)** button located in the Linked Development Environments section.
 
-![](./assets/create-pipeline-new-development-env-create.png)
+    ![](./assets/create-pipeline-new-development-env-create(1).png)
 
-A sidebar will be opened, where you can enter the details of the `Dev` environment you created in lab 01.
+2. A sidebar will appear, allowing you to enter the details of the `Dev` environment created in Lab 01.
 
-![](./assets/create-pipeline-new-development-env-details.png)
+    - Set Name as **Dev** **(1)**.
 
-1. Add `Dev` as the Name
+    - Click on the drop-down button and choose the Environment Type as **Development Environment** **(2)** .
 
-1. Set the Environment Type to `Development Environment`
+        ![](./assets/create-pipeline-new-development-env-details(1).png)
+
+
+
+3. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
+
+    - Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
+
+        ![](./assets/create-pipeline-new-development-env-ppac-dev(1).png)
+
+    - Select **Manage (1)** from the menu on the left, then click on **Environments (2)** and select the Environment named **Dev** **(3)**.
+
+        ![](./assets/create-pipeline-new-development-env-ppac-dev(2)(1).png)
+
+    - Copy the **Environment ID**. 
+
+        ![](./assets/create-pipeline-new-development-env-ppac-dev(3)(1).png)
+
+4. Paste the Environment ID copied in the above step, in the **EnvironmentId (1)** section of **Quick Create: Deployment Environment** window, then click **Save and Close (2)**.
+
+    ![](./assets/create-pipeline-new-development-env-details(2)(1).png)
+
+5. If all went well, you'll see the following screen. 
+
+    ![](./assets/create-pipeline-new-development-env-saved(1).png)
+
+    >**Note:** *Refresh* the page if you don't see it
+
+### Task 1.3 : Add the first deployment stage
+
+1. Now select the **+ New Deployment Stage** button  to add the first deployment stage.
+
+    ![](./assets/create-pipeline-new-deployment-stage(1).png)
+
+2. This will open a new form, where you can enter details about your first deployment stage.
+
+    - Add Name as **Deploy to QA (1)**.
+
+        ![](./assets/create-pipeline-new-deployment-stage(2)(1).png)
+
+        >**Note:** We're leaving the Description and Previous Deployment stage empty, because we don't have a previous deployment stage, since this is our first stage.
+
+1. Click on the input box next to **Target Deployment Environment ID** to bring up a small popup that lets you add a new deployment environment. Select **+ New**.
+    
+    ![](./assets/create-pipeline-new-deployment-stage(3)(1).png)
+
+1. A new sidebar will appear, allowing you to provide information about your QA environment.
+
+    ![](./assets/create-pipeline-new-deployment-stage(4)(1).png)
+
+1. In the sidebar, add the following details:
+
+    - Set the Name as **QA (1)**.
+
+    - From the drop-down, select EnvironmentType as **Target Environment (2)**.
+
+        ![](./assets/create-pipeline-new-development-env-ppac-qa(1).png)
+
+1. To add the environment ID of the test environment
+
+    - Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
+
+        ![](./assets/create-pipeline-new-development-env-ppac-dev(1).png)
+
+    - Select **Manage (1)** from the menu on the left, then click on **Environments (2)** and select the Environment named **QA** **(3)**.
+
+        ![](./assets/create-pipeline-new-development-env-ppac-qa(2)(1).png)
+
+     - Copy the **Environment ID**. 
+
+        ![](./assets/create-pipeline-new-development-env-ppac-qa(3)(1).png)
+
+1. Paste the Environment ID copied in the above step, in the **EnvironmentId (1)** section of **Quick Create: Deployment Environment** window, then click **Save and Close (2)**.
+
+    ![](./assets/create-pipeline-new-development-env-details(3)(1).png)
+
+1. Select **Save and Close** from the bar on top.
+   
+    ![](./assets/create-pipeline-new-development-env-details(4)(1).png)
+
+### Task 1.4 : Add the `Deploy to prod` deployment stage
+
+1. Select the **+ New Deployment Stage** button again to add a second deployment stage: 
+
+    ![](./assets/create-pipeline-deploy-to-prod(1).png) 
+
+1. Add the following details: 
+
+    - Set Name as **Deploy to prod**.
+
+    - Leave the **Description** empty.
+
+    - In **Previous Deployment Stage**, search and select for the **Deploy to QA** stage.
+
+        ![](./assets/create-pipeline-deploy-to-prod(2)(1).png)
+
+1. Click on the input box next to **Target Deployment Environment ID** to bring up a small popup that lets you add a new deployment environment. Select **+ New**.
+
+    ![](./assets/create-pipeline-new-deployment-stage(5)(1).png)
+
+    > **Note:**  
+    > There is a setting field called `Pre Deployment Step Required`. We're not using that in this case, but think about what could that be used for. During the workshop, the trainers will show an example of it.
+
+1. A new sidebar will appear, allowing you to provide information about your QA environment.
+
+    ![](./assets/create-pipeline-new-deployment-stage(4)(1).png)
+
+1. Add the following details:
+
+    - Set Name as **Prod (1)**.
+
+    - Set the Environment Type to **Target Environment (2)**.
+
+        ![](./assets/create-pipeline-new-development-env-ppac-prod(1).png)
 
 1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
 
     - Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
-    - Select **Environments** in the menu on the left
-    - Select the environment named **Dev**
 
-      ![](./assets/create-pipeline-new-development-env-ppac-dev.png)
+        ![](./assets/create-pipeline-new-development-env-ppac-dev(1).png)
 
-    - Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
+    - Select **Manage (1)** from the menu on the left, then click on **Environments (2)** and select the Environment named **Prod** **(3)**.
 
-1. Select the **Save and Close** button on the bottom of your sidebar
+        ![](./assets/create-pipeline-new-development-env-ppac-prod(2)(1).png)
 
-If all went well, you'll see the following screen (*Refresh* the page if you don't see it):
+     - Copy the **Environment ID**. 
 
-![](./assets/create-pipeline-new-development-env-saved.png)
+        ![](./assets/create-pipeline-new-development-env-ppac-prod(3)(1).png)
 
-Make sure to select the **+ New Deployment Stage** button now to add the first deployment stage.
+1. Paste the Environment ID copied in the above step, in the **EnvironmentId (1)** section of **Quick Create: Deployment Environment** window, then click **Save and Close (2)**.
 
-![](./assets/create-pipeline-new-deployment-stage.png)
+    ![](./assets/create-pipeline-new-development-env-details(5)(1).png)
 
-### Add the first deployment stage
-
-This will open a new form, where you can enter details about your first deployment stage.
-
-1. Add `Deploy to QA` as the Name
-
-1. We're leaving the Description and Previous Deployment stage empty, because we don't have a previous deployment stage, since this is our first stage
-
-1. Set focus to the input box next to target deployment environment. This will open up a small popup which enables you to add a new deployment environment
-
-1. Select **+ New Deployment Environment**
-
-![](./assets/create-pipeline-new-deployment-stage-details.png)
-
-This will open another sidebar where you can add details about your QA environment.
-
-#### Add the QA environment
-
-In the sidebar, make sure to add the following details:
-
-1. Add `QA` as the `Name`
-
-1. Add `Target Environment` as the `Environment Type`
-
-1. Add the environment ID of the test environment
-
-    - Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
-    - Select **Environments** in the menu on the left
-    - Select the environment named **QA**
-
-      ![](./assets/create-pipeline-new-development-env-ppac-qa.png)
-
-    - Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
-
-1. Select the **Save and Close** button on the bottom of your sidebar
-
-1. Select **Save and Close** to save at the top of your deployment stage form as well
-
-Make sure to select the **+ New Deployment Stage** button again to add a second deployment stage: `Deploy to prod`.
-
-### Add the `Deploy to prod` deployment stage
-
-1. Add `Deploy to prod` as the `Name`
-
-1. Leave the `Description` empty
-
-1. Focus on the `Previous Deployment Stage` and search for the `Deploy to QA` stage. After you have found that stage, select it
-
-1. Set focus to the input box next to target deployment environment. This will open up a small popup which enables you to add a new deployment environment
-
-1. Select **+ New deployment Environment**
-
-> **Note:**  
-> There is a setting field called `Pre Deployment Step Required`. We're not using that in this case, but think about what could that be used for. During the workshop, the trainers will show an example of it.
-
-![](./assets/create-pipeline-deploy-to-prod.png)
-
-#### Add the Prod environment
-
-1. Add `Prod` as the Name
-
-1. Set the Environment Type to `Target Environment`
-
-1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
-
-    - Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
-    - Select **Environments** in the menu on the left
-    - Select the environment named **Prod**
-
-      ![](./assets/create-pipeline-new-development-env-ppac-prod.png)
-
-    - Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
-
-1. Select the **Save and Close** button on the bottom of your sidebar
-
-    ![](./assets/create-pipeline-deploy-to-prod-env.png)
-
-1. Select **Save and Close** to save at the top of your deployment stage form as well
+1. Select **Save and Close** from the bar on top.
+   
+    ![](./assets/create-pipeline-new-development-env-details(6)(1).png)
 
 ## Task 2: Run the deployment to the QA environment
 
-In this task, you will deploy the solution we created in lab 2 to the QA and Prod environments. Let's start by deploying to QA. In this lab, you have configured a pipeline and the stages that belong to it. But how does a maker deploy a solution from the `Dev` environment to the `QA` and `Prod` environments?
+In this task, you’ll deploy the solution built in Lab 2 to both the QA and Production environments. We’ll begin by deploying it to QA. So far in this lab, you’ve set up a pipeline along with its associated stages. But how exactly does a maker move a solution from the `Dev` environment to the `QA` and `Prod` environments?
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
