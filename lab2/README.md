@@ -181,7 +181,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
 
-    **`add a column to track client full name in Agent table`** **(1)**
+    **`add a column for client full name in Showing table`** **(1)**
 
     Then, select the **Send** button.
 
@@ -191,7 +191,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Now type the following into the chat:
 
-    **`add a column to track client email to Agent table`**
+    **`add a column for client email to Showing table`**
 
     Then, select the **Send** button.
 
@@ -206,7 +206,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Now, let’s add a **Status** column within the  Showing table. In the text box within the **Copilot** pane, type and send:
 
-    `add a status column to the showing table`
+    `add a column for Status to the Showing table`
 
     It may take a minute to load. Once it does, you'll see that the **Status** column has been updated to include the option for **Completed**.
 
@@ -232,7 +232,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
     Notice that five more rows of data are added for each of the existing columns within the table.
 
-    ![The table is displayed with the new rows.](./assets/copilot-table-new-rows.png)
+    ![](../Media/L2T39.png)
 
     Now looking through your table, you should have a number of columns. However, for the sake of following the rest of the modules in this learning path - let's try and remove some of the columns that we won't be using.
 
@@ -249,9 +249,9 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
     Use what you've just learnt with the **Copilot Chat** window to adjust your table to match the above. Don't forget to reference the Suggestions section for help in case you need to remove a column, change a column name, or add a column.
 
-1. Let's create the app now. In the bottom right corner of the screen, select the **Create app** button.
+1. Let's create the app now. In the top right corner of the screen, select the **Save and open app** button.
 
-    ![The create app button is highlighted.](./assets/copilot-create-app.png)
+    ![](../Media/L2T40.png)
 
 1. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the **Skip** button.
 
@@ -261,11 +261,9 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. To the left of the screen, select the **Data** icon from the navigation bar. Notice that a **Dataverse** table has been created by the Copilot and is now in the **Environments** section.
 
-    ![The data icon is highlighted.](./assets/copilot-data.png)
+    ![](../Media/L2T41.png)
 
-    > **Note**
-    >
-    > Copilot is currently only supported for Dataverse. You cannot use any other data access point at this time.
+    > **Note:** Copilot is currently only supported for Dataverse. You cannot use any other data access point at this time.
 
     Let's try editing the table now that the app has been created.
 
@@ -273,17 +271,17 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. From the menu, select **Edit data**.
 
-    ![The edit data option is highlighted.](./assets/copilot-edit-data.png)
+    ![](../Media/L2T42.png)
 
 1. The Edit Table dialog appears. Here's where you can come and add your own columns to the table, or modify existing columns.
 
-    ![The edit table dialog is displayed.](./assets/edit-table.png)
+    ![The edit table dialog is displayed.](../Media/edit-table.png)
 
 1. Select the **ID** column header from the table.
 
 1. From the drop-down, select the **Edit column** option.
 
-    ![The edit column option is highlighted.](./assets/copilot-edit-column.png)
+    ![The edit column option is highlighted.](../Media/copilot-edit-column.png)
 
     In this example, we don't want the Data Type of the column to be a Single line of text. Let's change that.
 
@@ -291,13 +289,13 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Select **Save**.
 
-    ![The save button is highlighted.](./assets/save-column.png)
+    ![The save button is highlighted.](../Media/save-column.png)
 
 1. Select the **Close** button in the bottom right corner of the **Edit table** dialog.
 
 1. Notice that the table now says **Refreshed** within the Data pane.
 
-    ![The refreshed table is displayed.](./assets/copilot-refreshed-table.png)
+    ![The refreshed table is displayed.](../Media/L2T43.png)
 
 1. We have to modify the gallery in the application so that it displays the relevant data. Select the **Tree view** icon to return to the Tree view.
 
@@ -313,39 +311,37 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Select the **Body** and set the **Text** value to the following formula:
 
-    `ThisItem.Status`
+    `ThisItem.'Status (crcaa_status)'`
 
     A single record in the gallery should now look like this:
 
-    ![The gallery is displayed.](./assets/showings-gallery.png)
+    ![](../Media/L2T44.png)
 
 1. On the app main screen, select the **Form** control.
 
-    ![The form control is highlighted.](./assets/copilot-form-control.png)
+    ![](../Media/L2T45.png)
 
-1. On the **Properties** pane on the right, under the **Fields** property, select **Edit fields**.
+1. On the **Top** pane on the right, select **Edit fields** **(1)** drop down menu.
 
-    ![The edit fields option is highlighted.](./assets/copilot-edit-fields.png)
+1. Now within the **Fields** pane, expand the **ID** **(2)** field.
 
-1. Now within the **Fields** pane, expand the **ID** field.
+1. From the **Control type** drop-down, change the type to **View text** **(3)**.
 
-1. From the **Control type** drop-down, change the type to **View text**.
+    ![](../Media/L2T46.png)
 
-    ![The view text option is highlighted.](./assets/copilot-view-text.png)
+    > **Note:** Because we previously changed the ID field to Autonumber, we don’t want the users putting in their own number; Dataverse is going to autonumber it for us.
 
-    Because we previously changed the ID field to Autonumber, we don’t want the users putting in their own number; Dataverse is going to autonumber it for us.
-
-1. Within the **Fields** pane, use the **X** in the top right corner to close out the pane.
+1. Now click elsewhere to come back to the Tree view.
 
 1. Now, let's make a new request for a property showing within the app.
 
 1. From the top of the screen, select the Play button.
 
-    ![The play button is highlighted.](./assets/copilot-play.png)
+    ![](../Media/L2T47.png)
 
 1. Within the pane to the left of the app, select the **+New** button.
 
-    ![The new button is highlighted.](./assets/copilot-new.png)
+    ![The new button is highlighted.](../Media/copilot-new.png)
 
 1. Although you could modify the form to autofill the fields for you, we're going to do so ourselves to show that the app works.
 
@@ -356,6 +352,8 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
     - Client Email: < Your email >
     - Date: < Any future date >
     - Time: < Any future time >
+    - Showing: Active
+    - Property: 123 Main St
     - Status: `Pending`
     - Address: `210 Pine Road, Portland, OR 97204`
 
@@ -367,7 +365,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. Then select the checkmark in the top right corner of the screen.
 
-    ![The checkmark is highlighted.](./assets/copilot-checkmark.png)
+    ![The checkmark is highlighted.](../Media/copilot-checkmark.png)
 
 1. Now, select the **X** in the top right corner to close out of the app.
 
@@ -377,22 +375,22 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. From the top of your screen, select the **Save** button to save the new app you have created.
 
-    ![The save button is highlighted.](./assets/copilot-save.png)
+    ![](../Media/L2T48.png)
 
     If asked, save app name as **Real Estate Showings**.
 
 1. Select the publish icon to publish the app
 
-    ![Publish app](./assets/publish-app.png)
+    ![](../Media/L2T49.png)
 
 1. Generate a description using AI by selecting the **Create description using AI** button
 
-    ![Generate AI Description](./assets/create-ai-description-2.png)
+    ![](../Media/L2T50.png)
 
 1. Check if the description is correct. If not, correct it and select the **Publish this version** button. If yes, select the **Publish this version** button.
+    > **Note:** The description may vary as we are generating using Copilot.
 
-    ![Check and publish this version of the app](./assets/check-publish-2.png)
-
+    ![](../Media/L2T51.png)
 1. Exit the app to return to the Power Apps home page.
 
 Congratulations! You have now created a Power Apps Canvas App with Copilot!
@@ -405,57 +403,57 @@ In this task, you will create a solution for the components we just created via 
 
 1. From the Power Apps home screen, select Solutions in the left navigation.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions.png)
+    ![](../Media/L2T52.png)
 
 1. Select **+ New solution** at the top of the screen.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution.png)
+    ![](../Media/L2T53.png)
 
 1. Add the solution name `MPPC 23` and select **+ New publisher**
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher.png)
+    ![](../Media/L2T54.png)
 
-1. Add the `Display name`, `Name` and `Prefix`. Select **Save** when you're done.
+1. Add the details below
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Details.png)
+    - Display name: **Microsoft Power Platrorm Conference** **(1)**,
+    - Name: **MicrosoftPowerPlatrormConference** **(2)**, and 
+    - Prefix: **mppc** **(3)**. 
+    - Select **Save** **(4)** when you're done.
 
-1. Select the newly created publisher from the `Publisher` dropdown.
+    ![](../Media/L2T55.png)
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Publisher-Select.png)
+1. The newly created publisher will be automatically selected in the **Publisher** dropdown. Leave other settins as default and Select the **Create** button at the bottom.
 
-1. Select the **Create** button at the bottom.
+    ![](../Media/L2T56.png)
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Create.png)
+    > **Notes:** This concludes task 3, you have created the `MPPC 23` solution.
 
-This concludes task 3, you have created the `MPPC 23` solution.
-
-![Screenshot of the Solutions section on the homepage](./assets/Solutions-New-Solution-Finished.png)
 
 ## ☑️ Task 4: Add the resources created by Power Apps Copilot to a solution
 
 In this task, you will add the components we just created via Copilot to the `MPPC 23` solution!
 
-1. Select **Add existing > App > Canvas app**
+1. Select **Add existing** **(1)** > **App** **(2)** > **Canvas app** **(3)**
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-Add-Existing-Canvas-Apps.png)
+    ![](../Media/L2T57.png)
 
-1. In the next screen select **All apps** by selecting the checkbox at arrow 1 and select the **Add** button at the bottom.
+1. In the next screen select **All apps** **(1)** by selecting the checkbox at arrow 1 and select the **Add** **(2)** button at the bottom.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-Add-Existing-Canvas-Apps-Selection.png)
+    ![](../Media/L2T58.png)
 
     This will add the canvas apps to the solution we just created. Next, we will add the Dataverse tables to the same solution.
 
-1. Select **Add existing > Table**
+1. Select **Add existing** **(1)** > **Table** **(2)**.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-Add-Existing-Tables.png)
+    ![](../Media/L2T59.png)
 
-1. Search for `real` at the top right, this will filter the tables to only those that contain `Real` and will show only our tables, select the checkbox so that all tables are selected and select the **Next** button at the bottom.
+1. Search for **real** **(1)** at the top right, this will filter the tables to only those that contain `Real` and will show only our tables, **select the checkbox** **(2)** so that all tables are selected and select the **Next** **(3)** button at the bottom.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-Add-Tables-Selection.png)
+    ![](../Media/L2T60.png)
 
-1. Select **Include all objects** at both tables and select the add button at the bottom.
+1. Select **Include all objects** **(1)** at both tables and select the **Add** **(2)** button at the bottom.
 
-    ![Screenshot of the Solutions section on the homepage](./assets/Solutions-Add-Tables-Selection-Objects.png)
+    ![](../Media/L2T61.png)
 
 ## Next lab
 
