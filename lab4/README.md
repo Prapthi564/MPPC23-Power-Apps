@@ -8,192 +8,205 @@ In this lab, you will go through only one task:
 
 ## ☑️ Task: Extend the previous pipeline with Approvals
 
-### Extending the pipeline in the Deployment Pipeline Configuration App
+### Task 1.1 : Extending the pipeline in the Deployment Pipeline Configuration App
 
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
 1. Go to the [maker portal](https://make.powerapps.com)
 
-2. Check if you are in the `Prod` environment and if not, switch to that environment
+2. Make sure you're in the **Prod** environment; if you're not, switch to it.
 
-![](./assets/check-environment-prod.png)
+    ![](./assets/check-environment-prod.png)
 
-3. Look for the `Deployment Pipeline Configuration` app, hover on it and select the play button
+3. Hover on the **Deployment Pipeline Configuration** app, and select the **Play** button.
 
-![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
+    ![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
 
-4. This will open the `Deployment Pipeline Configuration` app and will enable you to modify your pipeline. Select the `My first pipeline` pipeline
+4. This will open the **Deployment Pipeline Configuration** app and will enable you to modify your pipeline. Select the **My first pipeline** pipeline.
 
-![](./assets/extend-pipeline-select-pipeline.png)
+    ![](./assets/extend-pipeline-select-pipeline(1).png)
 
-5. On the next screen, scroll down to the deployment stages and select the `Deploy to prod` deployment stage by selecting the name
+5. On the next screen, scroll down to the **Deployment Stages** and select the **Deploy to prod** deployment stage.
 
-![](./assets/extend-pipeline-select-deploy-to-prod-stage.png)
+    ![](./assets/extend-pipeline-select-deploy-to-prod-stage.png)
 
-6. Enable the check box in the `Pre-Deployment Step Required` field and select the `Save & Close` button in the command bar at the top
+6. Enable the check box in the **Pre-Deployment Step Required (1)** field and select the **Save & Close (2)** button in the command bar at the top.
 
-![](./assets/extend-pipeline-enable-pre-deployment-step.png)
+    ![](./assets/extend-pipeline-enable-pre-deployment-step(1).png)
 
-7. Check in the Deployment Stages subgrid if the `Pre-Deployment Step Required` field is changed to yes. If that's correct, you are done with this task, if not, go back to step 5 and try again
+7. In the Deployment Stages subgrid, verify whether the **Pre-Deployment Step Required field** is set to **Yes**. If it is, the task is complete. If not, return to step 5 and try again.
 
-![](./assets/extend-pipeline-enable-pre-deployment-step-saved.png)
+    ![](./assets/extend-pipeline-enable-pre-deployment-step-saved(1).png)
 
-### Create a cloud flow that handles the approval
+### Task 1.2 : Create a cloud flow that handles the approval
 
 In this task, you will learn how to create an approval flow that will handle the approval before deploying to production.
 
-1. Go to the [maker portal](https://make.powerapps.com)
+1. Go to the [maker portal](https://make.powerapps.com).
 
-2. Check if you are in the `Prod` environment and if not, switch to that environment
+2. Check if you are in the **Prod** environment and if not, switch to that environment.
 
-![](./assets/check-environment-prod.png)
+    ![](./assets/check-environment-prod.png)
 
-3. Select **Flows** in the left navigation pane
+3. Select **Flows (1)** from the left navigation pane, the select **New flow (2)** in the command bar at the top and select **Automated cloud flow (3)**.
 
-![](./assets/select-flows.png)
+    ![](./assets/extend-pipeline-create-automated-cloud-flow(1).png)
 
-4. Select **Get started** in the welcome pop-up
+4. This will open a pop up where you can name your flow and configure a trigger. 
 
-![](./assets/flow-get-started.png)
+    - Name your flow as **My first pipeline production approval (1)**, 
+    - Search for **action (2)**,
+    - Select the Microsoft Dataverse trigger  **When an action is performed (3)** and
+    - Select the **Create (4)** button.  
 
-5. Select **Flows** in the left navigation, select **New flow** in the command bar at the top and select **Automated cloud flow**
+        ![](./assets/extend-pipeline-cloud-flow-trigger(1).png)
 
-![](./assets/extend-pipeline-create-automated-cloud-flow.png)
+5. Configure the trigger inputs by making it look like the screenshot below.
 
-6. This will open a pop up where you can name your flow and configure a trigger. Name your flow `My first pipeline production approval`, search for `action`, select the Microsoft Dataverse trigger called `When an action is performed` and select the blue **Create** button.  
+    ![](./assets/extend-pipeline-cloud-flow-trigger-inputs(1).png)
 
-![](./assets/extend-pipeline-cloud-flow-trigger.png)
+    >**Note:** If a small Microsoft Dataverse dialog appears, choose **OAuth** as the Authentication Type and sign in using the same credentials you used for Power Apps. 
 
-7. Configure the trigger inputs by making it look like the screenshot below
+6. Select the **ellipsis (...) (1)** at the top-right corner of the trigger and select **Settings (2)** to open up the trigger settings.
 
-![](./assets/extend-pipeline-cloud-flow-trigger-inputs.png)
-8. Select the **ellipsis** at the top-right corner of the trigger and select **settings** to open up the trigger settings
+    ![](./assets/extend-pipeline-cloud-flow-trigger-open-settings(1).png)
 
-![](./assets/extend-pipeline-cloud-flow-trigger-open-settings.png)
-9. Select the **Add** button below trigger conditions to add a trigger condition in the trigger settings
+7. Select the **Add** button below trigger conditions to add a trigger condition.
 
-![](./assets/extend-pipeline-cloud-flow-trigger-settings-add-condition.png)
-10. Add the following trigger condition to make sure the cloud flow only triggers when the pipeline name is equal to `My first pipeline`:
+    ![](./assets/extend-pipeline-cloud-flow-trigger-settings-add-condition.png)
 
-```
-@equals(triggerOutputs()?['body/OutputParameters/DeploymentPipelineName'], 'My first pipeline')
-```
+8. Add the following trigger condition to make sure the cloud flow only triggers when the pipeline name is equal to **My first pipeline**.
 
-11. Select the **Add** button below the trigger condition above to add another trigger condition
+    ```
+    @equals(triggerOutputs()?['body/OutputParameters/DeploymentPipelineName'], 'My first pipeline')
+    ```
 
-![](./assets/extend-pipeline-cloud-flow-trigger-settings-add-another-condition.png)
+9. Select the **Add** button below the trigger condition above to add another trigger condition.    
 
-12. Add the following trigger condition to make sure the cloud flow only triggers when the pipeline name is equal to `Deploy to prod`:
+    ![](./assets/extend-pipeline-cloud-flow-trigger-settings-add-another-condition.png)
 
-```
-@equals(triggerOutputs()?['body/OutputParameters/DeploymentStageName'], 'Deploy to prod')
-```
+10. Add the following trigger condition to make sure the cloud flow only triggers when the pipeline name is equal to **Deploy to prod**.
 
-13. Select the **Done** button at the bottom of the trigger card to save the trigger conditions
+    ```
+    @equals(triggerOutputs()?['body/OutputParameters/DeploymentStageName'], 'Deploy to prod')
+    ```
 
-![](./assets/extend-pipeline-cloud-flow-trigger-settings-save-condition.png)
+11. Select the **Done** button at the bottom of the trigger card to save the trigger conditions.
 
-14. Select the **New step** button to add an action to start and wait for an approval
+    ![](./assets/extend-pipeline-cloud-flow-trigger-settings-save-condition(1).png)
 
-![](./assets/extend-pipeline-cloud-flow-add-action.png)
+12. Select the **New step** button to add an action to start and wait for an approval.
 
-15. Search for `approval` and select the **Start and wait for an approval** action
+    ![](./assets/extend-pipeline-cloud-flow-add-action.png)
 
-![](./assets/extend-pipeline-cloud-flow-add-approval.png)
+13. Search for **approval (1)** and select the **Start and wait for an approval (2)** action.
 
-16. Configure the approval action like the screenshot below:  
+    ![](./assets/extend-pipeline-cloud-flow-add-approval(1).png)
 
-For approval type, select **Approve/Reject - First to respond**  
+14. Configure the approval action as:  
 
-For title, add `Approval requested for`, select **ActionOutputs DeploymentPipelineName** from the dynamic content fields on the right, add ` - `, and select another dynamic content field from the right called **ActionOutputs DeploymentStageName**.  
+    - In **Approval Type**, select **Approve/Reject - First to respond**.  
 
-For assigned to, add the **email address of your user**.
+    - For title, add **Approval requested for**, select **ActionOutputs DeploymentPipelineName** from the dynamic content fields on the right, add ` - `, and select another dynamic content field from the right called **ActionOutputs DeploymentStageName**.  
 
-In production scenarios, this would be an admin that would approve deployments.  
+    - For **Assigned to**, add the **email address of your user**.
+        >**Note:** In production scenarios, this would be an admin that would approve deployments.  
 
-For details, add `# Deployment notes`, add a hard return, and select the **ActionOutputs DeploymentNotes** field from the dynamic content fields on the right.  
+    - For **Details**, add **# Deployment notes**, add a hard return, and select the **ActionOutputs DeploymentNotes** field from the dynamic content fields on the right.  
 
-For item link, select the **ActionOutputs StageRunDetailsLink** field from the dynamic content fields on the right.  
+    - For item link, select the **ActionOutputs StageRunDetailsLink** field from the dynamic content fields on the right.  
 
-For item link description, add `Stage Run Details`.  
+    - For item link description, add **Stage Run Details**.  
 
-![](./assets/extend-pipeline-cloud-flow-configure-approval.png)
+        ![](./assets/extend-pipeline-cloud-flow-configure-approval.png)
 
-17. Select the **New step** button to add a condition below the `Start and wait for an approval` action
+15. Click the **New step** button to insert a condition beneath the **Start and wait for an approval** action.
 
-![](./assets/extend-pipeline-cloud-flow-new-step-after-start-approval.png)
+    ![](./assets/extend-pipeline-cloud-flow-new-step-after-start-approval.png)
 
-18. Add the **Condition** action
+16. Add the **Condition** action.
 
-![](./assets/extend-pipeline-cloud-flow-add-condition.png)
+    ![](./assets/extend-pipeline-cloud-flow-add-condition.png)
 
-19. Add the **Outcome** dynamic content field from the **Start and wait for an approval** action in the first input field of the condition
+17. In the first input field of the condition:
 
-20. Add the text `Approve` to the other input field of the condition
+    - Click inside it. In the dynamic content panel, select **Outcome** under Start and wait for an approval.
 
-21. Select the **Add an action** button in the **If yes** part of the condition and add the **Perform an unbound action** action from the Microsoft Dataverse connector
+18. Add **Approve** to the other input field of the condition.
 
-Select **UpdatePreDeploymentStepStatus** as Action Name.  
+    ![](./assets/extend-pipeline-cloud-flow-add-condition-details(2)(1).png)
 
-Add `20` as the PreDeploymentStepStatus (20 is the status ID for approved).  
+19. In the **If yes** section of the condition,
 
-Add the **Response summary** dynamic content field from the **Start and wait for an approval** action as Comments.  
+    - Click **Add an action**.
 
-Add the following expression via the expression panel to the **Comments** field and select the blue **OK** button:
+    - Search for and select:**Perform an unbound action** (from the Microsoft Dataverse connector).
 
-```
-first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']
-```  
+20. Now configure the action fields:
 
-![](./assets/extend-pipeline-cloud-flow-unbound-action1-expression.png)
+    - Action Name: Select or type **UpdatePreDeploymentStepStatus**.  
 
-Add the **ActionInputs StageRunId** dynamic content field from the **When an action is performed** trigger as StageRunId.  
+    - Add **20** as the PreDeploymentStepStatus (20 is the status ID for approved).  
 
-22. Select the **Add an action** button in the **If no** part of the condition and add the **Perform an unbound action** action from the Microsoft Dataverse connector
+    - Add the **Response summary** dynamic content field from the **Start and wait for an approval** action as Comments.  
 
-Select **UpdatePreDeploymentStepStatus** as Action Name.
+    - Add the following expression via the expression panel to the **Comments** field and select the **OK** button:
 
-Add `30` as the PreDeploymentStepStatus (30 is the status ID for rejected).  
+        ```
+        first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']
+        ```  
 
-Add the **Response summary** dynamic content field from the **Start and wait for an approval** action as Comments.  
+        ![](./assets/extend-pipeline-cloud-flow-unbound-action1-expression.png)
 
-Add the following expression via the expression panel to the **Comments** field and select the blue **OK** button:
+21. Add the **ActionInputs StageRunId** dynamic content field from the **When an action is performed** trigger as StageRunId.  
 
-```
-first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']
-```
+22. In the **If no** section of the condition,
 
-![](./assets/extend-pipeline-cloud-flow-unbound-action2-expression.png)  
+    - Click **Add an action**.
 
-Add the **ActionInputs StageRunId** dynamic content field from the **When an action is performed** trigger as StageRunId.  
+    - Search for and select:**Perform an unbound action** (from the Microsoft Dataverse connector).
 
-![](./assets/extend-pipeline-cloud-flow-unbound-actions.png)
+23. Now configure the action fields: 
+    
+    - Action Name: Select or type **UpdatePreDeploymentStepStatus**.
 
-23. Save the flow
+    - Add **30** as the **PreDeploymentStepStatus** (30 is the status ID for rejected).  
 
-### Test out the approval
+    - Add the **Response summary** dynamic content field from the **Start and wait for an approval** action as Comments.  
+
+    - Add the following expression via the expression panel to the **Comments** field and select the blue **OK** button:
+
+        ```
+        first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']
+        ```
+
+        ![](./assets/extend-pipeline-cloud-flow-unbound-action2-expression.png)  
+
+24. Add the **ActionInputs StageRunId** dynamic content field from the **When an action is performed** trigger as StageRunId.  
+
+    ![](./assets/extend-pipeline-cloud-flow-unbound-actions.png)
+
+23. Click on **Save** to save the flow.
+
+### Task 1.3 : Test and Execute "Deploy to Prod" with Approval Process
 
 In this task, you are going to find out if the approval you configured in the last task actually works!
 
-#### Deploy to prod (with approval)
+1. Go to the [maker portal](https://make.powerapps.com).
 
-1. Go to the [maker portal](https://make.powerapps.com)
-
-1. Check if you are in the **Dev** environment and if not, switch to that environment
+1. Ensure you're in the **Dev** environment; if you're not, switch to it.
 
     ![](./assets/check-environment-dev.png)
 
-1. Go to **Solutions** via the left menu
+1. Go to **Solutions (1)** in the left menu. Select the **MPPC 23 (2)** solution.
 
-1. Select the **MPPC 23** solution by selecting the display name
+    ![](./assets/run-first-pipeline-dev(1).png)
 
-    ![](./assets/run-first-pipeline-dev.png)
+1. Select the **Pipelines** from the left.
 
-1. Select the **rocket icon** on the left
+    ![](./assets/run-first-pipeline-solution(1).png)
 
-    ![](./assets/run-first-pipeline-solution.png)
-
-1. Earlier in this lab, you have made a Pre-Deployment Step required. That means that now, there is an info box on the deploy to prod stage
+1. Earlier in this lab, you have made a Pre-Deployment Step required. That means that now, there is an info box on the deploy to prod stage.
 
     ![](./assets/run-deploy-to-prod-approval-info.png)
 
@@ -201,55 +214,54 @@ In this task, you are going to find out if the approval you configured in the la
 
     ![](./assets/run-deploy-to-prod-approval.png)  
 
-1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple **Next** button to go to the next screen
+1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple **Next** button to go to the next screen.
 
     ![](./assets/run-deploy-to-prod-approval-select-target.png)  
 
-1. Leave everything on default and select the purple Next button on the bottom of the sidebar
+1. Leave everything as default and select the **Next** button.
 
-    This will lead you to the next section called `Summary`. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview
+    >This will lead you to the next section called **Summary**. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview.
 
     ![](./assets/run-first-pipeline-summary-ai-prod.png)
 
-    When you're happy with that AI generated solution overview, select the **Apply** button below the AI suggested solution overview
-
-    Now the AI suggested solution overview is added in the `Deployment notes` box
+1. When you're happy with that AI generated solution overview, select the **Apply** button below the AI suggested solution overview.
+Now the AI suggested solution overview is added in the **Deployment notes** box.
 
     ![](./assets/run-first-pipeline-ai-generated-description-approved-prod.png)
 
-1. Check the AI suggested solution overview to make sure it doesn't include any errors and correct where needed
+1. Review the AI-suggested solution overview to ensure it's free of errors, and make corrections if necessary.
 
-1. Select the purple **Deploy** button
+1. Select the **Deploy** button.
 
-1. Next, you will see the following screen, that shows a yellow box which states that `Your request to deploy here is pending.`
+1. Next, you will see the following screen, that shows a yellow box which states that **Your request to deploy here is pending**.
 
     ![](./assets/run-deploy-to-prod-pending.png)
 
-1. This message is showing because our changes in the beginning of the lab made sure that the Power Automate cloud flow is now triggered. We are working on a fresh environment, so it can take a while before the approval solution is deployed. Best is to take a break now, since it can take 5-10 minutes before your next step
+1. This message is showing because our changes in the beginning of the lab made sure that the Power Automate cloud flow is now triggered. We are working on a fresh environment, so it can take a while before the approval solution is deployed. Best is to take a break now, since it can take 5-10 minutes before your next step.
 
-1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After 5-10 minutes (only the first time!) it should arrive
+1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After 5-10 minutes (only the first time!) it should arrive.
 
 1. In the approval mail you will see a couple of familiar parts:  
 
-    You will see the title of the approval (1)  
+    - You will see the title of the **Approval (1)**.  
 
-    You will see the deployment notes (2)  
+    - You will see the **Deployment notes (2)**.  
 
-    You will see approve / reject buttons (3)  
+    - You will see **Approve / Reject buttons (3)**.  
 
-    You will be able to add comments (4)  
+    - You will be able to add **Comments (4)**.  
 
-    You will be able to submit the approval / rejection (5)  
+    - You will be able to **Submit (5)** the approval / rejection.  
 
-1. Make sure to select **Approve** in the approval email, add `Approved!` as comments and select the **Submit** button
+1. Make sure to select **Approve** in the approval email, add **Approved!** as comments and select the **Submit** button.
 
     ![](./assets/run-deploy-to-prod-approval-outlook.png)  
 
-1. Close the Outlook browser tab, and you will see (sometimes you have to refresh) that the deployment to production is in progress
+1. Close the Outlook browser tab, and you will see (sometimes you have to refresh) that the deployment to production is in progress.
 
     ![](./assets/run-deploy-to-prod-approval-in-progress.png)
 
-1. After the deployment is finished, you will see that the deployment is finished
+1. After the deployment is finished, you will see that the deployment is finished.
 
     ![](./assets/run-deploy-to-prod-approval-finished.png)
 
@@ -261,7 +273,7 @@ In the meantime, you should've gotten another email.
 
 1. Go to [Outlook web](https://outlook.office.com)
 
-1. Look for an email with the subject `Solution checked for issues during import`
+1. Look for an email with the subject **Solution checked for issues during import**.
 
     It should look something like this:
 
