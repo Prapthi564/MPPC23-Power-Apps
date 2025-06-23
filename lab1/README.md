@@ -73,7 +73,9 @@ For this workshop, we are going to be using GitHub.
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
     - Under **Inbox** open the **Email** that was sent to you from GitHub and **Copy** the code
-        ![GitHub Sign up](../Media/Git4.png) 
+
+        ![GitHub Sign up](../Media/Git4.png)
+
 1. Enter the code that was sent to your email address on the GitHub website and click **Continue** to confirm the email address. This should lead you to the sign in page.
     
     - Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and **Password:**  <inject key="AzureAdUserPassword"></inject> **(2)** and click on **Sign in** **(3)**
@@ -161,7 +163,6 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 1. You will see a Pop-up **Are you trying to sign in to Power Platform CLI - pac**. Click **Continue**
 
     ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/CLI7.png)
-
 
     > **Note:** You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
