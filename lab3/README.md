@@ -63,6 +63,12 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
     As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
 
+6. As you scroll down, you’ll notice the following content beneath:
+
+    ![](./assets/create-pipeline-new-pipeline-saved(1).png)
+
+    As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
+
     **Linked Development Environments**
 
     A pipeline can be connected to multiple development environments. This is especially useful when you work with several development setups while sharing the same test and production environments.
