@@ -200,9 +200,6 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
     > **Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
 
-
-
-
 1. Now, let’s add a **Status** column within the  Showing table. In the text box within the **Copilot** pane, type and send:
 
     `Add a column for Status to the Showing table`
