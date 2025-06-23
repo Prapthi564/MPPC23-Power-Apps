@@ -1,4 +1,4 @@
-# Hands-On Lab - Build, Deploy and Scale Power Apps
+# Hands-On Lab - Build, Deploy, and Scale Power Apps
 
 ### Overall Estimated Duration: 8 Hours
 
@@ -8,13 +8,13 @@ The hands-on lab workshop will begin by guiding you through how to build scalabl
 
 ## Getting Started with the Lab
  
-Welcome to your Build, Deploy and Scale Power Apps workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Build, Deploy, and Scale Power Apps workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and guide will be right at your fingertips within your web browser.
  
-![](./images/29042025(88).png)
+![](./Media/accessing-lab-env.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -24,23 +24,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](./images/29042025(89).png)
+![](./Media/Environment.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![alt text](image-9.png)
+![](./Media/slit-window.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![alt text](image-10.png)
+![](./Media/resources.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+
+![](./Media/zoomin.png)
 
 ## Support Contact
  
@@ -52,6 +54,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
  
-![alt text](image-8.png)
+![](./Media/next.png)
 
 ### Happy Learning!!
