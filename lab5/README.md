@@ -69,6 +69,18 @@ In this task, you will add the Connected Service for Power Platform to your ASP.
 
 1. Once the connected service is configured, select **Close**.
 
+> **Note:** If you encounter an error stating that the `Swashbuckle.AspNetCore` package is not found, you may need to install it manually. Follow the steps below:
+>
+> - In **Solution Explorer**, right-click on the project (not the solution) you have created.
+> - Select **"Open in Terminal"**.
+> - Run the following command in the terminal:
+>   ```
+>   Install-Package Swashbuckle.AspNetCore
+>   ```
+> - If prompted, type **A** to accept all license agreements.
+> - Once installed, try the previous steps again.
+
+
 ## ☑️ Task 3: Create a canvas app with the custom connector
 
 When Visual Studio runs a web app and a tunnel is active, the web browser opens to a tunnel URL instead of a localhost URL.
