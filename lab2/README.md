@@ -329,94 +329,78 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 1. A single record in the gallery should now look like this:
 
-    ![](../Media/L2T44.png)
+    ![](../Media/bs61.png)
 
-1. On the app main screen, select the **Form** control.
+1. Now, let's make a new request for a property showing within the app.
 
-    ![](../Media/L2T45.png)
-
-20. On the **Top** pane on the right, select **Edit fields** **(1)** drop down menu.
-
-31. Now within the **Fields** pane, expand the **ID** **(2)** field.
-
-32. From the **Control type** drop-down, change the type to **View text** **(3)**.
-
-    ![](../Media/L2T46.png)
-
-    > **Note:** Because we previously changed the ID field to Autonumber, we don’t want the users putting in their own number; Dataverse is going to autonumber it for us.
-
-33. Now click elsewhere to come back to the Tree view.
-
-34. Now, let's make a new request for a property showing within the app.
-
-35. From the top of the screen, select the Play button.
+1. From the top of the screen, select the **Play** button.
 
     ![](../Media/L2T47.png)
 
-36. Within the pane to the left of the app, select the **+New** button.
+1. Within the pane to the left of the app, select the **+New** button.
 
-    ![The new button is highlighted.](../Media/L2T2S36.png)
+    ![The new button is highlighted.](../Media/bs62.png)
 
-37. Although you could modify the form to autofill the fields for you, we're going to do so ourselves to show that the app works.
+1. Although you could modify the form to autofill the fields for you, we're going to do so ourselves to show that the app works.
 
-38. Fill in the following fields with the information below:
+1. Fill in the following fields with the information below:
 
-    - Agent Name: < Your name >
-    - Client Full Name: < Your name >
-    - Client Email: < Your email >
-    - Date: < Any future date >
-    - Time: < Any future time >
-    - Showing: Active
-    - Property: 123 Main St
-    - Status: `Pending`
-    - Address: `210 Pine Road, Portland, OR 97204`
+    - Property Address: `210 Pine Road, Portland, OR 97204` **(1)**
+    - Agent Name: < Your name > **(2)**
+    - Client Full Name: < Your name > **(3)**
+    - Appointment Status: `Pending` **(4)**    
+    - Showing Date: < Any future date > **(5)**    
+    - Time: < Any future time > **(6)**
+    - Client Name: < Your name > **(7)**
+    - Client Email: < Your email > **(8)**
 
-    > **Note**
-    >
-    > This address is one of the addresses from the Excel file in Module 1. The same file which we uploaded and turned into the **Real Estate Properties** table.
-    >
-    > Usually, you would have a lookup field to the **Real Estate Properties** table, but we're going to keep it simple for this lab.
+    > **Note**: This address is one of the addresses from the Excel file in Module 1. The same file which we uploaded and turned into the **Real Estate Properties** table.
 
-39. Then select the checkmark in the top right corner of the screen.
+1. Then select the checkmark in the top right corner of the screen **(9)**.
 
-    ![The checkmark is highlighted.](../Media/copilot-checkmark.png)
+    ![The checkmark is highlighted.](../Media/bs63.png)
 
-40. Now, select the **X** in the top right corner to close out of the app.
+1. Now, select the **X** in the top right corner to close out of the app.
 
-    If a dialog appears saying: **Did you know?**, select OK.
+    If a dialog appears saying: **Did you know?**, select **OK**.
 
-    Notice that the new request has been added to the list of requests to the left of the app.
+1. Notice that the new request has been added to the list of requests to the left of the app.
 
-41. From the top of your screen, select the **Save** button to save the new app you have created.
+    ![The checkmark is highlighted.](../Media/bs64.png)
 
-    ![](../Media/L2T2S36.png)
+1. From the top of your screen, select the **Save** button to save the new app you have created.
 
-    If asked, save app name as **Real Estate Showings**.
+    ![](../Media/bs65.png)
 
-42. Select the publish icon to publish the app
+1. If asked, save app name as **Real Estate Showings (1)** and then **Save (2)**.
 
-    ![](../Media/L2T49.png)
+    ![](../Media/bs66.png)
 
-43. Generate a description using AI by selecting the **Create description using AI** button
+1. Select the **Publish** icon to publish the app
+
+    ![](../Media/bs67.png)
+
+1. Generate a description using AI by selecting the **Create description using AI** button
 
     ![](../Media/L2T50.png)
 
-44. Check if the description is correct. If not, correct it and select the **Publish this version** button. If yes, select the **Publish this version** button.
-    > **Note:** The description may vary as we are generating using Copilot.
+1. Check if the description is correct. If not, correct it and select the **Publish this version** button. If yes, select the **Publish this version** button.
 
-    ![](../Media/L2T51.png)
+    ![](../Media/bs68.png)
+
+     >**Note:** The description may vary as we are generating using Copilot.    
     
-45. Exit the app to return to the Power Apps home page.
+1. Exit the app to return to the Power Apps home page.
 
 Congratulations! You have now created a Power Apps Canvas App with Copilot!
 
-## ☑️ Task 3: Create a solution
+### ☑️ Task 3: Create a solution
 
 In this task, you will create a solution for the components we just created via Copilot!
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/) and Sign in with your Power Apps credentials.
+1. Navigate to the [make.powerapps.com](https://make.powerapps.com/) and Sign in with your Power Apps credentials.
 
-1. From the Power Apps home screen, select Solutions in the left navigation.
+1. From the **Power Apps** home screen, select **Solutions** in the left navigation.
 
     ![](../Media/L2T3S2.png)
 
@@ -424,9 +408,9 @@ In this task, you will create a solution for the components we just created via 
 
     ![](../Media/L2T3S3.png)
 
-1. Add the solution name `MPPC 23` and select **+ New publisher**
+1. Add the solution name `MPPC 23` **(1)** and select **+ New publisher (2)**.
 
-    ![](../Media/L2T3S4.png)
+    ![](../Media/bs69.png)
 
 1. Add the details below
 
@@ -435,17 +419,15 @@ In this task, you will create a solution for the components we just created via 
     - Prefix: **mppc** **(3)**. 
     - Select **Save** **(4)** when you're done.
 
+      ![](../Media/bs70.png)
 
-    ![](../Media/L2T3S5.png)
-
-1. The newly created publisher will be automatically selected in the **Publisher** dropdown. Leave other settings as default and Select the **Create** button at the bottom.
+1. The newly created publisher will be automatically selected in the **Publisher** dropdown **(1)**. Leave other settings as default and Select the **Create (2)** button at the bottom.
 
     ![](../Media/L2T3S6.png)
 
-    > **Notes:** This concludes task 3, you have created the `MPPC 23` solution.
+     > **Notes:** This concludes task 3, you have created the `MPPC 23` solution.
 
-
-## ☑️ Task 4: Add the resources created by Power Apps Copilot to a solution
+### ☑️ Task 4: Add the resources created by Power Apps Copilot to a solution
 
 In this task, you will add the components we just created via Copilot to the `MPPC 23` solution!
 
