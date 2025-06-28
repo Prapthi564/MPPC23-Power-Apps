@@ -9,14 +9,14 @@ In this lab, you will go though the following tasks:
 - Creating A Solution
 - Add The Resources Created By Power Apps Copilot To A Solution
 
-## ☑️ Task 1: Create A Canvas App With Data From An Excel-File
+### ☑️ Task 1: Create A Canvas App With Data From An Excel-File
 
 In this task, you will:
 
 - Create a Canvas App using Excel to App
 - Customize galleries by using Power Apps Ideas to generate Power Fx formulas
 
-### Introduction To Excel To App
+#### Introduction To Excel To App
 
 With Excel to App, you'll select an Excel file, create an app, and then run the app that you create. Every app created includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs.
 
@@ -26,85 +26,96 @@ If your environment is in the US region and AI is enabled in your organization, 
 
 In this task, you’ll create an application with data from an Excel table.
 
-> **Note:**
->
-> Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-platform/admin/pricing-billing-skus).
+> **Note:** Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-platform/admin/pricing-billing-skus).
 
-### Explore The Excel To Power App Functionality
+#### Task 1.1 Explore The Excel To Power App Functionality
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/) and sign In with your credentials if required.
+1. Navigate to the [make.powerapps.com](https://make.powerapps.com/) and sign In with your credentials if required.
 
-2. From the Power Apps home screen, Go to **Apps** **(1)** and select **Start with data** **(2)**.
+1. From the Power Apps home screen, make sure to select **Dev (1)** environment, then go to **Apps** **(2)** and select **Start with data** **(3)**.
 
-    ![Start with data](../Media/L2T11.png)
+    ![Start with data](../Media/bs27.png)
 
-3. Then click on **Create new tables** and then click on **Import an Excel file or .CSV**.
+1. Then click on **Create new tables**.
 
     ![](../Media/L2T12.png)
+
+1. Then click on **Import an Excel file or .CSV**.
+    
     ![](../Media/L2T13.png)
 
-4. Click **Select from device** and navigate to the location **`C:\LabFiles`** **(1)**, select the **RealEstateProperties.xlsx** **(2)** Excel file and click on **Open** **(3)**. The maximum file size limit is 5 GB.
+1. Click **Select from device**.
 
-    ![](../Media/L2T14.png)
+    ![](../Media/bs28.png)
+
+1. Navigate to the location **`C:\LabFiles`** **(1)**, select the **RealEstateProperties.xlsx** **(2)** Excel file and click on **Open** **(3)**. The maximum file size limit is 5 GB.
+
     ![](../Media/L2T15.png)
 
-5. Now click on **Import**.
+1. Now click on **Import**.
    
     ![](../Media/L2T16.png)
 
-7. Now, click on the **Elipse** and then click on **Properties**.
+1. Now, click on the **Elipses (1)** and then click on **Properties (2)**.
 
     ![](../Media/L2T17.png)
 
-8. On the **Edit Table** pop up, enter the Display name: **Real Estate Property** **(1)**, and enter the Plural Name: **Real Estate Properties** **(2)**, and make sure Primary column is **Address** **(3)**. Select **Save** **(4)**.
+1. On the **Edit Table** pop up,
 
-    ![](../Media/L2T18.png)
+    - Display name: Enter **Real Estate Property** **(1)**
+    - Plural Name: Enter **Real Estate Properties** **(2)**
+    - Make sure Primary column is **Address** **(3)**
+    - Select **Save** **(4)**
 
-9. Select the **Save and open app** button on the top right-hand corner of the screen. And if a pop up comes up click on **Save and open app** again.
+      ![](../Media/L2T18.png)
+
+1. Select the **Save and open app** button on the top right-hand corner of the screen. 
 
     ![](../Media/L2T19.png)
 
-10. When the app first loads, a dialog may appear saying: Welcome to Power Apps Studio. If so, select the Skip button.
+1. If a pop up comes up click on **Save and open app** again.    
 
-11. You should now be viewing the app that has been generated for you in Edit mode.
+1. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the **Skip** button.
 
-    ![](../Media/L2T20.png)
+1. You should now be viewing the app that has been generated for you in Edit mode.
 
-12. On the Left navigation pane, select the **Data icon**. Notice that a Dataverse table, based on the RealEstateProperties.xlsx Excel file, has been created.
+    ![](../Media/bs29.png)
 
-    ![](../Media/L2T21.png)
+1. On the Left navigation pane, select the **Data icon (1)**. Notice that a Dataverse table, based on the **RealEstateProperties.xlsx (2)** Excel file, has been created.
 
-13. Select the **Tree view icon** to return to the Tree view.
+    ![](../Media/bs30.png)
 
-    ![](../Media/L2T22.png)
+1. Select the **Tree view icon** to return to the Tree view.
 
-14. Under Tree View, click on **Real Estate Properties screen** **(1)** drop down, then click on **ScreenContainer1** **(2)** drop down, then click on **BodyContainer1** **(3)** drop down, and then click on **RecordsGallary1** **(4)** inside **SidebarContainer**
+    ![](../Media/bs31.png)
 
-    ![](../Media/L2T23.png)
+1. Under Tree View, click on **Real Estate Properties screen** **(1)** drop down, then click on **ScreenContainer1** **(2)** drop down, then click on **BodyContainer1** **(3)** drop down, then click on **SidebarContainer1 (4)** and then expnad **RecordsGallary1** **(5)**.
 
-15. Right click on the **NextArrow1** of RecordsGallery and click on **Delete**.
+    ![](../Media/bs32.png)
 
-    ![](../Media/L2T24.png)
+1. Right click on the **NextArrow1 (1)** of RecordsGallery and click on **Delete (2)**.
 
-16. Select the **RecordsGallery1** **(1)** and then select the **edit button** **(2)** to put the gallery in edit mode.
+    ![](../Media/bs33.png)
+
+1. Select the **RecordsGallery1** **(1)** and then select the **edit button** **(2)** to put the gallery in edit mode.
 
     ![](../Media/L2T25.png)
 
-17. Drag the **Title component** so that it's position is towards the right-hand side of the template cell.
+1. Drag the **Title component** so that it's position is towards the right-hand side of the template cell.
 
     ![](../Media/L2T26.png)
 
->**Note:** The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above.
+     >**Note:** The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above.
 
-17. Make sure that the gallery is still in edit mode. Select the Title.
+1. Make sure that the gallery is still in edit mode. Select the **Title (1)**.
 
-18. Make sure that the Text value of the Title component is set to the following formula:
+    - Make sure that the Text value of the Title component is set to the following formula:
 
-    `ThisItem.Address`
+      `ThisItem.Address` **(2)**
 
-    ![](../Media/L2T27.png)
+      ![](../Media/bs34.png)
 
-19. Now select the **Subtitle component** **(1)** in the gallery.
+1. Now select the **Subtitle component** **(1)** in the gallery.
 
     - Set the Text value suffix of the Subtitle to the following formula:
 
@@ -112,79 +123,102 @@ In this task, you’ll create an application with data from an Excel table.
 
     - Using the tool bar at the top of the page, change the Size to **13** **(3)**.
 
-    ![](../Media/L2T28.png)
+      ![](../Media/bs36.png)
 
-20. Finally, select the Body component in the gallery.
+1. Finally, select the **Body** component in the gallery **(1)**.
 
-21. Make sure the Text value of the Body is set to the following formula:
+    - Make sure the Text value of the Body is set to the following formula:
 
-    **`ThisItem.Price`**
+      **`ThisItem.Price` (2)**
 
-22. Your gallery should now look like this:
+      ![](../Media/bs37.png)      
+
+1. Your gallery should now look like this:
 
     ![Gallery](../Media/gallery-check-after-edits.png)
 
-23. Make sure the **RecordsGallery1** is still in edit mode. Then click on **Insert** **(1)**, then  search for **Image** **(2)**, and then select the **Image** **(3)** component.
+1. Make sure the **RecordsGallery1** is still in edit mode. Then click on **Insert** **(1)**, then  search for **Image** **(2)**, and then select the **Image** **(3)** component.
 
     ![](../Media/L2T29.png)
 
-24. The image will then be added to your gallery. Reposition and resize the image so that it is in the center of each gallery cell.
+1. The image will then be added to your gallery. Reposition and resize the image so that it is in the center of each gallery cell.
 
     ![](../Media/center-image.png)
 
-25. Make sure the gallery is still in edit mode. And select the gallery **Body** **(1)** containing the Price, then change the Text value to **Text(ThisItem.Price, "$#,##0", "en-US")** **(2)** next to the Copilot icon. The body value will change as displayed in the screenshot below.
+1. Make sure the gallery is still in edit mode. And select the gallery **Body** **(1)** containing the Price,
 
-    ![](../Media/L2T30.png)
+    - Change the Text value to **Text(ThisItem.Price, "$#,##0", "en-US")** **(2)** next to the Copilot icon. The body value will change as displayed in the screenshot below.
 
+      ![](../Media/L2T30.png)
 
-26. Select the **subtitle** **(1)** of the gallery, and thenchange the Text value to **"Size: " & Text(ThisItem.Size, "#,##0", "en-GB") & " sq ft"** **(2)** next to the Copilot icon. The body value will change as displayed in the screenshot below.
+1. Select the **Subtitle** **(1)** of the gallery, 
 
-    ![](../Media/L2T31.png)
+    - Change the Text value to **"Size: " & Text(ThisItem.Size, "#,##0", "en-GB") & " sq ft"** **(2)** next to the Copilot icon. The body value will change as displayed in the screenshot below.
 
+      ![](../Media/L2T31.png)
 
-27. Click on **Save** **(1)** and then click on **Publish** **(2)**on the top right corner.
+1. Click on **Save**.
 
-    ![](../Media/L2T32.png)
+    ![](../Media/bs38.png)
 
-28. Leave everything as default and click on the **Publish this version** button. 
+1. Provide **App (1)** for App name and then click on **Save**.
 
-    ![](../Media/L2T33.png)
+    ![](../Media/bs39.png)
 
-29. Click on **<- Back** to exit the app to return to the Power Apps home page. Click on Leave if you see a pop-up.
+1. Then click on **Publish** on the top right corner.
+
+    ![](../Media/bs40.png)
+
+1. Leave everything as default and click on the **Publish this version** button. 
+
+    ![](../Media/L2T33.png)    
+
+1. Wait for the app to Publish successfully.
+
+    ![](../Media/bs41.png)
+
+1. Click on **<- Back** to exit the app to return to the Power Apps home page. 
 
     ![](../Media/exit-app.png)
 
-## ☑️ Task 2: Create a Canvas App with Power Apps Copilot
+1. Click on **Leave** if you see a pop-up.
+
+1. Select **Cancel** to get back to the Power Apps home page.
+
+    ![](../Media/bs42.png)
+
+
+### ☑️ Task 2: Create a Canvas App with Power Apps Copilot
 
 In this task, you’ll create an application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
 > **Note:** Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-apps/administrator/pricing-billing-skus/).
 
-### Explore AI Copilot within Power Apps
+#### Task 2.1 Explore AI Copilot within Power Apps
 
 > **Note:** Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
 
 1. Make sure you are in the **Dev environment** in the Power Apps Maker Portal.
    
-2. From the left-hand navigation, click on **Apps**, then select **Start with Copilot**.
+1. From the left-hand navigation, click on **Apps (1)**, then select **Start with Copilot (2)**.
     
-    ![](../Media/L2T2S2.png)
+    ![](../Media/bs43.png)
 
-3. In the **Get started with Copilot** text field, enter the following **prompt (1)**:
+1. In the **Get started with Copilot** text field, enter the following **prompt (1)**:
 
     `build an app to manage real estate showings`
 
-4. Click on the **filter icon (3)**, select **one table (3)**, and then click on the **Generate (4)** button.
+1. Click on the **filter icon (3)**, select **one table (3)**, and then click on the **Generate (4)** button.
 
     ![](../Media/L2TT2.png)
 
-5. Once AI Copilot generates a table based on your prompt, review the table to see the columns that have been created as a starting point.
+1. Once AI Copilot generates a table based on your prompt, review the table to see the columns that have been created as a starting point.
 
-6. To view the sample data added by Copilot, click on the **three ellipses (⋯)** next to the table and select **View data**.
+1. To view the sample data added by Copilot, click on the **three ellipses (⋯)** next to the table and select **View data**.
    
     ![](../Media/L2TT3.png)
 
-7. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
+1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
 
     **`add a column for client full name in Real Estate Showing table`** **(1)**
 
