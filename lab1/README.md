@@ -17,7 +17,7 @@ In this lab, you will go through the following tasks:
 - Task 9: Deploy the pipelines solution to your Prod environment
 - Task 10: Enable Dataverse settings
 
-## Task 1: Log in to your account
+### Task 1: Log in to your account
 
 With the credentials provided in the Environment Details tab, let's log into the account you will use during the workshop.
 
@@ -40,7 +40,7 @@ With the credentials provided in the Environment Details tab, let's log into the
 
     ![Power apps home page](../Media/power-apps-home-page.png)
 
-## Task 2: Create a GitHub account
+### Task 2: Create a GitHub account
 
 For this workshop, we are going to be using GitHub.
 
@@ -58,12 +58,13 @@ For this workshop, we are going to be using GitHub.
 
     - Uncheck **Receive occasional product updates and announcements** **(4)** and then click **Continue** **(5)**
         
-        ![GitHub Sign up](../Media/signup-to-github.png)
+      ![GitHub Sign up](../Media/bs1.png)
 
-    -  Click on the visual puzzle and solve the puzzle to verify your account, and then click **Continue**
+    -  Click on the **Visual puzzle** 
         
-        ![GitHub Sign up](../Media/signup-to-github2.png)
+       ![GitHub Sign up](../Media/bs2.png)
 
+     - Solve the puzzle to verify your account, and then click **Continue**  
             
 1. Go to [Outlook for the web](https://outlook.office.com) in a new tab and sign in with the credentials below,
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -82,7 +83,7 @@ For this workshop, we are going to be using GitHub.
 
 You now have a GitHub account. Welcome to the GitHub community!
 
-## Task 3: Create a fork of the repository for this workshop
+### Task 3: Create a fork of the repository for this workshop
 
 Now that you have a GitHub account, we are going to create a fork of the repository for this workshop. A fork is a copy of an existing repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
@@ -98,37 +99,45 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 
 1. Once you have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **MPPC23-Power-Apps forked from microsoft/MPPC23-Power-Apps**.
 
-## Task 4: Create a GitHub Codespace
+    ![](../Media/bs3.png)
+
+### Task 4: Create a GitHub Codespace
 
 A codespace is a cloud-hosted development environment you can access from anywhere. It has everything you need, including a text editor, terminal, and debugger. Codespaces are powered by Visual Studio Code and run in a containerized environment. For this workshop, we are going to use CodeSpaces to do our development.
 
-1. Make sure that you are in your forked repository odl-user-<inject key="DeploymentID" enableCopy="false"/> / MPPC23-Power-Apps and then find and click on the **<> Code** **(1)** button.
+1. Make sure that you are in your forked repository **odl-user-<inject key="DeploymentID" enableCopy="false"/> / MPPC23-Power-Apps** and then find and click on the **<> Code** **(1)** button.
 
-1. On the **Code** pop up, select the **Codespaces** **(2)** tab.
+    - On the **Code** pop up, select the **Codespaces** **(2)** tab.
 
-1. Click **Create codespace on main** **(3)**.
+    - Click **Create codespace on main** **(3)**.
 
-    ![TODO: Add image of code button](../Media/Code1.png)
+      ![TODO: Add image of code button](../Media/Code1.png)
 
-    A codespace will now be created for you in a new tab. This will take a few seconds. But once it's done, you will have a fully functional Visual Studio Code environment in your browser. You can now start developing!
+1. A codespace will now be created for you in a new tab. This will take a few seconds. But once it's done, you will have a fully functional **Visual Studio Code** environment in your browser. You can now start developing!.
 
-## Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
+    ![](../Media/bs4.png)
+
+### Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
 
 1. In your codespace, you will see a pop-up for **Power Platform Tools** Extension,  click on **Allow**.
 
-    ![Power Platform Pop-up](../Media/Code2.png)
+    ![Power Platform Pop-up](../Media/bs5.png)
+
+1. If prompted, select the your user account **<inject key="AzureAdUserEmail"></inject>**.
+
+    ![](../Media/bs6.png)
 
 1. In your codespace, click on the **Power Platform** icon on the left navigation pane.
 
-    ![Power Platform Extension](../Media/CLI1.png)
+    ![Power Platform Extension](../Media/bs7.png)
 
-    You'll more than likely see that there is "No auth profiles found on this computer". Let's create one.
+1. You'll more than likely see that there is **No auth profiles found on this computer**. Let's create one.
 
     ![Screenshot of no auth profiles found](../Media/CLI2.png)
 
 1. If you don't see it open already, let's open the Terminal. Click on the **Burger menu icon** **(1)** in the top left corner and then hover over **Terminal** **(2)** and then click **New Terminal** **(3)**
 
-    ![Screenshot of new terminal menu](../Media/CLI3.png)
+    ![Screenshot of new terminal menu](../Media/bs8.png)
 
     A terminal window has now been opened for you. This is where you will write all of the following commands in this lab and in the upcoming labs as well.
 
@@ -144,35 +153,35 @@ A codespace is a cloud-hosted development environment you can access from anywhe
     
     ![Screenshot of the terminal with the code and link](../Media/CLI4.png)
 
-    - Once you click on that link, it will open a new browser tab where you will have to **Paste** that code into the browser and then click **Next**
+    - Once you click on that link, it will open a new browser tab where you will have to **Paste** that code into the browser **(1)** and then click **Next (2)**
 
-        ![Enter code and click next](../Media/CLI5.png)
+        ![Enter code and click next](../Media/bs9.png)
 
 1. Choose the lab user **Email/Username:** <inject key="AzureAdUserEmail"></inject>.
     
     > Note: If you can't see it on screen, then log in.
 
-    ![Screenshot of the account selection page](../Media/CLI6.png)
+    ![Screenshot of the account selection page](../Media/bs6.png)
 
 1. Then type in your password and click **Sign in**
 
 1. You will see a Pop-up **Are you trying to sign in to Power Platform CLI - pac**. Click **Continue**
 
-    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/CLI7.png)
+    ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](../Media/bs10.png)
 
     > **Note:** You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
-    ![Successful sign in](../Media/CLI8.png)
+    ![Successful sign in](../Media/bs11.png)
 
-1. If you don't see any **Auth Profiles**, refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
+1. If you don't see any **Auth Profiles**, refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles".
 
-    ![Screenshot of the Auth Profiles section with the Refresh button](../Media/CLI9.png)
+    ![Screenshot of the Auth Profiles section with the Refresh button](../Media/bs12.png)
 
     > **Note:** You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
 
-    ![Select Auth Profile](../Media/CLI10.png)
+    ![Select Auth Profile](../Media/bs13.png)
 
-## Task 6: Create developer environments
+### Task 6: Create developer environments
 
 Developer environments are very helpful when you want to try out features; they are meant to be short-lived environments.
 
@@ -193,7 +202,7 @@ To create developer environments, you can create them in multiple ways:
 
 In this workshop, we will create one environment through the UI, one via PPAC, and the last one via the CLI, so that you know all about how to create developer environments.
 
-### Create the 'Dev` environment by subscribing to the developer plan
+#### Task 6.1 Create the 'Dev` environment by subscribing to the developer plan
 
 Currently, if you want to get all that the Power Platform offers, you're required to subscribe to the Power Apps Developer Plan. In this part, we will walk you through all the steps:
 
@@ -204,7 +213,7 @@ Currently, if you want to get all that the Power Platform offers, you're require
 
 1. Enter the **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**, select the **Check box** **(2)** to agree to terms, and click on **Start Free** **(3)**.
 
-    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](../Media/Dev2.png)
+    ![Sign up page for Power Apps Developer Plan with options to request a license, buy a license or sign up for a community plan](../Media/bs14.png)
 
 1. If required, enter the **Password:** <inject key="AzureAdUserPassword"></inject> and click on **Sign in**.
 
@@ -236,17 +245,15 @@ Currently, if you want to get all that the Power Platform offers, you're require
     ![](../Media/Dev6.png)
 
 
-### Create a new **QA** environment via the Power Platform Admin Center (PPAC).
+#### Task 6.2 Create a new **QA** environment via the Power Platform Admin Center (PPAC).
 
 We are going to create a QA environment through the Power Platform Admin Center.
 
-1. Select **Environments** under **Manage**.
+1. Select **Environments (2)** under **Manage (1)** and then select **+ New (3)** in the top navigation pane.
 
-1. Select **+ New** in the top navigation pane.
+    ![Environment + New for adding environments](../Media/bs15.png)
 
-    ![Environment + New for adding environments](../Media/Dev7.png)
-
-1. When the right-hand side dialog pops up - enter the following information:
+1. When the right-hand side dialog pops up - enter the following information and then click on **Next (5)**.
 
     | Field | Value |
     | --- | --- |
@@ -257,13 +264,11 @@ We are going to create a QA environment through the Power Platform Admin Center.
 
     ![Create new Developer Environment](../Media/Dev8.png)
 
-1. Select **Next** **(5)**
-
 1. Leave everything to default and click on **Save**
 
     ![Save new Developer Environment](../Media/Dev9.png)
 
-### Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
+#### Task 6.3 Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
 
 We will create the last environment we are going to create via the Power Platform CLI. Because we don't have to go through the UI, and we don't have to load anything, this will go way faster than the other options.
 
@@ -275,9 +280,9 @@ We will create the last environment we are going to create via the Power Platfor
 
     | Field | Value |
     | --- | --- |
-    | Name | Prod |
-    | Region | US - Default |
-    | Type | Developer |
+    | Name | **Prod** |
+    | Region | **US - Default** |
+    | Type | **Developer** |
 
 1. Run the following command in the terminal in your codespace:
 
@@ -285,13 +290,15 @@ We will create the last environment we are going to create via the Power Platfor
     pac admin create --name "Prod" --type "Developer"
     ```
 
-    > **Note:** We won't be using `purpose` here, because the Power Platform CLI doesn't have a parameter for this. Also, we are using the defaults for `region` and `currency`, so we don't have to add those to the command.
+     ![Environment + New for adding environments](../Media/bs16.png)    
+
+      >**Note:** We won't be using `purpose` here, because the Power Platform CLI doesn't have a parameter for this. Also, we are using the defaults for `region` and `currency`, so we don't have to add those to the command.
 
 1. Once you have created all three environments, you should see them in the list of environments. Click the **Refresh** button on the top navigation if you don't see them yet.
 
     ![List of developer environments](../Media/Dev11.png)
 
-## Task 7: Switch between environments with the Power Platform CLI
+### Task 7: Switch between environments with the Power Platform CLI
 
 1. In the terminal, type the following command and then press **Enter**:
 
@@ -305,19 +312,19 @@ We will create the last environment we are going to create via the Power Platfor
 
     ![Screenshot of pac org list](../Media/T71.png)
 
-1. Copy the Environment ID of the **Dev** Environment and paste it into Notepad.
+1. Copy the **Environment ID** of the **Dev** Environment and paste it into Notepad.
 
     ![Copy of Dev environment ID](../Media/T72.png)
 
-1. Then in the terminal, type the following command and then press **Enter**. Make sure to replace ```00000000-0000-0000-0000-000000000000``` with the environment id that you copied above
+1. Then in the terminal, type the following command and then press **Enter**. Make sure to replace ```00000000-0000-0000-0000-000000000000``` with the **Environment id** that you copied above.
 
     ```bash
-    pac org select --environment 00000000-0000-0000-0000-000000000000
+    pac org select --environment <00000000-0000-0000-0000-000000000000>
     ```
 
     - You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
 
-        ![Screenshot of pac org select confirmation](../Media/T73.png)
+      ![Screenshot of pac org select confirmation](../Media/bs17.png)
 
 1. To have further confirmation that you have successfully connected to the **Dev** environment, in the terminal type the following command and then press **Enter**:
 
@@ -329,41 +336,41 @@ We will create the last environment we are going to create via the Power Platfor
 
     ![Screenshot of pac org who confirmation information](../Media/T74.png)
 
-## Task 8: Enable Managed Environments on all environments
+### Task 8: Enable Managed Environments on all environments
 
 In this task, you will learn how to enable Managed Environments on all environments you just created.
 
 1. Go back to the [Power Platform Admin Center](https://aka.ms/ppac) tab.
 
-1. Select **Environments** under **Manage** in the left navigation pane.
+1. Select **Environments (2)** under **Manage (1)** in the left navigation pane.
 
-1. Select **Dev** and click on **Enable Managed Environments** button at the top.
+    - Select **Dev (3)** and click on **Enable Managed Environments (4)** button at the top.
 
-    ![](../Media/T81.png)
+      ![](../Media/bs18.png)
 
 1. Make sure you review the **Licensing details** **(1)**. Leave everything else as default and click on **Enable** **(2)**.
 
-    ![](../Media/T82.png)
+    ![](../Media/bs19.png)
 
-1. **Repeat steps 3-5** for both the QA and Prod environments.
+1. **Repeat steps 3-5** for both the `QA` and `Prod` environments.
 
 1. Once enabled for the other two environments, you should see **Yes** in the **Managed** column for all three environments.
 
     ![](../Media/T83.png)
 
-## Task 9: Deploy the pipelines solution to your Prod environment
+### Task 9: Deploy the pipelines solution to your Prod environment
 
 In this task, you will learn how to install the pipelines for the Power Platform solution in your `Prod` environment.
 
 There are two ways to install the Pipelines solution:
 
-### Via Power Platform Admin Center
+#### Task 9.1 Via Power Platform Admin Center
 
-1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+1. Go to the [Power Platform Admin Center](https://aka.ms/ppac).
+
+1. Navigate to the **Prod** environment you created before.
 
     ![](../Media/T90.png)
-
-1. Go to the **Prod** environment you created before
 
 1. At the top , select **Resources** **(1)** and **Dynamics 365 apps** **(2)**.
 
@@ -381,21 +388,29 @@ There are two ways to install the Pipelines solution:
 
     ![](../Media/T94.png)
 
-This process will take a couple of minutes. You can refresh the page by selecting the **Refresh** button in the command bar at the top.
+1. This process will take around `20-25 minutes`. You can refresh the page by selecting the **Refresh** button in the command bar at the top.
 
-When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`Prod`). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
+1. Meanwhile you can proceed with the next task. After **20-25 minutes** you can come back and perform the below steps:
 
-### Via Power Platform CLI
+    - When finished, you can go to the [maker portal](https://make.powerapps.com).
+    
+    - Select the **Environment (1)** from the top right and then select `Prod` **(2)** environment.
+
+      ![](../Media/bs20.png)    
+    
+    - Navigate to **Apps (1)**, if all went well, you should be able to see the `Deployment Pipeline Configuration` **(2)** app in the Apps section in the maker portal.
+
+#### Task 9.2 Via Power Platform CLI
 
 1. Open up your Codespace.
 
-1. Open a new terminal by selecting the **Hamburger Menu > Terminal > New Terminal**
+1. Open a new terminal by selecting the **Hamburger Menu (1) > Terminal (2) > New Terminal (3)**.
 
-    ![](../Media/T9CLI1.png)
+    ![](../Media/bs8.png)
 
-1. Open the Power Platform Tools VS Code Extension by selecting the Power Platform DevTools icon on the left, make sure you see the `Prod` environment in the Environments & Solutions panel and select the empty star behind it to select the right environment.
+1. Open the Power Platform Tools VS Code Extension by selecting the **Power Platform DevTools (1)** icon on the left, make sure you see the `Prod` **(2)** environment in the Environments & Solutions panel and select the **empty star (3)** behind it to select the right environment.
 
-    ![](../Media/T9CLI2.png)
+    ![](../Media/bs22.png)
 
 1. Enter the following command:
 
@@ -415,15 +430,34 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
     pac application install --application-name msdyn_AppDeploymentAnchor
     ```
 
+    >**Note**: You may get an message like `Power Platform Pipelines` application is already installed, please proceed with the next task.
 
-## Task 10: Enable Dataverse settings
+### Task 10: Enable Dataverse settings
 
 A recent addition to the Power Platform CLI is the ability to list and update Dataverse settings. This means that you can change the settings that are normally only available through the UI. In this task, you will learn how to change the settings.
 
-### List Dataverse settings
+#### Task 10.1 List Dataverse settings
 
-1. Make sure to run the `pac org who` command to make sure you are in the `Dev` environment
-    If not, make sure to switch there, using the pac org select command like we did in task 7
+1. Ensure you run the command below to switch to the `Dev` environment. Since you selected **Prod** in the previous task, the current environment is still set to **Prod**.
+
+    ```bash
+    pac org who
+    ```
+
+    ![](../Media/bs23.png)
+
+1. So make sure to switch the environment to `Dev` by following the below steps.
+
+1. In the terminal, type the following command and then press **Enter**. Make sure to replace ```00000000-0000-0000-0000-000000000000``` with the **Environment id** that you copied in `Task 7 Step 2`.
+
+    ```bash
+    pac org select --environment <00000000-0000-0000-0000-000000000000>
+    ```
+
+    - You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
+
+      ![Screenshot of pac org select confirmation](../Media/bs17.png)
+
 1. Run the following command and then press **Enter**:
 
     ```bash
@@ -442,7 +476,7 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
 
     ![Screenshot of pac org list-settings --filter audit which shows 6 results](../Media/T101.png)
 
-### Update Dataverse settings
+#### Task 10.2 Update Dataverse settings
 
 1. Let's try out how updating a setting works. In the list of audit settings, we just saw a **`isauditenabled`** setting which is set to **No**.
 
@@ -454,10 +488,11 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
     pac org update-settings --name isauditenabled --value true
     ```
 
-    This command will set the `isauditenabled` setting to true.
+     ![](../Media/bs25.png)    
 
-    > **Note:** 
-    > Note that the list command showed `No` as the output, but to update we need to use true or false.
+      This command will set the `isauditenabled` setting to true.
+
+      > **Note:** Note that the list command showed `No` as the output, but to update we need to use true or false.
 
 1. Run the following command again to verify if the setting is applied and select **Enter**:
 
@@ -465,10 +500,23 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
     pac org list-settings --filter audit
     ```
 
-    This command will return all the settings that contain `audit` in the org we are connected to now (the `Dev` environment). As you can see, the `isauditenabled` setting is now set to `No`.
-
     ![Screenshot of pac org list-settings --filter audit which shows 6 results - a red rectangle is placed on the is audit enabled setting. The value is set to yes.](../Media/T103.png)
 
-## Next lab
+    >**Note**: This command will return all the settings that contain `audit` in the org we are connected to now (the `Dev` environment). As you can see, the `isauditenabled` setting is now set to `No`.    
 
-This is the end of lab 1. Select the second page below to move to the next lab.
+## Review
+
+In this lab you have completed the following tasks:
+
+- Task 1: Logged in to your account
+- Task 2: Created a GitHub account
+- Task 3: Created a fork of the repository for this workshop
+- Task 4: Created a GitHub Codespace
+- Task 5: Connected to the Power Platform using the Power Platform Command-Line Interface (CLI)
+- Task 6: Created developer environments
+- Task 7: Switched between environments with the Power Platform CLI
+- Task 8: Enabled Managed Environments on all environments
+- Task 9: Deployed the pipelines solution to your Prod environment
+- Task 10: Enabled Dataverse settings
+
+### Congratulations! you have successfully completed this lab, please click on **Next** to continue with the next lab
