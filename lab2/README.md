@@ -453,6 +453,13 @@ In this task, you will add the components we just created via Copilot to the `MP
 
     ![](../Media/L2T4S5.png)
 
-## Next lab
+## Review
 
-This is the end of lab 2. Select the third page below to move to the next lab.
+In this lab you have completed the following tasks:
+
+- Creating A Canvas App With Data From An Excel-File
+- Creating A Canvas App With Power Apps Copilot
+- Creating A Solution
+- Add The Resources Created By Power Apps Copilot To A Solution    
+
+### Congratulations! you have successfully completed this lab, please click on **Next** to continue with the next lab
