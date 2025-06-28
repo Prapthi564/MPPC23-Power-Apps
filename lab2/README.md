@@ -208,155 +208,130 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
     `build an app to manage real estate showings`
 
-1. Click on the **filter icon (3)**, select **one table (3)**, and then click on the **Generate (4)** button.
+    - Click on the **filter icon (2)**, select **Small (3)** then select **one table (4)**, and then click on the **Generate (5)** button.
 
-    ![](../Media/L2TT2.png)
+      ![](../Media/bs44.png)
 
 1. Once AI Copilot generates a table based on your prompt, review the table to see the columns that have been created as a starting point.
 
-1. To view the sample data added by Copilot, click on the **three ellipses (⋯)** next to the table and select **View data**.
+1. To view the sample data added by Copilot, click on the **three ellipses (⋯) (1)** next to the table and select **View data (2)**.
    
-    ![](../Media/L2TT3.png)
+    ![](../Media/bs45.png)
 
-1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type:
+1. You can view the table with the following columns:
+
+    - `Property Address`
+    - `Showing date`
+    - `Agent name`
+    - `Client name`
+
+1. In the text box, at the bottom of the **Copilot** pane to the right of the screen, type the following prompt **(1)** and then click on **Send**.
 
     **`add a column for client full name in Real Estate Showing table`** **(1)**
 
-    Then, select the **Send** button.
-   
- >**Note:** If column creation fails and you see an error like: "Sorry, something went wrong. Please try again, or share your feedback." It typically indicates an issue with Copilot itself. To resolve this, try recreating the table with the 'One table' filter applied. Set the table size to 'Small'. Then, retry your prompt to create the column.
+    - You'll see that Copilot has provided feedback that the table has been updated and you should also see the new column **Client Full Name** **(2)** added to the table:
 
+      ![](../Media/bs46.png)
 
- You'll see that Copilot has provided feedback that the table has been updated and you should also see the new column **Client Full Name** **(2)** added to the table:
+1. Now type the following into the chat **(1)** and then select the **Send** button.
 
- ![](../Media/L2T35.png)
+    **`add a column for client email to Real Estate Showing table` (1)**
 
-8. Now type the following into the chat:
+    - New column has been added to the table displaying the **Client Email (2)**
 
-    **`add a column for client email to Real Estate Showing table`**
+      ![](../Media/bs47.png)
 
-    Then, select the **Send** button.
+       >**Note**: Please ensure the column is named **Client Email**. If it is not, provide a prompt to explicitly set the column name to `Client Email`
 
-    ![](../Media/L2T36.png)
+       >**Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
 
-> **Note:** New column has been added to the table displaying the client’s email:
+1. Now, let’s add a **Status** column within the  Real Estate Showing table. In the text box within the **Copilot** pane, type and **Send**:
 
-> **Note** Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
+    `add a column for Appointment Status to the Real Estate Showing table`
 
-9. Now, let’s add a **Status** column within the  Real Estate Showing table. In the text box within the **Copilot** pane, type and send:
+1. It may take a minute to load. Once it does, you'll see that the **Appointment Status** column has been updated to include the option for **Completed**.
 
-    `add a column for Status to the Real Estate Showing table`
+1. Select the **Appointmnet Status (1)** column name **drop down**, and select **Edit column (2)**.
 
-    It may take a minute to load. Once it does, you'll see that the **Status** column has been updated to include the option for **Completed**.
+    ![](../Media/bs48.png)
 
-    ![](../Media/L2T37.png)
+1. Make sure the data type is set to **Choice (1)**. Here, you can click on **+New choice (2)** and add the drop down options such as **Pending** and **Confirmed** if not already present, and then click on **Update (3)**.
 
-10. Select the **Status** column name **drop down**, and select **Edit column**. Here, you can add the drop down options such as **Pending** and **Confirmed** if not already present, and then click on **Update**.
+    ![](../Media/bs49.png)
 
-    ![](../Media/L2T2S10.png)
+    > **Note**: `the status choices should be Pending, Confirmed, Scheduled, Cancelled, and Completed`
 
-    > **Note**
-    >
-    > If your column choices are not the same as the ones shown in the screenshot - you can also use Copilot to add these choices:
-    >
-    > `the status choices should be Pending, Confirmed, Cancelled, and Completed`
+1. Select the **X** in the top right corner of the pane to close out.
 
-    Select the **X** in the top right corner of the pane to close out.
+1. Let's try adding more data to our table and the existing columns.
 
-    Let's try adding more data to our table and the existing columns.
-
-11. Within the **Copilot** pane text box, type and send:
+1. Within the **Copilot** pane text box, type and send:
 
     `add 5 more rows of data`
 
     Notice that five more rows of data are added for each of the existing columns within the table.
 
-    ![](../Media/L2T39.png)
-
-    Now looking through your table, you should have a number of columns. However, for the sake of following the rest of the modules in this learning path - let's try and remove some of the columns that we won't be using.
+    ![](../Media/bs50.png)
 
     The list of columns that we will need going forward are:
 
-    - ID
-    - Address
-    - Date
-    - Time
-    - Status
-    - Agent Name
-    - Client Full Name
-    - Client Email
+    - `Property Address`
+    - `Showing date`
+    - `Agent name`
+    - `Client name`
+    - `Appointment Status`    
+    - `Client Full Name`
+    - `Client Email`    
 
     Use what you've just learnt with the **Copilot Chat** window to adjust your table to match the above. Don't forget to reference the Suggestions section for help in case you need to remove a column, change a column name, or add a column.
 
-12. Let's create the app now. In the top right corner of the screen, select the **Save and open app** button.
+1. Let's create the app now. In the top right corner of the screen, select the **Save and open app** button.
 
-    ![](../Media/L2T40.png)
+    ![](../Media/bs51.png)
 
-13. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the **Skip** button.
+1. Select the **Save and open app** button again.
+
+    ![](../Media/bs52.png)
+
+1. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the **Skip** button.
 
     You should now be viewing the app, that has been built for you, in **Edit** mode:
 
-    ![The app is displayed.](./assets/L2T2S13.png)
+    ![The app is displayed.](../Media/bs53.png)
 
-14. To the left of the screen, select the **Data** icon from the navigation bar. Notice that a **Dataverse** table has been created by the Copilot and is now in the **Environments** section.
+1. To the left of the screen, select the **Data (1)** icon from the navigation bar. Notice that a **Dataverse** table has been created by the Copilot and is now in the **Environments** section **(2)**.
 
-    ![](../Media/L2T41.png)
+    ![](../Media/bs54.png)
 
-    > **Note:** Copilot is currently only supported for Dataverse. You cannot use any other data access point at this time.
+     >**Note:** Copilot is currently only supported for Dataverse. You cannot use any other data access point at this time.
 
-    Let's try editing the table now that the app has been created.
+1. We have to modify the gallery in the application so that it displays the relevant data. Select the **Tree view (1)** icon to return to the Tree view.
 
-15. Within the **Data** pane, hover over the table. To the right of the table, select the **ellipsis** (...).
+    - On the app main screen, click on **RecordsGallery1 (2)** displaying the **Real Estate Showings** and then select the **edit (3)** button to put the gallery in edit mode.
 
-16. From the menu, select **Edit data**.
+      ![](../Media/bs60.png)    
 
-    ![](../Media/L2T42.png)
+1. Select the **Title** and make sure  **Text** value is set to the following formula:
 
-17. The Edit Table dialog appears. Here's where you can come and add your own columns to the table, or modify existing columns.
+    `ThisItem.'Property Address'`
 
-    ![The edit table dialog is displayed.](../Media/edit-table.png)
-
-18. Select the **ID** column header from the table.
-
-19. From the drop-down, select the **Edit column** option.
-
-    ![The edit column option is highlighted.](../Media/copilot-edit-column.png)
-
-    In this example, we don't want the Data Type of the column to be a Single line of text. Let's change that.
-
-20. Within the Edit column pane, from the **Date type** drop-down select **# Autonumber**.
-
-21. Select **Save**.
-
-    ![The save button is highlighted.](../Media/save-column.png)
-
-22. Select the **Close** button in the bottom right corner of the **Edit table** dialog.
-
-23. Notice that the table now says **Refreshed** within the Data pane.
-
-    ![The refreshed table is displayed.](../Media/L2T43.png)
-
-24. We have to modify the gallery in the application so that it displays the relevant data. Select the **Tree view** icon to return to the Tree view.
-
-25. On the app main screen, click on **RecordsGallery1** displaying the **Real Estate Showings** and then select the edit button to put the gallery in edit mode.
-
-26. Select the **Title** and set the **Text** value to the following formula:
-
-    `ThisItem.Address`
-
-27. Select the **Subtitle** and set the **Text** value to the following formula:
+1. Select the **Subtitle (1)** and set the **Text** value to the following formula **(2)**:
 
     `ThisItem.'Client Email'`
 
-28. Select the **Body** and set the **Text** value to the following formula:
+     ![](../Media/bs57.png)  
 
-    `ThisItem.'Status (crcaa_status)'`
+1. Select the **Body (1)** and set the **Text** value to the following formula **(2)**:
 
-    A single record in the gallery should now look like this:
+    `ThisItem.'Appointment Status'`
+
+     ![](../Media/bs58.png)    
+
+1. A single record in the gallery should now look like this:
 
     ![](../Media/L2T44.png)
 
-29. On the app main screen, select the **Form** control.
+1. On the app main screen, select the **Form** control.
 
     ![](../Media/L2T45.png)
 
