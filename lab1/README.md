@@ -398,7 +398,9 @@ There are two ways to install the Pipelines solution:
 
       ![](../Media/bs20.png)    
     
-    - Navigate to **Apps (1)**, if all went well, you should be able to see the `Deployment Pipeline Configuration` **(2)** app in the Apps section in the maker portal.
+    - Navigate to **Apps (1)**, then **All (2)** if all went well, you should be able to see the `Deployment Pipeline Configuration` **(3)** app in the Apps section in the maker portal.
+
+      ![](../Media/bs26.png)     
 
 #### Task 9.2 Via Power Platform CLI
 
