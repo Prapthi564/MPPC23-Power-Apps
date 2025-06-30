@@ -1,15 +1,21 @@
 # 🚀 Lab 5: Connect your own WebAPI to your Power App
 
-> **Note:**
-> This lab is optional. Only do this one when you are finished with lab 1 - lab 4.
+> **Note:** This lab is optional. Only do this one when you are finished with lab 1 - lab 4.
 
-## 📝 Lab 5 - Tasks
+
+### Estimated Duration: 60 minutes
+
+## Lab Scenario
+
+You are a developer at Contoso Ltd exploring ways to extend the capabilities of Power Apps by integrating external services. Your team wants to connect custom backend APIs to Power Platform solutions to expose complex business logic and data that cannot be handled directly within Dataverse. In this optional lab, you will build a simple ASP.NET Core Web API using Visual Studio, register it as a custom connector through a dev tunnel, and consume it in a canvas app. This scenario mimics real-world enterprise integration patterns where external APIs are connected securely to low-code applications.
+
+## Lab Objectives
 
 In this lab, you will go though the following tasks:
 
-- Create an ASP.NET project in Visual Studio
-- Add Power Platform as a connected service
-- Create a canvas app with the custom connector
+- Task 1: Create an ASP.NET project in Visual Studio
+- Task 2: Add Power Platform as a connected service
+- Task 3: Create a canvas app with the custom connector
 
 ### ☑️ Task 1: Create an ASP.NET project in Visual Studio
 
@@ -140,6 +146,8 @@ In this task, you will add the Connected Service for Power Platform to your ASP.
 
 ### ☑️ Task 3: Create a canvas app with the custom connector
 
+In this task, you will create a canvas app that connects to your ASP.NET Web API using the custom connector, and display data from the API using a gallery.
+
 When Visual Studio runs a web app and a tunnel is active, the web browser opens to a tunnel URL instead of a localhost URL.
 
 1. Run your Visual Studio solution and start debugging.
@@ -174,6 +182,15 @@ When Visual Studio runs a web app and a tunnel is active, the web browser opens 
 
 ![Screenshot of a Power Apps canvas app created using the sample ASP.NET Weather web API.](./assets/vs-powerapp.png)
 
-## End of labs
 
-This is the end of the optional lab 5 and the workshop, select the link below to move back to the workshop readme.
+## Review
+
+In this lab you have completed the following tasks:
+
+- Created an ASP.NET project in Visual Studio
+- Added Power Platform as a connected service
+- Created a canvas app with the custom connector
+
+
+### Congratulations! you have successfully completed this lab.
+
