@@ -218,74 +218,61 @@ In this task, you are going to find out if the approval you configured in the la
 
 1. Ensure you're in the **Dev** environment; if you're not, switch to it.
 
-    ![](./assets/check-environment-dev.png)
+    ![](./assets/bs123.png)
 
 1. Go to **Solutions (1)** in the left menu. Select the **MPPC 23 (2)** solution.
 
     ![](./assets/run-first-pipeline-dev(1).png)
 
-1. Select the **Pipelines** from the left.
+1. Click on the **hamburger (1)** icon and then select the **Pipelines (2)** from the left.
 
-    ![](./assets/run-first-pipeline-solution(1).png)
+    ![](./assets/bs124.png)
 
-1. Earlier in this lab, you have made a Pre-Deployment Step required. That means that now, there is an info box on the deploy to prod stage.
+1. Earlier in this lab, you have made a Pre-Deployment Step required. That means that now, there is an info box on the deploy to prod stage **(1)**. Select the purple **Deploy here (2)** button.
 
-    ![](./assets/run-deploy-to-prod-approval-info.png)
-
-1. Select the purple **Deploy here** button.
-
-    ![](./assets/run-deploy-to-prod-approval.png)  
+    ![](./assets/bs127.png)
 
 1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple **Next** button to go to the next screen.
 
-    ![](./assets/run-deploy-to-prod-approval-select-target.png)  
+    ![](./assets/bs126.png)  
 
-1. Leave everything as default and select the **Next** button.
+1. This will lead you to the next section called **Summary**. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview.
 
-    >This will lead you to the next section called **Summary**. Here you can find a bunch of info about the solution you are about to deploy to the QA environment. It also shows an AI suggested solution overview.
+    - Now the AI suggested solution overview is added in the **Deployment notes (1)** box
 
-    ![](./assets/run-first-pipeline-summary-ai-prod.png)
+    - Select the **Deploy (2)** button
 
-1. When you're happy with that AI generated solution overview, select the **Apply** button below the AI suggested solution overview.
-Now the AI suggested solution overview is added in the **Deployment notes** box.
-
-    ![](./assets/run-first-pipeline-ai-generated-description-approved-prod.png)
-
-1. Review the AI-suggested solution overview to ensure it's free of errors, and make corrections if necessary.
-
-1. Select the **Deploy** button.
+      ![](./assets/bs128.png)
 
 1. Next, you will see the following screen, that shows a yellow box which states that **Your request to deploy here is pending**.
 
-    ![](./assets/run-deploy-to-prod-pending.png)
+    ![](./assets/bs129.png)
 
-1. This message is showing because our changes in the beginning of the lab made sure that the Power Automate cloud flow is now triggered. We are working on a fresh environment, so it can take a while before the approval solution is deployed. Best is to take a break now, since it can take 5-10 minutes before your next step.
+1. This message is showing because our changes in the beginning of the lab made sure that the **Power Automate cloud flow** is now triggered. We are working on a fresh environment, so it can take a while before the approval solution is deployed. Best is to take a break now, since it can take `5-10` minutes before your next step.
 
-1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After 5-10 minutes (only the first time!) it should arrive.
+1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After `5-10 minutes` (only the first time!) it should arrive.
 
 1. In the approval mail you will see a couple of familiar parts:  
 
-    - You will see the title of the **Approval (1)**.  
+    - You will see the title of the **Approval (1)**  
 
-    - You will see the **Deployment notes (2)**.  
+    - You will see the **Deployment notes (2)**
 
-    - You will see **Approve / Reject buttons (3)**.  
+    - You will see **Approve / Reject buttons (3)**, select **Approve (4)**
 
-    - You will be able to add **Comments (4)**.  
+    - You will be able to add **Comments**, select **Approved! (5)** as comments
 
-    - You will be able to **Submit (5)** the approval / rejection.  
+    - You will be able to **Submit** the approval / rejection. Select **Submit (6)**
 
-1. Make sure to select **Approve** in the approval email, add **Approved!** as comments and select the **Submit** button.
+      ![](./assets/bs130.png)      
 
-    ![](./assets/run-deploy-to-prod-approval-outlook.png)  
-
-1. Close the Outlook browser tab, and you will see (sometimes you have to refresh) that the deployment to production is in progress.
+1. Close the **Outlook** browser tab, and you will see (sometimes you have to refresh) that the deployment to production is in progress.
 
     ![](./assets/run-deploy-to-prod-approval-in-progress.png)
 
 1. After the deployment is finished, you will see that the deployment is finished.
 
-    ![](./assets/run-deploy-to-prod-approval-finished.png)
+    ![](./assets/bs131.png)
 
 And that's how the deployment with approvals works!
 
@@ -293,7 +280,7 @@ And that's how the deployment with approvals works!
 
 In the meantime, you should've gotten another email.
 
-1. Go to [Outlook web](https://outlook.office.com)
+1. Go to [Outlook web](https://outlook.office.com).
 
 1. Look for an email with the subject **Solution checked for issues during import**.
 
@@ -301,7 +288,9 @@ In the meantime, you should've gotten another email.
 
     ![](./assets/warn-solution-checker-prod.png)
 
-    This email shows there are no solution checker issues found in our solution we just deployed to production: well done!
+     >**Note**: This may take a few moments to appear. In the meantime, please feel free to proceed with the next lab.
+    
+     This email shows there are no solution checker issues found in our solution we just deployed to production: well done!
 
 ## End of labs
 
