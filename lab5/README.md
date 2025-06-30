@@ -87,47 +87,58 @@ In this task, you will add the Connected Service for Power Platform to your ASP.
 
 ![Screenshot of adding a service dependency in Visual Studio.](./assets/vs-step2-1.png)
 
-1. In **Solution Explorer**, right-click the **Connected Services** node and select **Manage Connected Services** from the context menu.
+1. In **Solution Explorer**, right-click the **Connected Services** node.
+
+    ![TODO](./assets/bs146.png)
+
+1. Select **Manage Connected Services** from the context menu.
+
+    ![TODO](./assets/bs147.png)
 
 1. In the **Connected Services** tab, select the **+** icon for **Service Dependencies**.
 
-1. On the **Add dependency** dialog, type `Power Platform` into the search box.
+    ![TODO](./assets/bs148.png)
 
-1. Select **Microsoft Power Platform**, and then select **Next**.
+1. On the **Add dependency** dialog, type `Power Platform` into the search box then select **Microsoft Power Platform (2)** and then **Next (3)**.
 
-   If you aren't signed in already, sign into your Microsoft Power Platform account. If you don't have a Power Platform account, [Create a Developer Environment](create-developer-environment.md).
+    ![TODO](./assets/bs149.png)
 
-1. In the **Connect to Microsoft Power Platform** screen: select your developer environment.
+     >**Note**: If you aren't signed in already, sign into your Microsoft Power Platform account. If you don't have a Power Platform account, [Create a Developer Environment](create-developer-environment.md).
 
-1. In **Custom connectors name**, the value `WeatherSample_Connector` should already be set.
+1. In the **Connect to Microsoft Power Platform** screen
 
-1. In **Select a public dev tunnel**, select the **+** icon.
+   - Select your developer environment
+   - **Power Platform Solution**: Select **MPPC 23 (1)**
+   - In **Custom connectors name**, the value `WeatherSample_Connector` should already be set **(2)**
+   - In **Select a public dev tunnel**, select the **+ (3)** icon
 
-   1. In the field **Name**, type `SampleTunnel`.
+     ![TODO](./assets/bs150.png)  
 
-   1. Select **Tunnel Type**: **Persistent**.
+1. On the **Account** page, provide the following details:      
 
-   1. Select **Access** : **public**.
+   - In the field **Name**, type `SampleTunnel` **(1)**
 
-   1. Select **OK**.
+   - Select **Tunnel Type**: **Persistent** **(2)**
 
-1. Select **Finish**
+   - Select **Access** : **public** **(3)**
+
+   - Select **OK** **(4)**
+
+     ![TODO](./assets/bs151.png)    
+
+1. Select **Finish**.
+
+    ![TODO](./assets/bs152.png)
 
 1. Once the connected service is configured, select **Close**.
 
-> **Note:** If you encounter an error stating that the `Swashbuckle.AspNetCore` package is not found, you may need to install it manually. Follow the steps below:
->
-> - In **Solution Explorer**, right-click on the project (not the solution) you have created.
-> - Select **"Open in Terminal"**.
-> - Run the following command in the terminal:
->   ```
->   Install-Package Swashbuckle.AspNetCore
->   ```
-> - If prompted, type **A** to accept all license agreements.
-> - Once installed, try the previous steps again.
+    ![TODO](./assets/bs153.png)
 
+1. Click on **Build (1)** and then **Build Solution (2)**.
+ 
+    ![TODO](./assets/bs154.png)
 
-## ☑️ Task 3: Create a canvas app with the custom connector
+### ☑️ Task 3: Create a canvas app with the custom connector
 
 When Visual Studio runs a web app and a tunnel is active, the web browser opens to a tunnel URL instead of a localhost URL.
 
