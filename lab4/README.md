@@ -1,4 +1,4 @@
-# 🚀 Lab 4: Enterprise Scale
+# 🚀 Lab 4: Enterprise Scale – Scaling Deployments with Approval Gates
 
 ## Lab 4 - Tasks
 

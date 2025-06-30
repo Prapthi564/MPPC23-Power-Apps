@@ -1,4 +1,4 @@
-# 🚀 Lab 3: Deploy
+# 🚀 Lab 3: Deploying Solutions with Pipelines
 
 ## Lab 3 - Tasks
 

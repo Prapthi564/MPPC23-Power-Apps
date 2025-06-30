@@ -1,4 +1,5 @@
-# 🚀 Lab 1: Setup and configure
+# 🚀 Lab 1: Environment Setup and Power Platform Configuration
+
 ### Estimated Duration: 60 mins
 ## Overview
 

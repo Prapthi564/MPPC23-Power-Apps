@@ -1,4 +1,4 @@
-# 🚀 Lab 2: Develop
+# 🚀 Lab 2: Building Canvas Apps with Power Apps and Copilot
 
 ## 📝 Lab 2 - Tasks
 
