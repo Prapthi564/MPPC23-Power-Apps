@@ -1,7 +1,10 @@
 # 🚀 Lab 1: Environment Setup and Power Platform Configuration
 
 ### Estimated Duration: 60 mins
-## Overview
+
+## Lab Scenario
+
+You are a Power Platform developer at Contoso Ltd, responsible for setting up a secure and scalable development environment to support application lifecycle management (ALM) across multiple environments. In this lab, you will create and configure your GitHub repository, set up a Codespace for development, and use the Power Platform CLI to provision and manage environments. You'll enable Managed Environments, deploy the pipelines solution to your production environment, and configure key Dataverse settings—all foundational steps to support efficient and governed app development and deployment workflows.
 
 ## Lab Objectives
 
@@ -20,7 +23,7 @@ In this lab, you will go through the following tasks:
 
 ### Task 1: Log in to your account
 
-With the credentials provided in the Environment Details tab, let's log into the account you will use during the workshop.
+In this task, you will sign in to the Power Platform using the provided credentials to access the tools and services needed for the lab. Let's log into the account you will use during the workshop.
 
 1. Open **Microsoft Edge** browser and navigate to **[make.powerapps.com](https://make.powerapps.com)**
 1. On the sign-in screen, enter the email below and click **Next**,
@@ -43,7 +46,7 @@ With the credentials provided in the Environment Details tab, let's log into the
 
 ### Task 2: Create a GitHub account
 
-For this workshop, we are going to be using GitHub.
+In this task, you will create a GitHub account using the provided credentials. This account will be used throughout the workshop for code management, collaboration, and deployment activities.
 
 1. Open a new tab on **Microsoft Edge** browser and go to  [GitHub](https://github.com) website.
 
@@ -86,7 +89,7 @@ You now have a GitHub account. Welcome to the GitHub community!
 
 ### Task 3: Create a fork of the repository for this workshop
 
-Now that you have a GitHub account, we are going to create a fork of the repository for this workshop. A fork is a copy of an existing repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+In this task, you will create a fork of the workshop repository, allowing you to work on your own copy without affecting the original project. This forked repository will be used for development throughout the lab.
 
 1. Open a new tab on **Microsoft Edge** browser, **Copy and Paste** the link  [MPPC23-Power-Apps](https://aka.ms/MPPC23-Power-Apps) to go to the GitHub repository.
 
@@ -104,7 +107,7 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 
 ### Task 4: Create a GitHub Codespace
 
-A codespace is a cloud-hosted development environment you can access from anywhere. It has everything you need, including a text editor, terminal, and debugger. Codespaces are powered by Visual Studio Code and run in a containerized environment. For this workshop, we are going to use CodeSpaces to do our development.
+In this task, you will create a GitHub Codespace from your forked repository. This cloud-based development environment will allow you to build and manage Power Platform components directly from your browser using Visual Studio Code.
 
 1. Make sure that you are in your forked repository **odl-user-<inject key="DeploymentID" enableCopy="false"/> / MPPC23-Power-Apps** and then find and click on the **<> Code** **(1)** button.
 
@@ -119,6 +122,8 @@ A codespace is a cloud-hosted development environment you can access from anywhe
     ![](../Media/bs4.png)
 
 ### Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
+
+In this task, you will connect your GitHub Codespace to the Power Platform using the Power Platform CLI. This will authenticate your environment and allow you to manage environments, solutions, and deployments directly from the terminal.
 
 1. In your codespace, you will see a pop-up for **Power Platform Tools** Extension,  click on **Allow**.
 
@@ -205,7 +210,7 @@ In this workshop, we will create one environment through the UI, one via PPAC, a
 
 #### Task 6.1 Create the 'Dev` environment by subscribing to the developer plan
 
-Currently, if you want to get all that the Power Platform offers, you're required to subscribe to the Power Apps Developer Plan. In this part, we will walk you through all the steps:
+In this task, you will subscribe to the Power Apps Developer Plan to create your own personal development environment. This environment will be renamed to Dev and used for app development and testing throughout the lab.
 
 1. Open **Microsoft Edge** browser and navigate to the [Power Apps Developer Plan](https://aka.ms/pp/devplan) website
 1. Scroll down and select **Try for free** under **Developer plan**.
@@ -248,7 +253,7 @@ Currently, if you want to get all that the Power Platform offers, you're require
 
 #### Task 6.2 Create a new **QA** environment via the Power Platform Admin Center (PPAC).
 
-We are going to create a QA environment through the Power Platform Admin Center.
+In this task, you will create a new QA environment using the Power Platform Admin Center. This environment will be used to test your applications and solutions as part of the ALM process.
 
 1. Select **Environments (2)** under **Manage (1)** and then select **+ New (3)** in the top navigation pane.
 
@@ -271,7 +276,7 @@ We are going to create a QA environment through the Power Platform Admin Center.
 
 #### Task 6.3 Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
 
-We will create the last environment we are going to create via the Power Platform CLI. Because we don't have to go through the UI, and we don't have to load anything, this will go way faster than the other options.
+In this task, you will create a Prod environment using the Power Platform CLI directly from your Codespace terminal. This approach offers a faster and more efficient way to provision environments without using the admin UI.
 
 1. Navigate to the CodeSpace. If you see a pop-up **CodeSpace is Stopped**, click on **Restart CodeSpace**.
 
@@ -300,6 +305,8 @@ We will create the last environment we are going to create via the Power Platfor
     ![List of developer environments](../Media/Dev11.png)
 
 ### Task 7: Switch between environments with the Power Platform CLI
+
+In this task, you will use the Power Platform CLI to view available environments and switch the active context to the Dev environment. This allows you to run CLI commands against the correct environment throughout the lab.
 
 1. In the terminal, type the following command and then press **Enter**:
 
@@ -339,7 +346,7 @@ We will create the last environment we are going to create via the Power Platfor
 
 ### Task 8: Enable Managed Environments on all environments
 
-In this task, you will learn how to enable Managed Environments on all environments you just created.
+In this task, you will enable Managed Environments for all three environments—Dev, QA, and Prod. This feature helps apply governance, monitoring, and security policies across environments in an enterprise-grade setup.
 
 1. Go back to the [Power Platform Admin Center](https://aka.ms/ppac) tab.
 
@@ -366,6 +373,9 @@ In this task, you will learn how to install the pipelines for the Power Platform
 There are two ways to install the Pipelines solution:
 
 #### Task 9.1 Via Power Platform Admin Center
+
+In this task, you will install the Power Platform Pipelines app in the Prod environment using the Power Platform Admin Center. This app enables deployment automation and is a core component for implementing ALM in your Power Platform environments.
+
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac).
 
@@ -405,6 +415,8 @@ There are two ways to install the Pipelines solution:
 
 #### Task 9.2 Via Power Platform CLI
 
+In this task, you will install the Power Platform Pipelines application in the Prod environment using the Power Platform CLI. This method provides a quick, scriptable way to deploy solutions without navigating through the admin UI.
+
 1. Open up your Codespace.
 
 1. Open a new terminal by selecting the **Hamburger Menu (1) > Terminal (2) > New Terminal (3)**.
@@ -440,6 +452,8 @@ There are two ways to install the Pipelines solution:
 A recent addition to the Power Platform CLI is the ability to list and update Dataverse settings. This means that you can change the settings that are normally only available through the UI. In this task, you will learn how to change the settings.
 
 #### Task 10.1 List Dataverse settings
+
+In this task, you will list and filter Dataverse settings in the Dev environment using the Power Platform CLI. This helps you inspect key configuration options, such as audit settings, to better understand and manage environment behavior.
 
 1. Ensure you run the command below to switch to the `Dev` environment. Since you selected **Prod** in the previous task, the current environment is still set to **Prod**.
 
@@ -480,6 +494,8 @@ A recent addition to the Power Platform CLI is the ability to list and update Da
     ![Screenshot of pac org list-settings --filter audit which shows 6 results](../Media/T101.png)
 
 #### Task 10.2 Update Dataverse settings
+
+In this task, you will update a Dataverse setting using the Power Platform CLI by enabling auditing in the Dev environment. This demonstrates how to programmatically manage environment configurations for enhanced governance.
 
 1. Let's try out how updating a setting works. In the list of audit settings, we just saw a **`isauditenabled`** setting which is set to **No**.
 
