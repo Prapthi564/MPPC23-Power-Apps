@@ -1,6 +1,6 @@
 # 🚀 Lab 2: Building Canvas Apps with Power Apps and Copilot
 
-### Estimated Duration: 60 minutes
+### Estimated Duration: 90 minutes
 
 ## Lab Scenario
 
