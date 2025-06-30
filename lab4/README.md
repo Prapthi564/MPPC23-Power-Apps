@@ -1,6 +1,6 @@
 # 🚀 Lab 4: Enterprise Scale – Scaling Deployments with Approval Gates
 
-### Estimated Duration: 60 minutes
+### Estimated Duration: 75 minutes
 
 ## Lab Scenario
 
