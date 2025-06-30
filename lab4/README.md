@@ -292,6 +292,11 @@ In the meantime, you should've gotten another email.
     
      This email shows there are no solution checker issues found in our solution we just deployed to production: well done!
 
-## End of labs
+## Review
 
-This is the end of lab 4. Select page 5 below to move to the next lab.
+In this lab you have completed the following tasks:
+
+- Task 1: Extended the previous pipeline with Approvals
+
+
+### Congratulations! you have successfully completed this lab, please click on **Next** to continue with the next lab
