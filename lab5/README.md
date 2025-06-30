@@ -3,7 +3,7 @@
 > **Note:** This lab is optional. Only do this one when you are finished with lab 1 - lab 4.
 
 
-### Estimated Duration: 60 minutes
+### Estimated Duration: 75 minutes
 
 ## Lab Scenario
 
