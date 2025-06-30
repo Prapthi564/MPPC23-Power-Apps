@@ -11,31 +11,77 @@ In this lab, you will go though the following tasks:
 - Add Power Platform as a connected service
 - Create a canvas app with the custom connector
 
-## ☑️ Task 1: Create an ASP.NET project in Visual Studio
+### ☑️ Task 1: Create an ASP.NET project in Visual Studio
 
 In this task, we will create an ASP.NET project in Visual Studio.
 
-1. Open Visual Studio 2022
+1. Search for **Visual Studio 2022 (1)** and then select **Visual Studio 2022 (2)**.
 
-1. Select **Create a new project**
+    ![TODO](./assets/bs132.png)
 
-    ![TODO](./assets/asp-net-core-webapi.png)
+1. Select **Create a new project**.
 
-1. Search for `ASP.NET Core Web API`, select the one that has C# in the tags and select **Next**
+    ![TODO](./assets/bs133.png)
 
-1. Enter the following details and select **Next**:
+1. Search for `ASP.NET Core Web API` **(1)**, select `ASP.NET Core Web API` **(2)** the one that has **C# (3)** in the tags and select **Next (4)**.
 
-    Enter `WeatherSample` for the Project name
+    ![TODO](./assets/bs134.png)
 
-    Enter `C:\Dev` for the Location
+1. Enter the following details and select **Next (3)**:
 
-1. In the next screen, select **Create**
+   - Enter `WeatherSample` for the Project name **(1)**
 
-This should create your ASP.NET Code Web API project and open it in Visual Studio 2022.
+   - Enter `C:\Dev` for the Location **(2)**
 
-![TODO](./assets/asp-net-core-webapi-created.png)
+     ![TODO](./assets/bs135.png)   
 
-## ☑️ Task 2: Add Power Platform as a connected service
+1. In the next screen, select **Create**.
+
+    ![TODO](./assets/bs136.png)
+
+1. This should create your ASP.NET Code Web API project and open it in Visual Studio 2022.
+
+    ![TODO](./assets/bs137.png)
+
+1. Navigate to **Tools (1)** from the top menu and then select **Options (2)**.
+
+    ![TODO](./assets/bs138.png)
+
+1. Scroll down, then expand **Nuget Package Manager (1)** then select **Package Sources (2)** and make sure `nuget.org` package is added **(3)**. If present click on **Cancel (4)**.
+
+    ![TODO](./assets/bs139.png)
+
+    >**Note**: Please follow the below steps if `nuget.org` package is not added
+
+    - Click on the **+** symbol to add the package
+
+      ![TODO](./assets/bs140.png)
+
+    - Provide the **Name** as `nuget.org` **(1)** then **Source** as `https://api.nuget.org/v3/index.json` **(2)** then click on **Update (3)** and then **OK (4)**
+
+      ![TODO](./assets/bs141.png)    
+
+1. From the **Solution Explorer**, right click on the **WeatherSample** project.
+
+    ![TODO](./assets/bs142.png)
+
+1. Select **Manage NuGet Packages**.
+
+    ![TODO](./assets/bs143.png)
+
+1. Select **Installed (1)** tab, then make sure that `Swashbuckle.AspNetCore` is installed **(2)**.
+
+    ![TODO](./assets/bs144.png)
+   
+   - If not, navigate to **Browse** tab
+
+     ![TODO](./assets/bs145.png)  
+
+   - Search for `Swashbuckle.AspNetCore`, then click on **Install**    
+
+   - Make sure `Swashbuckle.AspNetCore` is installed
+
+### ☑️ Task 2: Add Power Platform as a connected service
 
 In this task, you will add the Connected Service for Power Platform to your ASP.NET Code Web API project.
 
