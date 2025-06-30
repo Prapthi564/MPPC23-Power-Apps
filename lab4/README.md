@@ -1,12 +1,18 @@
 # 🚀 Lab 4: Enterprise Scale – Scaling Deployments with Approval Gates
 
-## Lab 4 - Tasks
+### Estimated Duration: 60 minutes
+
+## Lab Scenario
+
+You are a Power Platform developer at Contoso Ltd. As the organization scales app development across multiple teams, it becomes essential to add governance and oversight to production deployments. To support enterprise-grade ALM, leadership has mandated that all deployments to the production environment go through an approval process. In this lab, you will enhance your existing deployment pipeline by adding a pre-deployment approval gate and build an automated Power Automate flow to handle approval requests, ensuring that production deployments are reviewed and authorized by designated approvers.
+
+## Lab Objective
 
 In this lab, you will go through only one task:
 
 - Extend the previous pipeline with Approvals
 
-### ☑️ Task: Extend the previous pipeline with Approvals
+### ☑️ Task : Extend the previous pipeline with Approvals
 
 #### Task 1.1 : Extending the pipeline in the Deployment Pipeline Configuration App
 
