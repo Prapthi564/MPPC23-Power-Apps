@@ -1,6 +1,6 @@
 # 🚀 Lab 3: Deploying Solutions with Pipelines
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 120 minutes
 
 ## Lab Scenario
 
