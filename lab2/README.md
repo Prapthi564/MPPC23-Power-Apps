@@ -16,7 +16,7 @@ In this lab, you will go though the following tasks:
 - Task 3 : Creating A Solution
 - Task 4: Add The Resources Created By Power Apps Copilot To A Solution
 
-### ☑️ Task 1: Create A Canvas App With Data From An Excel-File
+## ☑️ Task 1: Create A Canvas App With Data From An Excel-File
 
 In this task, you will use the Excel to App functionality in Power Apps to quickly generate a canvas app from an Excel file. This feature allows you to import structured Excel data into a Dataverse table and automatically build an app with screens for browsing, viewing, and editing records. You’ll then customize the gallery layout, add formatting, and publish the app for use within your environment.
 
@@ -184,13 +184,13 @@ With Excel to App, you can quickly turn an Excel file into a functional canvas a
     ![](../Media/bs42.png)
 
 
-### ☑️ Task 2: Create a Canvas App with Power Apps Copilot
+## ☑️ Task 2: Create a Canvas App with Power Apps Copilot
 
 In this task, you’ll create an application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
 > **Note:** Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/power-apps/administrator/pricing-billing-skus/).
 
-#### Task 2.1 Explore AI Copilot within Power Apps
+### Task 2.1 Explore AI Copilot within Power Apps
 
 > **Note:** Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
 
@@ -390,7 +390,7 @@ In this task, you’ll create an application leveraging Power Apps Copilot.  Thi
 
 Congratulations! You have now created a Power Apps Canvas App with Copilot!
 
-### ☑️ Task 3: Create a solution
+## ☑️ Task 3: Create a solution
 
 In this task, you will create a solution for the components we just created via Copilot!
 
@@ -423,7 +423,7 @@ In this task, you will create a solution for the components we just created via 
 
      > **Notes:** This concludes task 3, you have created the `MPPC 23` solution.
 
-### ☑️ Task 4: Add the resources created by Power Apps Copilot to a solution
+## ☑️ Task 4: Add the resources created by Power Apps Copilot to a solution
 
 In this task, you will add the components we just created via Copilot to the `MPPC 23` solution!
 

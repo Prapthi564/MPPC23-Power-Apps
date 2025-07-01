@@ -15,7 +15,7 @@ In this lab, you will go though the following tasks:
 - Task 2: Run the deployment to the QA environment
 - Task 3: Test if the solution was correctly deployed to QA
 
-### Task 1: Create your first pipeline
+## Task 1: Create your first pipeline
 
 In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app that you installed in lab 1 will be used for that.
 
@@ -41,7 +41,7 @@ In this task, you will create your first pipeline. The `Deployment Pipeline Conf
 
     - Finally, there's a `Settings` section, where you can manage security teams, configure advanced settings, and customize various aspects of the app.
 
-#### Task 1.1 : Create a New Pipeline
+### Task 1.1 : Create a New Pipeline
 
 In this task, you will create a new deployment pipeline using the Deployment Pipeline Configuration app. This pipeline will help automate the process of moving solutions through different environments like Dev, QA, and Prod.
 
@@ -79,7 +79,7 @@ In this task, you will create a new deployment pipeline using the Deployment Pip
 
     - **Deployment Stages**: The Deployment Stages section allows you to add stages that follow your development environment. For example, in today’s lab, we’ll be adding a stage called `Deploy to QA`, followed by another called `Deploy to Prod`. What’s great is that you can define the order by setting preceding stages—this ensures that `Deploy to QA` runs before `Deploy to Prod`.
 
-#### Task 1.2 Create a development environment
+### Task 1.2 Create a development environment
 
 In this task, you'll link the previously created Dev environment to your deployment pipeline. This allows solutions built in the Dev environment to be moved through the pipeline stages you define.
 
@@ -119,7 +119,7 @@ In this task, you'll link the previously created Dev environment to your deploym
 
     >**Note:** *Refresh* the page if you don't see it
 
-#### Task 1.3 : Add the first deployment stage
+### Task 1.3 : Add the first deployment stage
 
 In this task, you'll add your first deployment stage to the pipeline by linking the QA environment. This step allows you to define where solutions should be deployed after development, helping to establish a structured and repeatable ALM process.
 
@@ -231,7 +231,7 @@ In this task, you'll complete the pipeline setup by adding the Deploy to prod st
    
     ![](./assets/create-pipeline-new-development-env-details(6)(1).png)
 
-### Task 2: Run the deployment to the QA environment
+## Task 2: Run the deployment to the QA environment
 
 In this task, you’ll deploy the solution built in Lab 2 to both the QA and Production environments. We’ll begin by deploying it to QA. So far in this lab, you’ve set up a pipeline along with its associated stages. But how exactly does a maker move a solution from the `Dev` environment to the `QA` and `Prod` environments?
 
@@ -274,7 +274,7 @@ In this task, you’ll deploy the solution built in Lab 2 to both the QA and Pro
 
 As you can see, the last deployed solution version and last deployed date time are visible here.
 
-###  Task 3: Test if the solution was correctly deployed to QA
+##  Task 3: Test if the solution was correctly deployed to QA
 
 In this task, you will verify the successful deployment of the solution to the QA environment by opening the apps and adding test data to ensure they function correctly.
 

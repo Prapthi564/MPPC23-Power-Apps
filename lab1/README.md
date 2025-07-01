@@ -21,7 +21,7 @@ In this lab, you will go through the following tasks:
 - Task 9: Deploy the pipelines solution to your Prod environment
 - Task 10: Enable Dataverse settings
 
-### Task 1: Log in to your account
+## Task 1: Log in to your account
 
 In this task, you will sign in to the Power Platform using the provided credentials to access the tools and services needed for the lab. Let's log into the account you will use during the workshop.
 
@@ -44,7 +44,7 @@ In this task, you will sign in to the Power Platform using the provided credenti
 
     ![Power apps home page](../Media/power-apps-home-page.png)
 
-### Task 2: Create a GitHub account
+## Task 2: Create a GitHub account
 
 In this task, you will create a GitHub account using the provided credentials. This account will be used throughout the workshop for code management, collaboration, and deployment activities.
 
@@ -87,7 +87,7 @@ In this task, you will create a GitHub account using the provided credentials. T
 
 You now have a GitHub account. Welcome to the GitHub community!
 
-### Task 3: Create a fork of the repository for this workshop
+## Task 3: Create a fork of the repository for this workshop
 
 In this task, you will create a fork of the workshop repository, allowing you to work on your own copy without affecting the original project. This forked repository will be used for development throughout the lab.
 
@@ -105,7 +105,7 @@ In this task, you will create a fork of the workshop repository, allowing you to
 
     ![](../Media/bs3.png)
 
-### Task 4: Create a GitHub Codespace
+## Task 4: Create a GitHub Codespace
 
 In this task, you will create a GitHub Codespace from your forked repository. This cloud-based development environment will allow you to build and manage Power Platform components directly from your browser using Visual Studio Code.
 
@@ -121,7 +121,7 @@ In this task, you will create a GitHub Codespace from your forked repository. Th
 
     ![](../Media/bs4.png)
 
-### Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
+## Task 5: Connect to the Power Platform using the Power Platform Command-Line Interface (CLI)
 
 In this task, you will connect your GitHub Codespace to the Power Platform using the Power Platform CLI. This will authenticate your environment and allow you to manage environments, solutions, and deployments directly from the terminal.
 
@@ -187,7 +187,7 @@ In this task, you will connect your GitHub Codespace to the Power Platform using
 
     ![Select Auth Profile](../Media/bs13.png)
 
-### Task 6: Create developer environments
+## Task 6: Create developer environments
 
 Developer environments are very helpful when you want to try out features; they are meant to be short-lived environments.
 
@@ -208,7 +208,7 @@ To create developer environments, you can create them in multiple ways:
 
 In this workshop, we will create one environment through the UI, one via PPAC, and the last one via the CLI, so that you know all about how to create developer environments.
 
-#### Task 6.1 Create the 'Dev` environment by subscribing to the developer plan
+### Task 6.1 Create the 'Dev` environment by subscribing to the developer plan
 
 In this task, you will subscribe to the Power Apps Developer Plan to create your own personal development environment. This environment will be renamed to Dev and used for app development and testing throughout the lab.
 
@@ -251,7 +251,7 @@ In this task, you will subscribe to the Power Apps Developer Plan to create your
     ![](../Media/Dev6.png)
 
 
-#### Task 6.2 Create a new **QA** environment via the Power Platform Admin Center (PPAC).
+### Task 6.2 Create a new **QA** environment via the Power Platform Admin Center (PPAC).
 
 In this task, you will create a new QA environment using the Power Platform Admin Center. This environment will be used to test your applications and solutions as part of the ALM process.
 
@@ -274,7 +274,7 @@ In this task, you will create a new QA environment using the Power Platform Admi
 
     ![Save new Developer Environment](../Media/Dev9.png)
 
-#### Task 6.3 Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
+### Task 6.3 Create a **Prod** environment via the Power Platform Command-Line Interface (CLI)
 
 In this task, you will create a Prod environment using the Power Platform CLI directly from your Codespace terminal. This approach offers a faster and more efficient way to provision environments without using the admin UI.
 
@@ -304,7 +304,7 @@ In this task, you will create a Prod environment using the Power Platform CLI di
 
     ![List of developer environments](../Media/Dev11.png)
 
-### Task 7: Switch between environments with the Power Platform CLI
+## Task 7: Switch between environments with the Power Platform CLI
 
 In this task, you will use the Power Platform CLI to view available environments and switch the active context to the Dev environment. This allows you to run CLI commands against the correct environment throughout the lab.
 
@@ -344,7 +344,7 @@ In this task, you will use the Power Platform CLI to view available environments
 
     ![Screenshot of pac org who confirmation information](../Media/T74.png)
 
-### Task 8: Enable Managed Environments on all environments
+## Task 8: Enable Managed Environments on all environments
 
 In this task, you will enable Managed Environments for all three environments—Dev, QA, and Prod. This feature helps apply governance, monitoring, and security policies across environments in an enterprise-grade setup.
 
@@ -366,13 +366,13 @@ In this task, you will enable Managed Environments for all three environments—
 
     ![](../Media/T83.png)
 
-### Task 9: Deploy the pipelines solution to your Prod environment
+## Task 9: Deploy the pipelines solution to your Prod environment
 
 In this task, you will learn how to install the pipelines for the Power Platform solution in your `Prod` environment.
 
 There are two ways to install the Pipelines solution:
 
-#### Task 9.1 Via Power Platform Admin Center
+### Task 9.1 Via Power Platform Admin Center
 
 In this task, you will install the Power Platform Pipelines app in the Prod environment using the Power Platform Admin Center. This app enables deployment automation and is a core component for implementing ALM in your Power Platform environments.
 
@@ -395,7 +395,7 @@ In this task, you will install the Power Platform Pipelines app in the Prod envi
 
     ![](../Media/T93.png)
 
-1. Next,select **I agree to the termsof service** **(1)** and select the **Install** **(1)** button at the bottom of the sidebar
+1. Next,select **I agree to the termsof service** **(1)** and select the **Install** **(2)** button at the bottom of the sidebar
 
     ![](../Media/T94.png)
 
@@ -413,7 +413,7 @@ In this task, you will install the Power Platform Pipelines app in the Prod envi
 
       ![](../Media/bs26.png)     
 
-#### Task 9.2 Via Power Platform CLI
+### Task 9.2 Via Power Platform CLI
 
 In this task, you will install the Power Platform Pipelines application in the Prod environment using the Power Platform CLI. This method provides a quick, scriptable way to deploy solutions without navigating through the admin UI.
 
@@ -447,11 +447,11 @@ In this task, you will install the Power Platform Pipelines application in the P
 
     >**Note**: You may get an message like `Power Platform Pipelines` application is already installed, please proceed with the next task.
 
-### Task 10: Enable Dataverse settings
+## Task 10: Enable Dataverse settings
 
 A recent addition to the Power Platform CLI is the ability to list and update Dataverse settings. This means that you can change the settings that are normally only available through the UI. In this task, you will learn how to change the settings.
 
-#### Task 10.1 List Dataverse settings
+### Task 10.1 List Dataverse settings
 
 In this task, you will list and filter Dataverse settings in the Dev environment using the Power Platform CLI. This helps you inspect key configuration options, such as audit settings, to better understand and manage environment behavior.
 
@@ -493,7 +493,7 @@ In this task, you will list and filter Dataverse settings in the Dev environment
 
     ![Screenshot of pac org list-settings --filter audit which shows 6 results](../Media/T101.png)
 
-#### Task 10.2 Update Dataverse settings
+### Task 10.2 Update Dataverse settings
 
 In this task, you will update a Dataverse setting using the Power Platform CLI by enabling auditing in the Dev environment. This demonstrates how to programmatically manage environment configurations for enhanced governance.
 

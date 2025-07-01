@@ -12,9 +12,9 @@ In this lab, you will go through only one task:
 
 - Extend the previous pipeline with Approvals
 
-### ☑️ Task : Extend the previous pipeline with Approvals
+## ☑️ Task : Extend the previous pipeline with Approvals
 
-#### Task 1.1 : Extending the pipeline in the Deployment Pipeline Configuration App
+### Task 1.1 : Extending the pipeline in the Deployment Pipeline Configuration App
 
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
@@ -44,7 +44,7 @@ In this task, you will learn how to extend the pipeline and add an approval befo
 
     ![](./assets/extend-pipeline-enable-pre-deployment-step-saved(1).png)
 
-#### Task 1.2 : Create a cloud flow that handles the approval
+### Task 1.2 : Create a cloud flow that handles the approval
 
 In this task, you will learn how to create an approval flow that will handle the approval before deploying to production.
 
@@ -216,7 +216,7 @@ In this task, you will learn how to create an approval flow that will handle the
 
     ![](./assets/bs122.png)
 
-#### Task 1.3 : Test and Execute "Deploy to Prod" with Approval Process
+### Task 1.3 : Test and Execute "Deploy to Prod" with Approval Process
 
 In this task, you are going to find out if the approval you configured in the last task actually works!
 
